@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: policy-controller
+  namespace: argocd
+spec:
+  project: default
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: artifact-attestations
+  source:
+    repoURL: ghcr.io/sigstore/helm-charts
+    chart: policy-controller
+    targetRevision: 0.10.5
+    helm:
+      releaseName: policy-controller
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true

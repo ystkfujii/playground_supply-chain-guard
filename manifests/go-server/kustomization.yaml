@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - deployment.yaml
+  - ns.yaml
+
+images:
+  - name: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server
+    newName: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server
+    newTag: stable
+    digest: sha256:04152438d98eede14c9046f4faefb7747c3353b85574ccef94ba7e88fdbfb6be

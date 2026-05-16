@@ -1,0 +1,1850 @@
+apiVersion: spdx.softwarecomposition.kubescape.io/v1beta1
+kind: SBOMSyft
+metadata:
+  annotations:
+    kubescape.io/image-id: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@sha256:9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+    kubescape.io/image-tag: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@sha256:9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+    kubescape.io/resource-size: "50864"
+    kubescape.io/status: ready
+    kubescape.io/sync-checksum: 7e0d1e96d6b7738030bf47f933c18533af692fcfd80aa873b891cf7903733e3c
+    kubescape.io/tool-version: v1.32.0
+  creationTimestamp: "2026-05-24T09:38:27Z"
+  labels:
+    kubescape.io/image-id: ghcr-io-ystkfujii-playground-supply-chain-guard-go-server-sha25
+    kubescape.io/image-name: ghcr-io-ystkfujii-playground-supply-chain-guard-go-server
+  name: ghcr.io-ystkfujii-playground-supply-chain-guard-go-server-sha256-9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922-20f922
+  namespace: kubescape
+  resourceVersion: "2"
+  uid: 1d672e43-4a76-40ab-b2cf-0e8f20b12848
+spec:
+  metadata:
+    report:
+      createdAt: "2026-05-24T09:38:27Z"
+    tool:
+      name: syft
+      version: v1.32.0
+  syft:
+    artifactRelationships:
+    - child: 082d82352dcce411
+      parent: 0250a99519d85d81
+      type: contains
+    - child: 13701b38d939df77
+      parent: 0250a99519d85d81
+      type: contains
+    - child: 2f149d5e4ce10ab7
+      parent: 0250a99519d85d81
+      type: evident-by
+    - child: 3c90bacb4c4d8c33
+      parent: 0250a99519d85d81
+      type: dependency-of
+    - child: 45afd3fb1409c7c0
+      parent: 0250a99519d85d81
+      type: contains
+    - child: 4c6f0114a23e6efc
+      parent: 0250a99519d85d81
+      type: contains
+    - child: 4e30b69eb8f5716e
+      parent: 0250a99519d85d81
+      type: contains
+    - child: 63ca4cd8bf06bbd5
+      parent: 0250a99519d85d81
+      type: dependency-of
+    - child: 715cceb53ede241e
+      parent: 0250a99519d85d81
+      type: contains
+    - child: 7568460f27a7f6f6
+      parent: 0250a99519d85d81
+      type: contains
+    - child: 75b5ba1004bc765a
+      parent: 0250a99519d85d81
+      type: dependency-of
+    - child: 96c8aead9ecaf97c
+      parent: 0250a99519d85d81
+      type: contains
+    - child: b5ece04c27193042
+      parent: 0250a99519d85d81
+      type: contains
+    - child: d5c25fe975d08434
+      parent: 0250a99519d85d81
+      type: contains
+    - child: 0a3d2bed8cddbdbc
+      parent: 0df337d25a2602d5
+      type: contains
+    - child: 2e95a66e002e0094
+      parent: 0df337d25a2602d5
+      type: contains
+    - child: 2f149d5e4ce10ab7
+      parent: 0df337d25a2602d5
+      type: evident-by
+    - child: 545452b71f670487
+      parent: 0df337d25a2602d5
+      type: contains
+    - child: 80c96a54db5ef2a3
+      parent: 0df337d25a2602d5
+      type: contains
+    - child: 8ee49f897691f7e7
+      parent: 0df337d25a2602d5
+      type: contains
+    - child: a566cefed15818a3
+      parent: 0df337d25a2602d5
+      type: contains
+    - child: be3ca956d6d1dfbc
+      parent: 0df337d25a2602d5
+      type: contains
+    - child: cc951414e5bc3f66
+      parent: 0df337d25a2602d5
+      type: contains
+    - child: ccc4f9c23cb85c2b
+      parent: 0df337d25a2602d5
+      type: contains
+    - child: e4f1e06ee185055f
+      parent: 0df337d25a2602d5
+      type: contains
+    - child: 0df337d25a2602d5
+      parent: 1884d73c69d1f8cf
+      type: dependency-of
+    - child: 1538b34393218a6e
+      parent: 1884d73c69d1f8cf
+      type: contains
+    - child: 17708ed5fbf8d211
+      parent: 1884d73c69d1f8cf
+      type: contains
+    - child: 233e192445756e89
+      parent: 1884d73c69d1f8cf
+      type: contains
+    - child: 252a6f87c373255b
+      parent: 1884d73c69d1f8cf
+      type: contains
+    - child: 2f149d5e4ce10ab7
+      parent: 1884d73c69d1f8cf
+      type: evident-by
+    - child: 47b171206631e991
+      parent: 1884d73c69d1f8cf
+      type: contains
+    - child: 5f55333566e8cd8f
+      parent: 1884d73c69d1f8cf
+      type: contains
+    - child: 608f7f8377f05fb5
+      parent: 1884d73c69d1f8cf
+      type: contains
+    - child: a17a6ed06be10aa1
+      parent: 1884d73c69d1f8cf
+      type: contains
+    - child: af3436b5c6a8f83d
+      parent: 1884d73c69d1f8cf
+      type: contains
+    - child: b1d5d9f7acaaace8
+      parent: 1884d73c69d1f8cf
+      type: contains
+    - child: c1e79a4c5b98a469
+      parent: 1884d73c69d1f8cf
+      type: contains
+    - child: cf60d1cf8b3aedea
+      parent: 1884d73c69d1f8cf
+      type: contains
+    - child: f696237ea5c99f05
+      parent: 1884d73c69d1f8cf
+      type: contains
+    - child: f98944926538946e
+      parent: 1884d73c69d1f8cf
+      type: contains
+    - child: 8191a55e3bc90c76
+      parent: 3350c9ed471ab501
+      type: dependency-of
+    - child: f0fb712869ed2695
+      parent: 3350c9ed471ab501
+      type: evident-by
+    - child: 187181d44bc61352
+      parent: 3369bd7f0acffc51
+      type: contains
+    - child: 2f149d5e4ce10ab7
+      parent: 3369bd7f0acffc51
+      type: evident-by
+    - child: 3153bb745d0a9fc2
+      parent: 3369bd7f0acffc51
+      type: contains
+    - child: ad5d0683e5446e2a
+      parent: 3369bd7f0acffc51
+      type: contains
+    - child: c68a1ef3d9062561
+      parent: 3369bd7f0acffc51
+      type: contains
+    - child: d98b6b2746e33142
+      parent: 3369bd7f0acffc51
+      type: contains
+    - child: 0250a99519d85d81
+      parent: 357615fbf72da3fc
+      type: dependency-of
+    - child: 2f149d5e4ce10ab7
+      parent: 357615fbf72da3fc
+      type: evident-by
+    - child: 3369bd7f0acffc51
+      parent: 357615fbf72da3fc
+      type: dependency-of
+    - child: 36b5764983e8c2ac
+      parent: 357615fbf72da3fc
+      type: dependency-of
+    - child: 3c90bacb4c4d8c33
+      parent: 357615fbf72da3fc
+      type: dependency-of
+    - child: 63ca4cd8bf06bbd5
+      parent: 357615fbf72da3fc
+      type: dependency-of
+    - child: 6ca5b246959782cd
+      parent: 357615fbf72da3fc
+      type: dependency-of
+    - child: 752ad684c3575e50
+      parent: 357615fbf72da3fc
+      type: contains
+    - child: 75b5ba1004bc765a
+      parent: 357615fbf72da3fc
+      type: dependency-of
+    - child: e70542a40cdca454
+      parent: 357615fbf72da3fc
+      type: dependency-of
+    - child: 2f149d5e4ce10ab7
+      parent: 36b5764983e8c2ac
+      type: evident-by
+    - child: 63ca4cd8bf06bbd5
+      parent: 36b5764983e8c2ac
+      type: dependency-of
+    - child: 6db5a5b89fd89822
+      parent: 36b5764983e8c2ac
+      type: contains
+    - child: 8191a55e3bc90c76
+      parent: 3c0b3be9f7f6650b
+      type: dependency-of
+    - child: f0fb712869ed2695
+      parent: 3c0b3be9f7f6650b
+      type: evident-by
+    - child: 2f149d5e4ce10ab7
+      parent: 3c90bacb4c4d8c33
+      type: evident-by
+    - child: 63ca4cd8bf06bbd5
+      parent: 3c90bacb4c4d8c33
+      type: dependency-of
+    - child: 75b5ba1004bc765a
+      parent: 3c90bacb4c4d8c33
+      type: dependency-of
+    - child: d9e6723e7fcefd50
+      parent: 3c90bacb4c4d8c33
+      type: contains
+    - child: 8191a55e3bc90c76
+      parent: 413b9f2b57fe92f5
+      type: dependency-of
+    - child: f0fb712869ed2695
+      parent: 413b9f2b57fe92f5
+      type: evident-by
+    - child: 8191a55e3bc90c76
+      parent: 451a8966f859cd0b
+      type: dependency-of
+    - child: f0fb712869ed2695
+      parent: 451a8966f859cd0b
+      type: evident-by
+    - child: 8191a55e3bc90c76
+      parent: 4c5d61edc6736904
+      type: dependency-of
+    - child: f0fb712869ed2695
+      parent: 4c5d61edc6736904
+      type: evident-by
+    - child: 8191a55e3bc90c76
+      parent: 5ca0278082c94b78
+      type: dependency-of
+    - child: f0fb712869ed2695
+      parent: 5ca0278082c94b78
+      type: evident-by
+    - child: 260ae75d2be0c0f9
+      parent: 63ca4cd8bf06bbd5
+      type: contains
+    - child: 2f149d5e4ce10ab7
+      parent: 63ca4cd8bf06bbd5
+      type: evident-by
+    - child: e0a00041eff2a75b
+      parent: 63ca4cd8bf06bbd5
+      type: contains
+    - child: 8191a55e3bc90c76
+      parent: 63f50f1c75e814c3
+      type: dependency-of
+    - child: f0fb712869ed2695
+      parent: 63f50f1c75e814c3
+      type: evident-by
+    - child: 0df337d25a2602d5
+      parent: 647e208285fe9a62
+      type: dependency-of
+    - child: 2f149d5e4ce10ab7
+      parent: 647e208285fe9a62
+      type: evident-by
+    - child: 40fd205c14516398
+      parent: 647e208285fe9a62
+      type: contains
+    - child: 2cc7ae500c41a910
+      parent: 6ca5b246959782cd
+      type: contains
+    - child: 2f149d5e4ce10ab7
+      parent: 6ca5b246959782cd
+      type: evident-by
+    - child: 40fd205c14516398
+      parent: 6ca5b246959782cd
+      type: contains
+    - child: 5f9981db136e227b
+      parent: 6ca5b246959782cd
+      type: contains
+    - child: 647e208285fe9a62
+      parent: 6ca5b246959782cd
+      type: dependency-of
+    - child: 845113b8334fd108
+      parent: 6ca5b246959782cd
+      type: contains
+    - child: 8e17eb953fad34e4
+      parent: 6ca5b246959782cd
+      type: contains
+    - child: 95a043bd15bf1cad
+      parent: 6ca5b246959782cd
+      type: contains
+    - child: abd36acdb0a1633b
+      parent: 6ca5b246959782cd
+      type: contains
+    - child: 2f149d5e4ce10ab7
+      parent: 75b5ba1004bc765a
+      type: evident-by
+    - child: 4ff4cc9eb057dc1b
+      parent: 75b5ba1004bc765a
+      type: contains
+    - child: 8191a55e3bc90c76
+      parent: 7fc73da7bd034206
+      type: dependency-of
+    - child: f0fb712869ed2695
+      parent: 7fc73da7bd034206
+      type: evident-by
+    - child: f0fb712869ed2695
+      parent: 8191a55e3bc90c76
+      type: evident-by
+    - child: 8191a55e3bc90c76
+      parent: b2f3a18f96939540
+      type: dependency-of
+    - child: f0fb712869ed2695
+      parent: b2f3a18f96939540
+      type: evident-by
+    - child: 8191a55e3bc90c76
+      parent: b62d90b243fca261
+      type: dependency-of
+    - child: f0fb712869ed2695
+      parent: b62d90b243fca261
+      type: evident-by
+    - child: 8191a55e3bc90c76
+      parent: d915c2dc43aa0be8
+      type: dependency-of
+    - child: f0fb712869ed2695
+      parent: d915c2dc43aa0be8
+      type: evident-by
+    - child: 0c0f241a8f699eb0
+      parent: e52c1dbb30b5f839
+      type: contains
+    - child: 21744d077f8919ae
+      parent: e52c1dbb30b5f839
+      type: contains
+    - child: 2f149d5e4ce10ab7
+      parent: e52c1dbb30b5f839
+      type: evident-by
+    - child: b03e3ed563f8ccdd
+      parent: e52c1dbb30b5f839
+      type: contains
+    - child: c3a3aca676f798c7
+      parent: e52c1dbb30b5f839
+      type: contains
+    - child: 2f149d5e4ce10ab7
+      parent: e70542a40cdca454
+      type: evident-by
+    - child: 3369bd7f0acffc51
+      parent: e70542a40cdca454
+      type: dependency-of
+    - child: 3d09899bb108e96e
+      parent: e70542a40cdca454
+      type: contains
+    - child: 2f149d5e4ce10ab7
+      parent: e859b89365edb8ca
+      type: evident-by
+    - child: 36857ed702a8d18a
+      parent: e859b89365edb8ca
+      type: contains
+    - child: 63ca4cd8bf06bbd5
+      parent: e859b89365edb8ca
+      type: dependency-of
+    - child: 01b498559d7dfd14
+      parent: f3faf4bc1f174ce9
+      type: contains
+    - child: 0529c5a117a7384a
+      parent: f3faf4bc1f174ce9
+      type: contains
+    - child: 0c8f53a55280c06f
+      parent: f3faf4bc1f174ce9
+      type: contains
+    - child: 13bbd5aa14006478
+      parent: f3faf4bc1f174ce9
+      type: contains
+    - child: 24ac705ad0bdf6f3
+      parent: f3faf4bc1f174ce9
+      type: contains
+    - child: 2815d2d504a27c91
+      parent: f3faf4bc1f174ce9
+      type: contains
+    - child: 297283db2447d59b
+      parent: f3faf4bc1f174ce9
+      type: contains
+    - child: 2e1e94af4f4b7954
+      parent: f3faf4bc1f174ce9
+      type: contains
+    - child: 2f149d5e4ce10ab7
+      parent: f3faf4bc1f174ce9
+      type: evident-by
+    - child: 44bf0c601f4f12df
+      parent: f3faf4bc1f174ce9
+      type: contains
+    - child: 451687210365323f
+      parent: f3faf4bc1f174ce9
+      type: contains
+    - child: 48f6b061fe960c55
+      parent: f3faf4bc1f174ce9
+      type: contains
+    - child: 7394789bd0f53fb8
+      parent: f3faf4bc1f174ce9
+      type: contains
+    - child: 7ae66dabdc546614
+      parent: f3faf4bc1f174ce9
+      type: contains
+    - child: 80d3d67305770f7f
+      parent: f3faf4bc1f174ce9
+      type: contains
+    - child: 975bf19204a316be
+      parent: f3faf4bc1f174ce9
+      type: contains
+    - child: b23ebc4f8dce427d
+      parent: f3faf4bc1f174ce9
+      type: contains
+    - child: b268e5bcbb5ae6cd
+      parent: f3faf4bc1f174ce9
+      type: contains
+    - child: bb59fcc5d2a649e2
+      parent: f3faf4bc1f174ce9
+      type: contains
+    - child: ca82b5c176e30c09
+      parent: f3faf4bc1f174ce9
+      type: contains
+    - child: cc23aee18bf990dc
+      parent: f3faf4bc1f174ce9
+      type: contains
+    - child: e52c1dbb30b5f839
+      parent: f3faf4bc1f174ce9
+      type: dependency-of
+    - child: e710b48378b06bef
+      parent: f3faf4bc1f174ce9
+      type: contains
+    - child: ee2391d5e878699b
+      parent: f3faf4bc1f174ce9
+      type: contains
+    - child: ee8be499a3487add
+      parent: f3faf4bc1f174ce9
+      type: contains
+    - child: 8191a55e3bc90c76
+      parent: fb87a3c573b6630b
+      type: dependency-of
+    - child: f0fb712869ed2695
+      parent: fb87a3c573b6630b
+      type: evident-by
+    - child: 0250a99519d85d81
+      parent: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+      type: contains
+    - child: 0df337d25a2602d5
+      parent: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+      type: contains
+    - child: 1884d73c69d1f8cf
+      parent: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+      type: contains
+    - child: 3350c9ed471ab501
+      parent: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+      type: contains
+    - child: 3369bd7f0acffc51
+      parent: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+      type: contains
+    - child: 357615fbf72da3fc
+      parent: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+      type: contains
+    - child: 36b5764983e8c2ac
+      parent: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+      type: contains
+    - child: 3c0b3be9f7f6650b
+      parent: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+      type: contains
+    - child: 3c90bacb4c4d8c33
+      parent: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+      type: contains
+    - child: 413b9f2b57fe92f5
+      parent: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+      type: contains
+    - child: 451a8966f859cd0b
+      parent: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+      type: contains
+    - child: 4c5d61edc6736904
+      parent: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+      type: contains
+    - child: 5ca0278082c94b78
+      parent: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+      type: contains
+    - child: 63ca4cd8bf06bbd5
+      parent: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+      type: contains
+    - child: 63f50f1c75e814c3
+      parent: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+      type: contains
+    - child: 647e208285fe9a62
+      parent: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+      type: contains
+    - child: 6ca5b246959782cd
+      parent: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+      type: contains
+    - child: 75b5ba1004bc765a
+      parent: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+      type: contains
+    - child: 7fc73da7bd034206
+      parent: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+      type: contains
+    - child: 8191a55e3bc90c76
+      parent: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+      type: contains
+    - child: b2f3a18f96939540
+      parent: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+      type: contains
+    - child: b62d90b243fca261
+      parent: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+      type: contains
+    - child: d915c2dc43aa0be8
+      parent: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+      type: contains
+    - child: e52c1dbb30b5f839
+      parent: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+      type: contains
+    - child: e70542a40cdca454
+      parent: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+      type: contains
+    - child: e859b89365edb8ca
+      parent: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+      type: contains
+    - child: f3faf4bc1f174ce9
+      parent: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+      type: contains
+    - child: fb87a3c573b6630b
+      parent: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+      type: contains
+    artifacts:
+    - cpes:
+      - cpe: cpe:2.3:a:alpine-baselayout:alpine-baselayout:3.6.8-r1:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:alpine-baselayout:alpine_baselayout:3.6.8-r1:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:alpine_baselayout:alpine-baselayout:3.6.8-r1:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:alpine_baselayout:alpine_baselayout:3.6.8-r1:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:alpine:alpine-baselayout:3.6.8-r1:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:alpine:alpine_baselayout:3.6.8-r1:*:*:*:*:*:*:*
+        source: syft-generated
+      foundBy: ""
+      id: 0df337d25a2602d5
+      language: ""
+      licenses:
+      - locations: null
+        spdxExpression: GPL-2.0-only
+        type: declared
+        urls: null
+        value: GPL-2.0-only
+      locations:
+      - accessPath: ""
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /lib/apk/db/installed
+      metadata:
+        architecture: ""
+        description: ""
+        files: null
+        gitCommitOfApkPort: ""
+        installedSize: 0
+        maintainer: ""
+        originPackage: alpine-baselayout
+        package: ""
+        provides: null
+        pullChecksum: ""
+        pullDependencies: null
+        size: 0
+        url: ""
+        version: ""
+      metadataType: apk-db-entry
+      name: alpine-baselayout
+      purl: pkg:apk/alpine/alpine-baselayout@3.6.8-r1?arch=x86_64&distro=alpine-3.21.7
+      type: apk
+      version: 3.6.8-r1
+    - cpes:
+      - cpe: cpe:2.3:a:alpine-baselayout-data:alpine-baselayout-data:3.6.8-r1:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:alpine-baselayout-data:alpine_baselayout_data:3.6.8-r1:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:alpine_baselayout_data:alpine-baselayout-data:3.6.8-r1:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:alpine_baselayout_data:alpine_baselayout_data:3.6.8-r1:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:alpine-baselayout:alpine-baselayout-data:3.6.8-r1:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:alpine-baselayout:alpine_baselayout_data:3.6.8-r1:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:alpine_baselayout:alpine-baselayout-data:3.6.8-r1:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:alpine_baselayout:alpine_baselayout_data:3.6.8-r1:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:alpine:alpine-baselayout-data:3.6.8-r1:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:alpine:alpine_baselayout_data:3.6.8-r1:*:*:*:*:*:*:*
+        source: syft-generated
+      foundBy: ""
+      id: 1884d73c69d1f8cf
+      language: ""
+      licenses:
+      - locations: null
+        spdxExpression: GPL-2.0-only
+        type: declared
+        urls: null
+        value: GPL-2.0-only
+      locations:
+      - accessPath: ""
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /lib/apk/db/installed
+      metadata:
+        architecture: ""
+        description: ""
+        files: null
+        gitCommitOfApkPort: ""
+        installedSize: 0
+        maintainer: ""
+        originPackage: alpine-baselayout
+        package: ""
+        provides: null
+        pullChecksum: ""
+        pullDependencies: null
+        size: 0
+        url: ""
+        version: ""
+      metadataType: apk-db-entry
+      name: alpine-baselayout-data
+      purl: pkg:apk/alpine/alpine-baselayout-data@3.6.8-r1?arch=x86_64&distro=alpine-3.21.7&upstream=alpine-baselayout
+      type: apk
+      version: 3.6.8-r1
+    - cpes:
+      - cpe: cpe:2.3:a:alpine-keys:alpine-keys:2.5-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:alpine-keys:alpine_keys:2.5-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:alpine_keys:alpine-keys:2.5-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:alpine_keys:alpine_keys:2.5-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:alpine:alpine-keys:2.5-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:alpine:alpine_keys:2.5-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      foundBy: ""
+      id: f3faf4bc1f174ce9
+      language: ""
+      licenses:
+      - locations: null
+        spdxExpression: MIT
+        type: declared
+        urls: null
+        value: MIT
+      locations:
+      - accessPath: ""
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /lib/apk/db/installed
+      metadata:
+        architecture: ""
+        description: ""
+        files: null
+        gitCommitOfApkPort: ""
+        installedSize: 0
+        maintainer: ""
+        originPackage: alpine-keys
+        package: ""
+        provides: null
+        pullChecksum: ""
+        pullDependencies: null
+        size: 0
+        url: ""
+        version: ""
+      metadataType: apk-db-entry
+      name: alpine-keys
+      purl: pkg:apk/alpine/alpine-keys@2.5-r0?arch=x86_64&distro=alpine-3.21.7
+      type: apk
+      version: 2.5-r0
+    - cpes:
+      - cpe: cpe:2.3:a:alpine-release:alpine-release:3.21.7-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:alpine-release:alpine_release:3.21.7-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:alpine_release:alpine-release:3.21.7-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:alpine_release:alpine_release:3.21.7-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:alpine:alpine-release:3.21.7-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:alpine:alpine_release:3.21.7-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      foundBy: ""
+      id: e52c1dbb30b5f839
+      language: ""
+      licenses:
+      - locations: null
+        spdxExpression: MIT
+        type: declared
+        urls: null
+        value: MIT
+      locations:
+      - accessPath: ""
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /lib/apk/db/installed
+      metadata:
+        architecture: ""
+        description: ""
+        files: null
+        gitCommitOfApkPort: ""
+        installedSize: 0
+        maintainer: ""
+        originPackage: alpine-base
+        package: ""
+        provides: null
+        pullChecksum: ""
+        pullDependencies: null
+        size: 0
+        url: ""
+        version: ""
+      metadataType: apk-db-entry
+      name: alpine-release
+      purl: pkg:apk/alpine/alpine-release@3.21.7-r0?arch=x86_64&distro=alpine-3.21.7&upstream=alpine-base
+      type: apk
+      version: 3.21.7-r0
+    - cpes:
+      - cpe: cpe:2.3:a:apk-tools:apk-tools:2.14.6-r3:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:apk-tools:apk_tools:2.14.6-r3:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:apk_tools:apk-tools:2.14.6-r3:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:apk_tools:apk_tools:2.14.6-r3:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:apk:apk-tools:2.14.6-r3:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:apk:apk_tools:2.14.6-r3:*:*:*:*:*:*:*
+        source: syft-generated
+      foundBy: ""
+      id: 63ca4cd8bf06bbd5
+      language: ""
+      licenses:
+      - locations: null
+        spdxExpression: GPL-2.0-only
+        type: declared
+        urls: null
+        value: GPL-2.0-only
+      locations:
+      - accessPath: ""
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /lib/apk/db/installed
+      metadata:
+        architecture: ""
+        description: ""
+        files: null
+        gitCommitOfApkPort: ""
+        installedSize: 0
+        maintainer: ""
+        originPackage: apk-tools
+        package: ""
+        provides: null
+        pullChecksum: ""
+        pullDependencies: null
+        size: 0
+        url: ""
+        version: ""
+      metadataType: apk-db-entry
+      name: apk-tools
+      purl: pkg:apk/alpine/apk-tools@2.14.6-r3?arch=x86_64&distro=alpine-3.21.7
+      type: apk
+      version: 2.14.6-r3
+    - cpes:
+      - cpe: cpe:2.3:a:busybox:busybox:1.37.0-r14:*:*:*:*:*:*:*
+        source: syft-generated
+      foundBy: ""
+      id: 6ca5b246959782cd
+      language: ""
+      licenses:
+      - locations: null
+        spdxExpression: GPL-2.0-only
+        type: declared
+        urls: null
+        value: GPL-2.0-only
+      locations:
+      - accessPath: ""
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /lib/apk/db/installed
+      metadata:
+        architecture: ""
+        description: ""
+        files: null
+        gitCommitOfApkPort: ""
+        installedSize: 0
+        maintainer: ""
+        originPackage: busybox
+        package: ""
+        provides: null
+        pullChecksum: ""
+        pullDependencies: null
+        size: 0
+        url: ""
+        version: ""
+      metadataType: apk-db-entry
+      name: busybox
+      purl: pkg:apk/alpine/busybox@1.37.0-r14?arch=x86_64&distro=alpine-3.21.7
+      type: apk
+      version: 1.37.0-r14
+    - cpes:
+      - cpe: cpe:2.3:a:busybox-binsh:busybox-binsh:1.37.0-r14:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:busybox-binsh:busybox_binsh:1.37.0-r14:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:busybox_binsh:busybox-binsh:1.37.0-r14:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:busybox_binsh:busybox_binsh:1.37.0-r14:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:busybox:busybox-binsh:1.37.0-r14:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:busybox:busybox_binsh:1.37.0-r14:*:*:*:*:*:*:*
+        source: syft-generated
+      foundBy: ""
+      id: 647e208285fe9a62
+      language: ""
+      licenses:
+      - locations: null
+        spdxExpression: GPL-2.0-only
+        type: declared
+        urls: null
+        value: GPL-2.0-only
+      locations:
+      - accessPath: ""
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /lib/apk/db/installed
+      metadata:
+        architecture: ""
+        description: ""
+        files: null
+        gitCommitOfApkPort: ""
+        installedSize: 0
+        maintainer: ""
+        originPackage: busybox
+        package: ""
+        provides: null
+        pullChecksum: ""
+        pullDependencies: null
+        size: 0
+        url: ""
+        version: ""
+      metadataType: apk-db-entry
+      name: busybox-binsh
+      purl: pkg:apk/alpine/busybox-binsh@1.37.0-r14?arch=x86_64&distro=alpine-3.21.7&upstream=busybox
+      type: apk
+      version: 1.37.0-r14
+    - cpes:
+      - cpe: cpe:2.3:a:ca-certificates-bundle:ca-certificates-bundle:20260413-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:ca-certificates-bundle:ca_certificates_bundle:20260413-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:ca_certificates_bundle:ca-certificates-bundle:20260413-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:ca_certificates_bundle:ca_certificates_bundle:20260413-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:ca-certificates:ca-certificates-bundle:20260413-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:ca-certificates:ca_certificates_bundle:20260413-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:ca_certificates:ca-certificates-bundle:20260413-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:ca_certificates:ca_certificates_bundle:20260413-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:mozilla:ca-certificates-bundle:20260413-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:mozilla:ca_certificates_bundle:20260413-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:ca:ca-certificates-bundle:20260413-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:ca:ca_certificates_bundle:20260413-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      foundBy: ""
+      id: e859b89365edb8ca
+      language: ""
+      licenses:
+      - locations: null
+        spdxExpression: MPL-2.0 AND MIT
+        type: declared
+        urls: null
+        value: MPL-2.0 AND MIT
+      locations:
+      - accessPath: ""
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /lib/apk/db/installed
+      metadata:
+        architecture: ""
+        description: ""
+        files: null
+        gitCommitOfApkPort: ""
+        installedSize: 0
+        maintainer: ""
+        originPackage: ca-certificates
+        package: ""
+        provides: null
+        pullChecksum: ""
+        pullDependencies: null
+        size: 0
+        url: ""
+        version: ""
+      metadataType: apk-db-entry
+      name: ca-certificates-bundle
+      purl: pkg:apk/alpine/ca-certificates-bundle@20260413-r0?arch=x86_64&distro=alpine-3.21.7&upstream=ca-certificates
+      type: apk
+      version: 20260413-r0
+    - cpes: null
+      foundBy: ""
+      id: 8191a55e3bc90c76
+      language: go
+      licenses: null
+      locations:
+      - accessPath: ""
+        layerID: sha256:eedfd6e00764b58237f6d24bed51996202f07ee6397e60552d748b475912ac85
+        path: /server
+      metadata:
+        architecture: ""
+        goCompiledVersion: ""
+        mainModule: command-line-arguments
+      metadataType: go-module-buildinfo-entry
+      name: command-line-arguments
+      purl: pkg:golang/command-line-arguments
+      type: go-module
+      version: UNKNOWN
+    - cpes:
+      - cpe: cpe:2.3:a:labstack:echo\/v4:v4.15.2:*:*:*:*:*:*:*
+        source: syft-generated
+      foundBy: ""
+      id: d915c2dc43aa0be8
+      language: go
+      licenses: null
+      locations:
+      - accessPath: ""
+        layerID: sha256:eedfd6e00764b58237f6d24bed51996202f07ee6397e60552d748b475912ac85
+        path: /server
+      metadata:
+        architecture: ""
+        goCompiledVersion: ""
+        mainModule: command-line-arguments
+      metadataType: go-module-buildinfo-entry
+      name: github.com/labstack/echo/v4
+      purl: pkg:golang/github.com/labstack/echo@v4.15.2#v4
+      type: go-module
+      version: v4.15.2
+    - cpes:
+      - cpe: cpe:2.3:a:labstack:gommon:v0.5.0:*:*:*:*:*:*:*
+        source: syft-generated
+      foundBy: ""
+      id: 3350c9ed471ab501
+      language: go
+      licenses: null
+      locations:
+      - accessPath: ""
+        layerID: sha256:eedfd6e00764b58237f6d24bed51996202f07ee6397e60552d748b475912ac85
+        path: /server
+      metadata:
+        architecture: ""
+        goCompiledVersion: ""
+        mainModule: command-line-arguments
+      metadataType: go-module-buildinfo-entry
+      name: github.com/labstack/gommon
+      purl: pkg:golang/github.com/labstack/gommon@v0.5.0
+      type: go-module
+      version: v0.5.0
+    - cpes:
+      - cpe: cpe:2.3:a:mattn:go-colorable:v0.1.14:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:mattn:go_colorable:v0.1.14:*:*:*:*:*:*:*
+        source: syft-generated
+      foundBy: ""
+      id: 3c0b3be9f7f6650b
+      language: go
+      licenses: null
+      locations:
+      - accessPath: ""
+        layerID: sha256:eedfd6e00764b58237f6d24bed51996202f07ee6397e60552d748b475912ac85
+        path: /server
+      metadata:
+        architecture: ""
+        goCompiledVersion: ""
+        mainModule: command-line-arguments
+      metadataType: go-module-buildinfo-entry
+      name: github.com/mattn/go-colorable
+      purl: pkg:golang/github.com/mattn/go-colorable@v0.1.14
+      type: go-module
+      version: v0.1.14
+    - cpes:
+      - cpe: cpe:2.3:a:mattn:go-isatty:v0.0.22:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:mattn:go_isatty:v0.0.22:*:*:*:*:*:*:*
+        source: syft-generated
+      foundBy: ""
+      id: fb87a3c573b6630b
+      language: go
+      licenses: null
+      locations:
+      - accessPath: ""
+        layerID: sha256:eedfd6e00764b58237f6d24bed51996202f07ee6397e60552d748b475912ac85
+        path: /server
+      metadata:
+        architecture: ""
+        goCompiledVersion: ""
+        mainModule: command-line-arguments
+      metadataType: go-module-buildinfo-entry
+      name: github.com/mattn/go-isatty
+      purl: pkg:golang/github.com/mattn/go-isatty@v0.0.22
+      type: go-module
+      version: v0.0.22
+    - cpes:
+      - cpe: cpe:2.3:a:valyala:bytebufferpool:v1.0.0:*:*:*:*:*:*:*
+        source: syft-generated
+      foundBy: ""
+      id: 451a8966f859cd0b
+      language: go
+      licenses: null
+      locations:
+      - accessPath: ""
+        layerID: sha256:eedfd6e00764b58237f6d24bed51996202f07ee6397e60552d748b475912ac85
+        path: /server
+      metadata:
+        architecture: ""
+        goCompiledVersion: ""
+        mainModule: command-line-arguments
+      metadataType: go-module-buildinfo-entry
+      name: github.com/valyala/bytebufferpool
+      purl: pkg:golang/github.com/valyala/bytebufferpool@v1.0.0
+      type: go-module
+      version: v1.0.0
+    - cpes:
+      - cpe: cpe:2.3:a:valyala:fasttemplate:v1.2.2:*:*:*:*:*:*:*
+        source: syft-generated
+      foundBy: ""
+      id: b2f3a18f96939540
+      language: go
+      licenses: null
+      locations:
+      - accessPath: ""
+        layerID: sha256:eedfd6e00764b58237f6d24bed51996202f07ee6397e60552d748b475912ac85
+        path: /server
+      metadata:
+        architecture: ""
+        goCompiledVersion: ""
+        mainModule: command-line-arguments
+      metadataType: go-module-buildinfo-entry
+      name: github.com/valyala/fasttemplate
+      purl: pkg:golang/github.com/valyala/fasttemplate@v1.2.2
+      type: go-module
+      version: v1.2.2
+    - cpes:
+      - cpe: cpe:2.3:a:go:ssh:v0.50.0:*:*:*:*:go:*:*
+        source: nvd-cpe-dictionary
+      foundBy: ""
+      id: 413b9f2b57fe92f5
+      language: go
+      licenses: null
+      locations:
+      - accessPath: ""
+        layerID: sha256:eedfd6e00764b58237f6d24bed51996202f07ee6397e60552d748b475912ac85
+        path: /server
+      metadata:
+        architecture: ""
+        goCompiledVersion: ""
+        mainModule: command-line-arguments
+      metadataType: go-module-buildinfo-entry
+      name: golang.org/x/crypto
+      purl: pkg:golang/golang.org/x/crypto@v0.50.0
+      type: go-module
+      version: v0.50.0
+    - cpes:
+      - cpe: cpe:2.3:a:golang:networking:v0.53.0:*:*:*:*:go:*:*
+        source: nvd-cpe-dictionary
+      foundBy: ""
+      id: 63f50f1c75e814c3
+      language: go
+      licenses: null
+      locations:
+      - accessPath: ""
+        layerID: sha256:eedfd6e00764b58237f6d24bed51996202f07ee6397e60552d748b475912ac85
+        path: /server
+      metadata:
+        architecture: ""
+        goCompiledVersion: ""
+        mainModule: command-line-arguments
+      metadataType: go-module-buildinfo-entry
+      name: golang.org/x/net
+      purl: pkg:golang/golang.org/x/net@v0.53.0
+      type: go-module
+      version: v0.53.0
+    - cpes:
+      - cpe: cpe:2.3:a:golang:x\/sys:v0.43.0:*:*:*:*:*:*:*
+        source: syft-generated
+      foundBy: ""
+      id: 4c5d61edc6736904
+      language: go
+      licenses: null
+      locations:
+      - accessPath: ""
+        layerID: sha256:eedfd6e00764b58237f6d24bed51996202f07ee6397e60552d748b475912ac85
+        path: /server
+      metadata:
+        architecture: ""
+        goCompiledVersion: ""
+        mainModule: command-line-arguments
+      metadataType: go-module-buildinfo-entry
+      name: golang.org/x/sys
+      purl: pkg:golang/golang.org/x/sys@v0.43.0
+      type: go-module
+      version: v0.43.0
+    - cpes:
+      - cpe: cpe:2.3:a:golang:text:v0.36.0:*:*:*:*:*:*:*
+        source: nvd-cpe-dictionary
+      foundBy: ""
+      id: 5ca0278082c94b78
+      language: go
+      licenses: null
+      locations:
+      - accessPath: ""
+        layerID: sha256:eedfd6e00764b58237f6d24bed51996202f07ee6397e60552d748b475912ac85
+        path: /server
+      metadata:
+        architecture: ""
+        goCompiledVersion: ""
+        mainModule: command-line-arguments
+      metadataType: go-module-buildinfo-entry
+      name: golang.org/x/text
+      purl: pkg:golang/golang.org/x/text@v0.36.0
+      type: go-module
+      version: v0.36.0
+    - cpes:
+      - cpe: cpe:2.3:a:golang:x\/time:v0.15.0:*:*:*:*:*:*:*
+        source: syft-generated
+      foundBy: ""
+      id: b62d90b243fca261
+      language: go
+      licenses: null
+      locations:
+      - accessPath: ""
+        layerID: sha256:eedfd6e00764b58237f6d24bed51996202f07ee6397e60552d748b475912ac85
+        path: /server
+      metadata:
+        architecture: ""
+        goCompiledVersion: ""
+        mainModule: command-line-arguments
+      metadataType: go-module-buildinfo-entry
+      name: golang.org/x/time
+      purl: pkg:golang/golang.org/x/time@v0.15.0
+      type: go-module
+      version: v0.15.0
+    - cpes:
+      - cpe: cpe:2.3:a:libcrypto3:libcrypto3:3.3.7-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:libcrypto3:libcrypto:3.3.7-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:libcrypto:libcrypto3:3.3.7-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:libcrypto:libcrypto:3.3.7-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      foundBy: ""
+      id: 0250a99519d85d81
+      language: ""
+      licenses:
+      - locations: null
+        spdxExpression: Apache-2.0
+        type: declared
+        urls: null
+        value: Apache-2.0
+      locations:
+      - accessPath: ""
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /lib/apk/db/installed
+      metadata:
+        architecture: ""
+        description: ""
+        files: null
+        gitCommitOfApkPort: ""
+        installedSize: 0
+        maintainer: ""
+        originPackage: openssl
+        package: ""
+        provides: null
+        pullChecksum: ""
+        pullDependencies: null
+        size: 0
+        url: ""
+        version: ""
+      metadataType: apk-db-entry
+      name: libcrypto3
+      purl: pkg:apk/alpine/libcrypto3@3.3.7-r0?arch=x86_64&distro=alpine-3.21.7&upstream=openssl
+      type: apk
+      version: 3.3.7-r0
+    - cpes:
+      - cpe: cpe:2.3:a:libssl3:libssl3:3.3.7-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:libssl3:libssl:3.3.7-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:libssl:libssl3:3.3.7-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:libssl:libssl:3.3.7-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      foundBy: ""
+      id: 3c90bacb4c4d8c33
+      language: ""
+      licenses:
+      - locations: null
+        spdxExpression: Apache-2.0
+        type: declared
+        urls: null
+        value: Apache-2.0
+      locations:
+      - accessPath: ""
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /lib/apk/db/installed
+      metadata:
+        architecture: ""
+        description: ""
+        files: null
+        gitCommitOfApkPort: ""
+        installedSize: 0
+        maintainer: ""
+        originPackage: openssl
+        package: ""
+        provides: null
+        pullChecksum: ""
+        pullDependencies: null
+        size: 0
+        url: ""
+        version: ""
+      metadataType: apk-db-entry
+      name: libssl3
+      purl: pkg:apk/alpine/libssl3@3.3.7-r0?arch=x86_64&distro=alpine-3.21.7&upstream=openssl
+      type: apk
+      version: 3.3.7-r0
+    - cpes:
+      - cpe: cpe:2.3:a:musl-libc:musl:1.2.5-r11:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:musl_libc:musl:1.2.5-r11:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:musl:musl:1.2.5-r11:*:*:*:*:*:*:*
+        source: syft-generated
+      foundBy: ""
+      id: 357615fbf72da3fc
+      language: ""
+      licenses:
+      - locations: null
+        spdxExpression: MIT
+        type: declared
+        urls: null
+        value: MIT
+      locations:
+      - accessPath: ""
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /lib/apk/db/installed
+      metadata:
+        architecture: ""
+        description: ""
+        files: null
+        gitCommitOfApkPort: ""
+        installedSize: 0
+        maintainer: ""
+        originPackage: musl
+        package: ""
+        provides: null
+        pullChecksum: ""
+        pullDependencies: null
+        size: 0
+        url: ""
+        version: ""
+      metadataType: apk-db-entry
+      name: musl
+      purl: pkg:apk/alpine/musl@1.2.5-r11?arch=x86_64&distro=alpine-3.21.7
+      type: apk
+      version: 1.2.5-r11
+    - cpes:
+      - cpe: cpe:2.3:a:musl-utils:musl-utils:1.2.5-r11:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:musl-utils:musl_utils:1.2.5-r11:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:musl_utils:musl-utils:1.2.5-r11:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:musl_utils:musl_utils:1.2.5-r11:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:musl-libc:musl-utils:1.2.5-r11:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:musl-libc:musl_utils:1.2.5-r11:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:musl:musl-utils:1.2.5-r11:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:musl:musl_utils:1.2.5-r11:*:*:*:*:*:*:*
+        source: syft-generated
+      foundBy: ""
+      id: 3369bd7f0acffc51
+      language: ""
+      licenses:
+      - locations: null
+        spdxExpression: MIT AND BSD-2-Clause AND GPL-2.0-or-later
+        type: declared
+        urls: null
+        value: MIT AND BSD-2-Clause AND GPL-2.0-or-later
+      locations:
+      - accessPath: ""
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /lib/apk/db/installed
+      metadata:
+        architecture: ""
+        description: ""
+        files: null
+        gitCommitOfApkPort: ""
+        installedSize: 0
+        maintainer: ""
+        originPackage: musl
+        package: ""
+        provides: null
+        pullChecksum: ""
+        pullDependencies: null
+        size: 0
+        url: ""
+        version: ""
+      metadataType: apk-db-entry
+      name: musl-utils
+      purl: pkg:apk/alpine/musl-utils@1.2.5-r11?arch=x86_64&distro=alpine-3.21.7&upstream=musl
+      type: apk
+      version: 1.2.5-r11
+    - cpes:
+      - cpe: cpe:2.3:a:scanelf:scanelf:1.3.8-r1:*:*:*:*:*:*:*
+        source: syft-generated
+      foundBy: ""
+      id: e70542a40cdca454
+      language: ""
+      licenses:
+      - locations: null
+        spdxExpression: GPL-2.0-only
+        type: declared
+        urls: null
+        value: GPL-2.0-only
+      locations:
+      - accessPath: ""
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /lib/apk/db/installed
+      metadata:
+        architecture: ""
+        description: ""
+        files: null
+        gitCommitOfApkPort: ""
+        installedSize: 0
+        maintainer: ""
+        originPackage: pax-utils
+        package: ""
+        provides: null
+        pullChecksum: ""
+        pullDependencies: null
+        size: 0
+        url: ""
+        version: ""
+      metadataType: apk-db-entry
+      name: scanelf
+      purl: pkg:apk/alpine/scanelf@1.3.8-r1?arch=x86_64&distro=alpine-3.21.7&upstream=pax-utils
+      type: apk
+      version: 1.3.8-r1
+    - cpes:
+      - cpe: cpe:2.3:a:ssl-client:ssl-client:1.37.0-r14:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:ssl-client:ssl_client:1.37.0-r14:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:ssl_client:ssl-client:1.37.0-r14:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:ssl_client:ssl_client:1.37.0-r14:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:ssl:ssl-client:1.37.0-r14:*:*:*:*:*:*:*
+        source: syft-generated
+      - cpe: cpe:2.3:a:ssl:ssl_client:1.37.0-r14:*:*:*:*:*:*:*
+        source: syft-generated
+      foundBy: ""
+      id: 75b5ba1004bc765a
+      language: ""
+      licenses:
+      - locations: null
+        spdxExpression: GPL-2.0-only
+        type: declared
+        urls: null
+        value: GPL-2.0-only
+      locations:
+      - accessPath: ""
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /lib/apk/db/installed
+      metadata:
+        architecture: ""
+        description: ""
+        files: null
+        gitCommitOfApkPort: ""
+        installedSize: 0
+        maintainer: ""
+        originPackage: busybox
+        package: ""
+        provides: null
+        pullChecksum: ""
+        pullDependencies: null
+        size: 0
+        url: ""
+        version: ""
+      metadataType: apk-db-entry
+      name: ssl_client
+      purl: pkg:apk/alpine/ssl_client@1.37.0-r14?arch=x86_64&distro=alpine-3.21.7&upstream=busybox
+      type: apk
+      version: 1.37.0-r14
+    - cpes:
+      - cpe: cpe:2.3:a:golang:go:1.26.3:-:*:*:*:*:*:*
+        source: syft-generated
+      foundBy: ""
+      id: 7fc73da7bd034206
+      language: go
+      licenses:
+      - locations: null
+        spdxExpression: BSD-3-Clause
+        type: declared
+        urls: null
+        value: BSD-3-Clause
+      locations:
+      - accessPath: ""
+        layerID: sha256:eedfd6e00764b58237f6d24bed51996202f07ee6397e60552d748b475912ac85
+        path: /server
+      metadata:
+        architecture: ""
+        goCompiledVersion: ""
+      metadataType: go-module-buildinfo-entry
+      name: stdlib
+      purl: pkg:golang/stdlib@1.26.3
+      type: go-module
+      version: go1.26.3
+    - cpes:
+      - cpe: cpe:2.3:a:zlib:zlib:1.3.2-r0:*:*:*:*:*:*:*
+        source: syft-generated
+      foundBy: ""
+      id: 36b5764983e8c2ac
+      language: ""
+      licenses:
+      - locations: null
+        spdxExpression: Zlib
+        type: declared
+        urls: null
+        value: Zlib
+      locations:
+      - accessPath: ""
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /lib/apk/db/installed
+      metadata:
+        architecture: ""
+        description: ""
+        files: null
+        gitCommitOfApkPort: ""
+        installedSize: 0
+        maintainer: ""
+        originPackage: zlib
+        package: ""
+        provides: null
+        pullChecksum: ""
+        pullDependencies: null
+        size: 0
+        url: ""
+        version: ""
+      metadataType: apk-db-entry
+      name: zlib
+      purl: pkg:apk/alpine/zlib@1.3.2-r0?arch=x86_64&distro=alpine-3.21.7
+      type: apk
+      version: 1.3.2-r0
+    descriptor:
+      configuration: null
+      name: syft
+      version: v1.32.0
+    distro:
+      bugReportURL: https://gitlab.alpinelinux.org/alpine/aports/-/issues
+      homeURL: https://alpinelinux.org/
+      id: alpine
+      name: Alpine Linux
+      prettyName: Alpine Linux v3.21
+      versionID: 3.21.7
+    files:
+    - id: f0fb712869ed2695
+      location:
+        layerID: sha256:eedfd6e00764b58237f6d24bed51996202f07ee6397e60552d748b475912ac85
+        path: /server
+    - id: b1d5d9f7acaaace8
+      location:
+        layerID: sha256:1519b5d08e3feb969c1a21bdf1c2e232f996e6aa185f386f34dda678c58d8cf0
+        path: /etc/group
+    - id: 17708ed5fbf8d211
+      location:
+        layerID: sha256:1519b5d08e3feb969c1a21bdf1c2e232f996e6aa185f386f34dda678c58d8cf0
+        path: /etc/passwd
+    - id: 1538b34393218a6e
+      location:
+        layerID: sha256:1519b5d08e3feb969c1a21bdf1c2e232f996e6aa185f386f34dda678c58d8cf0
+        path: /etc/shadow
+    - id: 40fd205c14516398
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /bin/busybox
+    - id: c3a3aca676f798c7
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/alpine-release
+    - id: 80d3d67305770f7f
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/apk/keys/alpine-devel@lists.alpinelinux.org-4a6a0840.rsa.pub
+    - id: 451687210365323f
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/apk/keys/alpine-devel@lists.alpinelinux.org-5243ef4b.rsa.pub
+    - id: b268e5bcbb5ae6cd
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/apk/keys/alpine-devel@lists.alpinelinux.org-5261cecb.rsa.pub
+    - id: ee8be499a3487add
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/apk/keys/alpine-devel@lists.alpinelinux.org-6165ee59.rsa.pub
+    - id: 2815d2d504a27c91
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/apk/keys/alpine-devel@lists.alpinelinux.org-61666e3f.rsa.pub
+    - id: 845113b8334fd108
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/busybox-paths.d/busybox
+    - id: e4f1e06ee185055f
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/crontabs/root
+    - id: 47b171206631e991
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/fstab
+    - id: af3436b5c6a8f83d
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/hostname
+    - id: 233e192445756e89
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/hosts
+    - id: c1e79a4c5b98a469
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/inittab
+    - id: 0c0f241a8f699eb0
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/issue
+    - id: 2cc7ae500c41a910
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/logrotate.d/acpid
+    - id: a566cefed15818a3
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/modprobe.d/aliases.conf
+    - id: 2e95a66e002e0094
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/modprobe.d/blacklist.conf
+    - id: 545452b71f670487
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/modprobe.d/i386.conf
+    - id: 0a3d2bed8cddbdbc
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/modprobe.d/kms.conf
+    - id: 608f7f8377f05fb5
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/modules
+    - id: 80c96a54db5ef2a3
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/motd
+    - id: 95a043bd15bf1cad
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/network/if-up.d/dad
+    - id: 252a6f87c373255b
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/nsswitch.conf
+    - id: 5f55333566e8cd8f
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/profile
+    - id: cc951414e5bc3f66
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/profile.d/20locale.sh
+    - id: ccc4f9c23cb85c2b
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/profile.d/README
+    - id: be3ca956d6d1dfbc
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/profile.d/color_prompt.sh.disabled
+    - id: cf60d1cf8b3aedea
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/protocols
+    - id: b03e3ed563f8ccdd
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/secfixes.d/alpine
+    - id: 5f9981db136e227b
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/securetty
+    - id: f696237ea5c99f05
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/services
+    - id: a17a6ed06be10aa1
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/shells
+    - id: 36857ed702a8d18a
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/ssl/certs/ca-certificates.crt
+    - id: 4c6f0114a23e6efc
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/ssl/ct_log_list.cnf
+    - id: 4e30b69eb8f5716e
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/ssl/ct_log_list.cnf.dist
+    - id: d5c25fe975d08434
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/ssl/openssl.cnf
+    - id: b5ece04c27193042
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/ssl/openssl.cnf.dist
+    - id: f98944926538946e
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/sysctl.conf
+    - id: 8e17eb953fad34e4
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /etc/udhcpc/udhcpc.conf
+    - id: 2f149d5e4ce10ab7
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /lib/apk/db/installed
+    - id: 752ad684c3575e50
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /lib/ld-musl-x86_64.so.1
+    - id: 260ae75d2be0c0f9
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /sbin/apk
+    - id: d98b6b2746e33142
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /sbin/ldconfig
+    - id: ad5d0683e5446e2a
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/bin/getconf
+    - id: c68a1ef3d9062561
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/bin/getent
+    - id: 3153bb745d0a9fc2
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/bin/iconv
+    - id: 187181d44bc61352
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/bin/ldd
+    - id: 3d09899bb108e96e
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/bin/scanelf
+    - id: 4ff4cc9eb057dc1b
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/bin/ssl_client
+    - id: 715cceb53ede241e
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/lib/engines-3/afalg.so
+    - id: 7568460f27a7f6f6
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/lib/engines-3/capi.so
+    - id: 45afd3fb1409c7c0
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/lib/engines-3/loader_attic.so
+    - id: 96c8aead9ecaf97c
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/lib/engines-3/padlock.so
+    - id: e0a00041eff2a75b
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/lib/libapk.so.2.14.0
+    - id: 13701b38d939df77
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/lib/libcrypto.so.3
+    - id: d9e6723e7fcefd50
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/lib/libssl.so.3
+    - id: 6db5a5b89fd89822
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/lib/libz.so.1.3.2
+    - id: 21744d077f8919ae
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/lib/os-release
+    - id: 082d82352dcce411
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/lib/ossl-modules/legacy.so
+    - id: 8ee49f897691f7e7
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/lib/sysctl.d/00-alpine.conf
+    - id: 2e1e94af4f4b7954
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-4a6a0840.rsa.pub
+    - id: 7ae66dabdc546614
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-5243ef4b.rsa.pub
+    - id: 297283db2447d59b
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-524d27bb.rsa.pub
+    - id: 0529c5a117a7384a
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-5261cecb.rsa.pub
+    - id: 44bf0c601f4f12df
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-58199dcc.rsa.pub
+    - id: 24ac705ad0bdf6f3
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-58cbb476.rsa.pub
+    - id: 13bbd5aa14006478
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-58e4f17d.rsa.pub
+    - id: ca82b5c176e30c09
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-5e69ca50.rsa.pub
+    - id: bb59fcc5d2a649e2
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-60ac2099.rsa.pub
+    - id: 01b498559d7dfd14
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-6165ee59.rsa.pub
+    - id: 48f6b061fe960c55
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-61666e3f.rsa.pub
+    - id: 7394789bd0f53fb8
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-616a9724.rsa.pub
+    - id: ee2391d5e878699b
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-616abc23.rsa.pub
+    - id: e710b48378b06bef
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-616ac3bc.rsa.pub
+    - id: b23ebc4f8dce427d
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-616adfeb.rsa.pub
+    - id: 0c8f53a55280c06f
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-616ae350.rsa.pub
+    - id: cc23aee18bf990dc
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-616db30d.rsa.pub
+    - id: 975bf19204a316be
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-66ba20fe.rsa.pub
+    - id: abd36acdb0a1633b
+      location:
+        layerID: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        path: /usr/share/udhcpc/default.script
+    schema:
+      url: https://raw.githubusercontent.com/anchore/syft/main/schema/json/schema-16.0.39.json
+      version: 16.0.39
+    source:
+      id: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+      metadata:
+        architecture: amd64
+        config: eyJhcmNoaXRlY3R1cmUiOiJhbWQ2NCIsImNyZWF0ZWQiOiIyMDI2LTA1LTI0VDA5OjMzOjMzLjM5MDcwNDYzNloiLCJoaXN0b3J5IjpbeyJjcmVhdGVkIjoiMjAyNi0wNC0xNlQyMzo1MzoxNS43MDQxMTA0MTRaIiwiY3JlYXRlZF9ieSI6IkFERCBhbHBpbmUtbWluaXJvb3Rmcy0zLjIxLjcteDg2XzY0LnRhci5neiAvICMgYnVpbGRraXQiLCJjb21tZW50IjoiYnVpbGRraXQuZG9ja2VyZmlsZS52MCJ9LHsiY3JlYXRlZCI6IjIwMjYtMDQtMTZUMjM6NTM6MTUuNzA0MTEwNDE0WiIsImNyZWF0ZWRfYnkiOiJDTUQgW1wiL2Jpbi9zaFwiXSIsImNvbW1lbnQiOiJidWlsZGtpdC5kb2NrZXJmaWxlLnYwIiwiZW1wdHlfbGF5ZXIiOnRydWV9LHsiY3JlYXRlZCI6IjIwMjYtMDUtMjRUMDk6MzM6MTQuNjYyMjY5OTMxWiIsImNyZWF0ZWRfYnkiOiJSVU4gL2Jpbi9zaCAtYyBhZGR1c2VyIC1EIC1IIC11IDEwMDAxIGFwcHVzZXIgIyBidWlsZGtpdCIsImNvbW1lbnQiOiJidWlsZGtpdC5kb2NrZXJmaWxlLnYwIn0seyJjcmVhdGVkIjoiMjAyNi0wNS0yNFQwOTozMzozMy4zOTA3MDQ2MzZaIiwiY3JlYXRlZF9ieSI6IkNPUFkgL291dC9zZXJ2ZXIgL3NlcnZlciAjIGJ1aWxka2l0IiwiY29tbWVudCI6ImJ1aWxka2l0LmRvY2tlcmZpbGUudjAifSx7ImNyZWF0ZWQiOiIyMDI2LTA1LTI0VDA5OjMzOjMzLjM5MDcwNDYzNloiLCJjcmVhdGVkX2J5IjoiVVNFUiBhcHB1c2VyIiwiY29tbWVudCI6ImJ1aWxka2l0LmRvY2tlcmZpbGUudjAiLCJlbXB0eV9sYXllciI6dHJ1ZX0seyJjcmVhdGVkIjoiMjAyNi0wNS0yNFQwOTozMzozMy4zOTA3MDQ2MzZaIiwiY3JlYXRlZF9ieSI6IkVYUE9TRSBbODA4MC90Y3BdIiwiY29tbWVudCI6ImJ1aWxka2l0LmRvY2tlcmZpbGUudjAiLCJlbXB0eV9sYXllciI6dHJ1ZX0seyJjcmVhdGVkIjoiMjAyNi0wNS0yNFQwOTozMzozMy4zOTA3MDQ2MzZaIiwiY3JlYXRlZF9ieSI6IkVOVFJZUE9JTlQgW1wiL3NlcnZlclwiXSIsImNvbW1lbnQiOiJidWlsZGtpdC5kb2NrZXJmaWxlLnYwIiwiZW1wdHlfbGF5ZXIiOnRydWV9XSwib3MiOiJsaW51eCIsInJvb3RmcyI6eyJ0eXBlIjoibGF5ZXJzIiwiZGlmZl9pZHMiOlsic2hhMjU2OmVlZGZkNmUwMDc2NGI1ODIzN2Y2ZDI0YmVkNTE5OTYyMDJmMDdlZTYzOTdlNjA1NTJkNzQ4YjQ3NTkxMmFjODUiLCJzaGEyNTY6MTUxOWI1ZDA4ZTNmZWI5NjljMWEyMWJkZjFjMmUyMzJmOTk2ZTZhYTE4NWYzODZmMzRkZGE2NzhjNThkOGNmMCIsInNoYTI1Njo3MjExZDAxYWJhOGZhMmU5ZWI3MWFkMzQzOTVjZDMxM2RmNWZjNTFhNmI2OWI5MmQyZGZhZDMyY2MzNzc1OWNiIl19LCJjb25maWciOnsiSGVhbHRoY2hlY2siOnt9LCJFbnRyeXBvaW50IjpbIi9zZXJ2ZXIiXSwiRW52IjpbIlBBVEg9L3Vzci9sb2NhbC9zYmluOi91c3IvbG9jYWwvYmluOi91c3Ivc2JpbjovdXNyL2Jpbjovc2JpbjovYmluIl0sIldvcmtpbmdEaXIiOiIvIiwiRXhwb3NlZFBvcnRzIjp7IjgwODAvdGNwIjp7fX19fQ==
+        imageID: sha256:dc43b47ec6a5190090f2f9f951050565f03916a27a7d8c7eda78789db28353c1
+        imageSize: 14603377
+        layers:
+        - digest: sha256:eedfd6e00764b58237f6d24bed51996202f07ee6397e60552d748b475912ac85
+          mediaType: application/vnd.oci.image.layer.v1.tar+gzip
+          size: 7833588
+        - digest: sha256:1519b5d08e3feb969c1a21bdf1c2e232f996e6aa185f386f34dda678c58d8cf0
+          mediaType: application/vnd.oci.image.layer.v1.tar+gzip
+          size: 3035
+        - digest: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+          mediaType: application/vnd.oci.image.layer.v1.tar+gzip
+          size: 6766754
+        manifest: null
+        manifestDigest: ""
+        mediaType: ""
+        os: linux
+        repoDigests:
+        - ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@sha256:9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+        tags: []
+        userInput: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@sha256:9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+      name: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@sha256:9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+      type: image
+      version: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@sha256:9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+status: {}

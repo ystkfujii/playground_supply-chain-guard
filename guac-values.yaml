@@ -1,0 +1,14 @@
+imagePullSecrets: []
+
+guac:
+  guacImage:
+    tag: "v1.1.0"
+
+  graphqlServer:
+    debug: true
+
+  visualizer:
+    enabled: true
+
+  sampleData:
+    ingest: false

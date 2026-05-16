@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: guaccollector
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/ystkfujii/playground_supply-chain-guard
+    targetRevision: main
+    path: manifests/guaccollector
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: guac
+  syncPolicy: {}

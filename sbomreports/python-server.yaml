@@ -1,0 +1,3951 @@
+apiVersion: aquasecurity.github.io/v1alpha1
+kind: SbomReport
+metadata:
+  creationTimestamp: "2026-05-24T09:52:46Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/managed-by: trivy-operator
+    resource-spec-hash: 844cf5b646
+    trivy-operator.container.name: app
+    trivy-operator.resource.kind: ReplicaSet
+    trivy-operator.resource.name: python-server-5ccdd8f84d
+    trivy-operator.resource.namespace: demo-python
+  name: replicaset-python-server-5ccdd8f84d-app
+  namespace: demo-python
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: false
+    controller: true
+    kind: ReplicaSet
+    name: python-server-5ccdd8f84d
+    uid: 8d9dc596-acfc-4799-83be-0b7f72268032
+  resourceVersion: "33425"
+  uid: 0b2bde8e-016a-495b-8400-a55edc9531c6
+report:
+  artifact:
+    digest: sha256:f4c72d8e76069a4643dd3f6568499bfd254a8c8faf5d94992b63a0fe2a70da68
+    repository: ystkfujii/playground_supply-chain-guard/python-server
+    tag: stable
+  components:
+    bomFormat: CycloneDX
+    components:
+    - bom-ref: 7a45c3d9-8218-40d1-80d5-52988bf78f1c
+      name: debian
+      properties:
+      - name: aquasecurity:trivy:Class
+        value: os-pkgs
+      - name: aquasecurity:trivy:Type
+        value: debian
+      type: operating-system
+      version: "13.5"
+    - bom-ref: pkg:deb/debian/adduser@3.152?arch=all&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-2.0-only
+      name: adduser
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:c529e1b2553946dcc9afa2d77e33a75f23d3702e0b4a7911b67e2f1fe45a4939
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:e113665b194b20ba7e9093ef6a1a38edbaebbfb983c00e379a45a142a95a86ef
+      - name: aquasecurity:trivy:PkgID
+        value: adduser@3.152
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: adduser
+      - name: aquasecurity:trivy:SrcVersion
+        value: "3.152"
+      purl: pkg:deb/debian/adduser@3.152?arch=all&distro=debian-13.5
+      supplier:
+        name: Debian Adduser Developers <adduser@packages.debian.org>
+      type: library
+      version: "3.152"
+    - bom-ref: pkg:deb/debian/apt@3.0.3?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: curl
+      - license:
+          id: BSD-3-Clause
+      - license:
+          id: MIT
+      - license:
+          id: GPL-2.0-only
+      name: apt
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: apt@3.0.3
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: apt
+      - name: aquasecurity:trivy:SrcVersion
+        value: 3.0.3
+      purl: pkg:deb/debian/apt@3.0.3?arch=amd64&distro=debian-13.5
+      supplier:
+        name: APT Development Team <deity@lists.debian.org>
+      type: library
+      version: 3.0.3
+    - bom-ref: pkg:deb/debian/base-files@13.8%2Bdeb13u5?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          name: verbatim
+      name: base-files
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: base-files@13.8+deb13u5
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: base-files
+      - name: aquasecurity:trivy:SrcVersion
+        value: 13.8+deb13u5
+      purl: pkg:deb/debian/base-files@13.8%2Bdeb13u5?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Santiago Vila <sanvila@debian.org>
+      type: library
+      version: 13.8+deb13u5
+    - bom-ref: pkg:deb/debian/base-passwd@3.6.7?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-2.0-only
+      - license:
+          name: public-domain
+      name: base-passwd
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: base-passwd@3.6.7
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: base-passwd
+      - name: aquasecurity:trivy:SrcVersion
+        value: 3.6.7
+      purl: pkg:deb/debian/base-passwd@3.6.7?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Shadow package maintainers <pkg-shadow-devel@lists.alioth.debian.org>
+      type: library
+      version: 3.6.7
+    - bom-ref: pkg:deb/debian/bash@5.2.37-2%2Bb9?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-3.0-or-later
+      - license:
+          id: GPL-3.0-only
+      - license:
+          name: GPL-3.0-or-later WITH Bison-exception
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: GFDL-1.3-no-invariants-only
+      - license:
+          id: GFDL-1.3-only
+      - license:
+          id: Latex2e
+      - license:
+          id: BSD-4-Clause-UC
+      - license:
+          id: MIT
+      - license:
+          name: permissive
+      name: bash
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: bash@5.2.37-2+b9
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: bash
+      - name: aquasecurity:trivy:SrcRelease
+        value: "2"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 5.2.37
+      purl: pkg:deb/debian/bash@5.2.37-2%2Bb9?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Matthias Klose <doko@debian.org>
+      type: library
+      version: 5.2.37-2+b9
+    - bom-ref: pkg:deb/debian/bsdutils@2.41-5?arch=amd64&distro=debian-13.5&epoch=1
+      licenses:
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: GPL-3.0-or-later
+      - license:
+          id: LGPL-2.1-or-later
+      - license:
+          name: public-domain
+      - license:
+          id: BSD-4-Clause
+      - license:
+          id: MIT
+      - license:
+          id: ISC
+      - license:
+          id: BSD-3-Clause
+      - license:
+          name: BSLA
+      - license:
+          id: LGPL-2.0-or-later
+      - license:
+          id: BSD-2-Clause
+      - license:
+          id: LGPL-3.0-or-later
+      - license:
+          id: GPL-3.0-only
+      - license:
+          id: LGPL-2.0-only
+      - license:
+          id: LGPL-2.1-only
+      - license:
+          id: LGPL-3.0-only
+      name: bsdutils
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: bsdutils@1:2.41-5
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: util-linux
+      - name: aquasecurity:trivy:SrcRelease
+        value: "5"
+      - name: aquasecurity:trivy:SrcVersion
+        value: "2.41"
+      purl: pkg:deb/debian/bsdutils@2.41-5?arch=amd64&distro=debian-13.5&epoch=1
+      supplier:
+        name: Chris Hofstaedtler <zeha@debian.org>
+      type: library
+      version: 1:2.41-5
+    - bom-ref: pkg:deb/debian/ca-certificates@20250419?arch=all&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: MPL-2.0
+      name: ca-certificates
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:ae0096d57d7f18e7861848f1103983488102f78517c11444120d8a938884de54
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:4a9dde5cdde190bfa0a3ab17863a083e66ea9636b157638c315357dfa476ba76
+      - name: aquasecurity:trivy:PkgID
+        value: ca-certificates@20250419
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: ca-certificates
+      - name: aquasecurity:trivy:SrcVersion
+        value: "20250419"
+      purl: pkg:deb/debian/ca-certificates@20250419?arch=all&distro=debian-13.5
+      supplier:
+        name: Julien Cristau <jcristau@debian.org>
+      type: library
+      version: "20250419"
+    - bom-ref: pkg:deb/debian/coreutils@9.7-3?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-3.0-or-later
+      - license:
+          id: BSD-4-Clause-UC
+      - license:
+          id: GPL-3.0-only
+      - license:
+          id: ISC
+      - license:
+          id: FSFULLR
+      - license:
+          id: GFDL-1.3-no-invariants-only
+      - license:
+          id: GFDL-1.3-only
+      name: coreutils
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: coreutils@9.7-3
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: coreutils
+      - name: aquasecurity:trivy:SrcRelease
+        value: "3"
+      - name: aquasecurity:trivy:SrcVersion
+        value: "9.7"
+      purl: pkg:deb/debian/coreutils@9.7-3?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Michael Stone <mstone@debian.org>
+      type: library
+      version: 9.7-3
+    - bom-ref: pkg:deb/debian/dash@0.5.12-12?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: BSD-3-Clause
+      - license:
+          name: public-domain
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-2.0-only
+      name: dash
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: dash@0.5.12-12
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: dash
+      - name: aquasecurity:trivy:SrcRelease
+        value: "12"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 0.5.12
+      purl: pkg:deb/debian/dash@0.5.12-12?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Andrej Shadura <andrewsh@debian.org>
+      type: library
+      version: 0.5.12-12
+    - bom-ref: pkg:deb/debian/debconf@1.5.91?arch=all&distro=debian-13.5
+      licenses:
+      - license:
+          id: BSD-2-Clause
+      name: debconf
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: debconf@1.5.91
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: debconf
+      - name: aquasecurity:trivy:SrcVersion
+        value: 1.5.91
+      purl: pkg:deb/debian/debconf@1.5.91?arch=all&distro=debian-13.5
+      supplier:
+        name: Debconf Developers <debconf-devel@lists.alioth.debian.org>
+      type: library
+      version: 1.5.91
+    - bom-ref: pkg:deb/debian/debian-archive-keyring@2025.1?arch=all&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-2.0-or-later
+      name: debian-archive-keyring
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: debian-archive-keyring@2025.1
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: debian-archive-keyring
+      - name: aquasecurity:trivy:SrcVersion
+        value: "2025.1"
+      purl: pkg:deb/debian/debian-archive-keyring@2025.1?arch=all&distro=debian-13.5
+      supplier:
+        name: Debian Release Team <packages@release.debian.org>
+      type: library
+      version: "2025.1"
+    - bom-ref: pkg:deb/debian/debianutils@5.23.2?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-2.0-only
+      - license:
+          name: public-domain
+      - license:
+          id: SMAIL-GPL
+      name: debianutils
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: debianutils@5.23.2
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: debianutils
+      - name: aquasecurity:trivy:SrcVersion
+        value: 5.23.2
+      purl: pkg:deb/debian/debianutils@5.23.2?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Ileana Dumitrescu <ileanadumitrescu95@gmail.com>
+      type: library
+      version: 5.23.2
+    - bom-ref: pkg:deb/debian/diffutils@3.10-4?arch=amd64&distro=debian-13.5&epoch=1
+      licenses:
+      - license:
+          id: GPL-3.0-or-later
+      - license:
+          id: FSFULLR
+      - license:
+          id: LGPL-2.1-or-later
+      - license:
+          name: GPL-3.0-only WITH autoconf-exception+
+      - license:
+          id: GPL-3.0-only
+      - license:
+          name: GPL-3.0-or-later WITH texinfo-exception
+      - license:
+          id: LGPL-2.0-or-later
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: X11
+      - license:
+          id: FSFAP
+      - license:
+          id: GFDL-1.3-no-invariants-only
+      - license:
+          id: LGPL-3.0-or-later
+      - license:
+          id: LGPL-3.0-only
+      - license:
+          name: public-domain
+      - license:
+          id: LGPL-2.0-only
+      - license:
+          id: LGPL-2.1-only
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: GFDL-1.3-only
+      name: diffutils
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: diffutils@1:3.10-4
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcEpoch
+        value: "1"
+      - name: aquasecurity:trivy:SrcName
+        value: diffutils
+      - name: aquasecurity:trivy:SrcRelease
+        value: "4"
+      - name: aquasecurity:trivy:SrcVersion
+        value: "3.10"
+      purl: pkg:deb/debian/diffutils@3.10-4?arch=amd64&distro=debian-13.5&epoch=1
+      supplier:
+        name: Santiago Vila <sanvila@debian.org>
+      type: library
+      version: 1:3.10-4
+    - bom-ref: pkg:deb/debian/dpkg@1.22.22?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          name: public-domain-s-s-d
+      - license:
+          id: GPL-2.0-only
+      name: dpkg
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: dpkg@1.22.22
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: dpkg
+      - name: aquasecurity:trivy:SrcVersion
+        value: 1.22.22
+      purl: pkg:deb/debian/dpkg@1.22.22?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Dpkg Developers <debian-dpkg@lists.debian.org>
+      type: library
+      version: 1.22.22
+    - bom-ref: pkg:deb/debian/findutils@4.10.0-3?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: GFDL-1.3-no-invariants-or-later
+      - license:
+          id: GPL-3.0-or-later
+      - license:
+          id: FSFAP
+      - license:
+          name: GPL-2.0-or-later WITH Autoconf-data-exception
+      - license:
+          name: GPL-3.0-or-later WITH Autoconf-data-exception
+      - license:
+          id: FSFULLR
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: X11
+      - license:
+          name: public-domain
+      - license:
+          id: LGPL-2.1-or-later
+      - license:
+          name: GPL-2.0-or-later WITH automake-exception
+      - license:
+          id: LGPL-2.0-or-later
+      - license:
+          id: LGPL-3.0-or-later
+      - license:
+          id: BSD-3-Clause
+      - license:
+          name: GPL-3.0-or-later WITH Bison-2.2-exception
+      - license:
+          id: LGPL-3.0-only
+      - license:
+          id: ISC
+      - license:
+          id: GFDL-1.3-only
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: GPL-3.0-only
+      - license:
+          id: LGPL-2.0-only
+      - license:
+          id: LGPL-2.1-only
+      name: findutils
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: findutils@4.10.0-3
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: findutils
+      - name: aquasecurity:trivy:SrcRelease
+        value: "3"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 4.10.0
+      purl: pkg:deb/debian/findutils@4.10.0-3?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Andreas Metzler <ametzler@debian.org>
+      type: library
+      version: 4.10.0-3
+    - bom-ref: pkg:deb/debian/gcc-14-base@14.2.0-19?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-3.0-only
+      - license:
+          id: GFDL-1.2-only
+      - license:
+          id: Artistic-2.0
+      - license:
+          id: LGPL-2.0-or-later
+      name: gcc-14-base
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: gcc-14-base@14.2.0-19
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: gcc-14
+      - name: aquasecurity:trivy:SrcRelease
+        value: "19"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 14.2.0
+      purl: pkg:deb/debian/gcc-14-base@14.2.0-19?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+      type: library
+      version: 14.2.0-19
+    - bom-ref: pkg:deb/debian/grep@3.11-4?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-3.0-or-later
+      - license:
+          id: GPL-3.0-only
+      name: grep
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: grep@3.11-4
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: grep
+      - name: aquasecurity:trivy:SrcRelease
+        value: "4"
+      - name: aquasecurity:trivy:SrcVersion
+        value: "3.11"
+      purl: pkg:deb/debian/grep@3.11-4?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Anibal Monsalve Salazar <anibal@debian.org>
+      type: library
+      version: 3.11-4
+    - bom-ref: pkg:deb/debian/gzip@1.13-1?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-3.0-or-later
+      - license:
+          name: GFDL-1.3--no-invariant
+      - license:
+          name: FSF-manpages
+      - license:
+          id: GPL-3.0-only
+      - license:
+          name: GFDL-3
+      name: gzip
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: gzip@1.13-1
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: gzip
+      - name: aquasecurity:trivy:SrcRelease
+        value: "1"
+      - name: aquasecurity:trivy:SrcVersion
+        value: "1.13"
+      purl: pkg:deb/debian/gzip@1.13-1?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Milan Kupcevic <milan@debian.org>
+      type: library
+      version: 1.13-1
+    - bom-ref: pkg:deb/debian/hostname@3.25?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-2.0-only
+      name: hostname
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: hostname@3.25
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: hostname
+      - name: aquasecurity:trivy:SrcVersion
+        value: "3.25"
+      purl: pkg:deb/debian/hostname@3.25?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Michael Meskes <meskes@debian.org>
+      type: library
+      version: "3.25"
+    - bom-ref: pkg:deb/debian/init-system-helpers@1.69~deb13u1?arch=all&distro=debian-13.5
+      licenses:
+      - license:
+          id: BSD-3-Clause
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-2.0-only
+      name: init-system-helpers
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: init-system-helpers@1.69~deb13u1
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: init-system-helpers
+      - name: aquasecurity:trivy:SrcVersion
+        value: 1.69~deb13u1
+      purl: pkg:deb/debian/init-system-helpers@1.69~deb13u1?arch=all&distro=debian-13.5
+      supplier:
+        name: Debian systemd Maintainers <pkg-systemd-maintainers@lists.alioth.debian.org>
+      type: library
+      version: 1.69~deb13u1
+    - bom-ref: pkg:deb/debian/libacl1@2.3.2-2%2Bb1?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: LGPL-2.0-or-later
+      - license:
+          id: LGPL-2.1-only
+      name: libacl1
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libacl1@2.3.2-2+b1
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: acl
+      - name: aquasecurity:trivy:SrcRelease
+        value: "2"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 2.3.2
+      purl: pkg:deb/debian/libacl1@2.3.2-2%2Bb1?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Guillem Jover <guillem@debian.org>
+      type: library
+      version: 2.3.2-2+b1
+    - bom-ref: pkg:deb/debian/libapt-pkg7.0@3.0.3?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: curl
+      - license:
+          id: BSD-3-Clause
+      - license:
+          id: MIT
+      - license:
+          id: GPL-2.0-only
+      name: libapt-pkg7.0
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libapt-pkg7.0@3.0.3
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: apt
+      - name: aquasecurity:trivy:SrcVersion
+        value: 3.0.3
+      purl: pkg:deb/debian/libapt-pkg7.0@3.0.3?arch=amd64&distro=debian-13.5
+      supplier:
+        name: APT Development Team <deity@lists.debian.org>
+      type: library
+      version: 3.0.3
+    - bom-ref: pkg:deb/debian/libattr1@2.5.2-3?arch=amd64&distro=debian-13.5&epoch=1
+      licenses:
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: LGPL-2.0-or-later
+      - license:
+          id: LGPL-2.1-only
+      name: libattr1
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libattr1@1:2.5.2-3
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcEpoch
+        value: "1"
+      - name: aquasecurity:trivy:SrcName
+        value: attr
+      - name: aquasecurity:trivy:SrcRelease
+        value: "3"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 2.5.2
+      purl: pkg:deb/debian/libattr1@2.5.2-3?arch=amd64&distro=debian-13.5&epoch=1
+      supplier:
+        name: Guillem Jover <guillem@debian.org>
+      type: library
+      version: 1:2.5.2-3
+    - bom-ref: pkg:deb/debian/libaudit-common@4.0.2-2?arch=all&distro=debian-13.5&epoch=1
+      licenses:
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: LGPL-2.1-only
+      - license:
+          id: GPL-1.0-only
+      name: libaudit-common
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libaudit-common@1:4.0.2-2
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcEpoch
+        value: "1"
+      - name: aquasecurity:trivy:SrcName
+        value: audit
+      - name: aquasecurity:trivy:SrcRelease
+        value: "2"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 4.0.2
+      purl: pkg:deb/debian/libaudit-common@4.0.2-2?arch=all&distro=debian-13.5&epoch=1
+      supplier:
+        name: Laurent Bigonville <bigon@debian.org>
+      type: library
+      version: 1:4.0.2-2
+    - bom-ref: pkg:deb/debian/libaudit1@4.0.2-2%2Bb2?arch=amd64&distro=debian-13.5&epoch=1
+      licenses:
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: LGPL-2.1-only
+      - license:
+          id: GPL-1.0-only
+      name: libaudit1
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libaudit1@1:4.0.2-2+b2
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcEpoch
+        value: "1"
+      - name: aquasecurity:trivy:SrcName
+        value: audit
+      - name: aquasecurity:trivy:SrcRelease
+        value: "2"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 4.0.2
+      purl: pkg:deb/debian/libaudit1@4.0.2-2%2Bb2?arch=amd64&distro=debian-13.5&epoch=1
+      supplier:
+        name: Laurent Bigonville <bigon@debian.org>
+      type: library
+      version: 1:4.0.2-2+b2
+    - bom-ref: pkg:deb/debian/libblkid1@2.41-5?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: GPL-3.0-or-later
+      - license:
+          id: LGPL-2.1-or-later
+      - license:
+          name: public-domain
+      - license:
+          id: BSD-4-Clause
+      - license:
+          id: MIT
+      - license:
+          id: ISC
+      - license:
+          id: BSD-3-Clause
+      - license:
+          name: BSLA
+      - license:
+          id: LGPL-2.0-or-later
+      - license:
+          id: BSD-2-Clause
+      - license:
+          id: LGPL-3.0-or-later
+      - license:
+          id: GPL-3.0-only
+      - license:
+          id: LGPL-2.0-only
+      - license:
+          id: LGPL-2.1-only
+      - license:
+          id: LGPL-3.0-only
+      name: libblkid1
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libblkid1@2.41-5
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: util-linux
+      - name: aquasecurity:trivy:SrcRelease
+        value: "5"
+      - name: aquasecurity:trivy:SrcVersion
+        value: "2.41"
+      purl: pkg:deb/debian/libblkid1@2.41-5?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Chris Hofstaedtler <zeha@debian.org>
+      type: library
+      version: 2.41-5
+    - bom-ref: pkg:deb/debian/libbsd0@0.12.2-2?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: BSD-3-Clause
+      - license:
+          name: BSD-3-clause-Regents
+      - license:
+          id: BSD-2-Clause-NetBSD
+      - license:
+          name: BSD-3-clause-author
+      - license:
+          name: BSD-3-clause-John-Birrell
+      - license:
+          name: BSD-5-clause-Peter-Wemm
+      - license:
+          id: BSD-2-Clause
+      - license:
+          name: BSD-2-clause-verbatim
+      - license:
+          name: BSD-2-clause-author
+      - license:
+          id: ISC
+      - license:
+          name: ISC-Original
+      - license:
+          id: MIT
+      - license:
+          name: public-domain
+      - license:
+          id: Beerware
+      name: libbsd0
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libbsd0@0.12.2-2
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: libbsd
+      - name: aquasecurity:trivy:SrcRelease
+        value: "2"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 0.12.2
+      purl: pkg:deb/debian/libbsd0@0.12.2-2?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Guillem Jover <guillem@debian.org>
+      type: library
+      version: 0.12.2-2
+    - bom-ref: pkg:deb/debian/libbz2-1.0@1.0.8-6?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: BSD-3-Clause
+      - license:
+          id: GPL-2.0-only
+      name: libbz2-1.0
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libbz2-1.0@1.0.8-6
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: bzip2
+      - name: aquasecurity:trivy:SrcRelease
+        value: "6"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 1.0.8
+      purl: pkg:deb/debian/libbz2-1.0@1.0.8-6?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Anibal Monsalve Salazar <anibal@debian.org>
+      type: library
+      version: 1.0.8-6
+    - bom-ref: pkg:deb/debian/libc-bin@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: LGPL-2.1-or-later
+      - license:
+          id: LGPL-2.0-or-later
+      - license:
+          name: LGPL-2.1-or-later WITH link-exception
+      - license:
+          id: LGPL-3.0-or-later
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          name: GPL-2.0-or-later WITH link-exception
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: GPL-3.0-or-later
+      - license:
+          id: FSFAP
+      - license:
+          name: Carnegie
+      - license:
+          name: Inner-Net
+      - license:
+          name: MIT-like-Lord
+      - license:
+          name: BSD-like-Spencer
+      - license:
+          name: PCRE
+      - license:
+          name: BSD-3-clause-Carnegie
+      - license:
+          id: Unicode-DFS-2016
+      - license:
+          id: BSL-1.0
+      - license:
+          id: SunPro
+      - license:
+          name: CORE-MATH
+      - license:
+          name: BSD-3-clause-Berkeley
+      - license:
+          name: BSD-3-clause-WIDE
+      - license:
+          id: BSD-2-Clause
+      - license:
+          name: BSD-3-clause-Oracle
+      - license:
+          name: DEC
+      - license:
+          name: IBM
+      - license:
+          id: ISC
+      - license:
+          name: Univ-Coimbra
+      - license:
+          name: public-domain
+      - license:
+          id: GPL-3.0-only
+      - license:
+          id: LGPL-2.0-only
+      - license:
+          id: LGPL-2.1-only
+      - license:
+          id: LGPL-3.0-only
+      name: libc-bin
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libc-bin@2.41-12+deb13u3
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: glibc
+      - name: aquasecurity:trivy:SrcRelease
+        value: 12+deb13u3
+      - name: aquasecurity:trivy:SrcVersion
+        value: "2.41"
+      purl: pkg:deb/debian/libc-bin@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      supplier:
+        name: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+      type: library
+      version: 2.41-12+deb13u3
+    - bom-ref: pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: LGPL-2.1-or-later
+      - license:
+          id: LGPL-2.0-or-later
+      - license:
+          name: LGPL-2.1-or-later WITH link-exception
+      - license:
+          id: LGPL-3.0-or-later
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          name: GPL-2.0-or-later WITH link-exception
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: GPL-3.0-or-later
+      - license:
+          id: FSFAP
+      - license:
+          name: Carnegie
+      - license:
+          name: Inner-Net
+      - license:
+          name: MIT-like-Lord
+      - license:
+          name: BSD-like-Spencer
+      - license:
+          name: PCRE
+      - license:
+          name: BSD-3-clause-Carnegie
+      - license:
+          id: Unicode-DFS-2016
+      - license:
+          id: BSL-1.0
+      - license:
+          id: SunPro
+      - license:
+          name: CORE-MATH
+      - license:
+          name: BSD-3-clause-Berkeley
+      - license:
+          name: BSD-3-clause-WIDE
+      - license:
+          id: BSD-2-Clause
+      - license:
+          name: BSD-3-clause-Oracle
+      - license:
+          name: DEC
+      - license:
+          name: IBM
+      - license:
+          id: ISC
+      - license:
+          name: Univ-Coimbra
+      - license:
+          name: public-domain
+      - license:
+          id: GPL-3.0-only
+      - license:
+          id: LGPL-2.0-only
+      - license:
+          id: LGPL-2.1-only
+      - license:
+          id: LGPL-3.0-only
+      name: libc6
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libc6@2.41-12+deb13u3
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: glibc
+      - name: aquasecurity:trivy:SrcRelease
+        value: 12+deb13u3
+      - name: aquasecurity:trivy:SrcVersion
+        value: "2.41"
+      purl: pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      supplier:
+        name: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+      type: library
+      version: 2.41-12+deb13u3
+    - bom-ref: pkg:deb/debian/libcap-ng0@0.8.5-4%2Bb1?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: LGPL-2.1-or-later
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-3.0-only
+      - license:
+          id: LGPL-2.1-only
+      - license:
+          id: GPL-2.0-only
+      name: libcap-ng0
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libcap-ng0@0.8.5-4+b1
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: libcap-ng
+      - name: aquasecurity:trivy:SrcRelease
+        value: "4"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 0.8.5
+      purl: pkg:deb/debian/libcap-ng0@0.8.5-4%2Bb1?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Håvard F. Aasen <havard.f.aasen@pfft.no>
+      type: library
+      version: 0.8.5-4+b1
+    - bom-ref: pkg:deb/debian/libcap2@2.75-10%2Bdeb13u1%2Bb1?arch=amd64&distro=debian-13.5&epoch=1
+      licenses:
+      - license:
+          id: BSD-3-Clause
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: GPL-2.0-or-later
+      name: libcap2
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libcap2@1:2.75-10+deb13u1+b1
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcEpoch
+        value: "1"
+      - name: aquasecurity:trivy:SrcName
+        value: libcap2
+      - name: aquasecurity:trivy:SrcRelease
+        value: 10+deb13u1
+      - name: aquasecurity:trivy:SrcVersion
+        value: "2.75"
+      purl: pkg:deb/debian/libcap2@2.75-10%2Bdeb13u1%2Bb1?arch=amd64&distro=debian-13.5&epoch=1
+      supplier:
+        name: Christian Kastner <ckk@debian.org>
+      type: library
+      version: 1:2.75-10+deb13u1+b1
+    - bom-ref: pkg:deb/debian/libcrypt1@4.4.38-1?arch=amd64&distro=debian-13.5&epoch=1
+      name: libcrypt1
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libcrypt1@1:4.4.38-1
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcEpoch
+        value: "1"
+      - name: aquasecurity:trivy:SrcName
+        value: libxcrypt
+      - name: aquasecurity:trivy:SrcRelease
+        value: "1"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 4.4.38
+      purl: pkg:deb/debian/libcrypt1@4.4.38-1?arch=amd64&distro=debian-13.5&epoch=1
+      supplier:
+        name: Marco d'Itri <md@linux.it>
+      type: library
+      version: 1:4.4.38-1
+    - bom-ref: pkg:deb/debian/libdb5.3t64@5.3.28%2Bdfsg2-9?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: Sleepycat
+      - license:
+          id: BSD-3-Clause
+      - license:
+          id: MS-PL
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: Artistic-2.0
+      - license:
+          id: X11
+      - license:
+          name: MIT-old
+      - license:
+          name: TCL-like
+      - license:
+          name: BSD-3-clause-fjord
+      - license:
+          id: GPL-3.0-only
+      - license:
+          id: Zlib
+      name: libdb5.3t64
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libdb5.3t64@5.3.28+dfsg2-9
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: db5.3
+      - name: aquasecurity:trivy:SrcRelease
+        value: "9"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 5.3.28+dfsg2
+      purl: pkg:deb/debian/libdb5.3t64@5.3.28%2Bdfsg2-9?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Debian QA Group <packages@qa.debian.org>
+      type: library
+      version: 5.3.28+dfsg2-9
+    - bom-ref: pkg:deb/debian/libdebconfclient0@0.280?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: BSD-2-Clause
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-2.0-only
+      name: libdebconfclient0
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libdebconfclient0@0.280
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: cdebconf
+      - name: aquasecurity:trivy:SrcVersion
+        value: "0.280"
+      purl: pkg:deb/debian/libdebconfclient0@0.280?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Debian Install System Team <debian-boot@lists.debian.org>
+      type: library
+      version: "0.280"
+    - bom-ref: pkg:deb/debian/libffi8@3.4.8-2?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: MIT
+      - license:
+          id: X11
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-3.0-or-later
+      - license:
+          id: MPL-1.1
+      - license:
+          id: LGPL-2.1-or-later
+      - license:
+          name: public-domain
+      name: libffi8
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:c529e1b2553946dcc9afa2d77e33a75f23d3702e0b4a7911b67e2f1fe45a4939
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:e113665b194b20ba7e9093ef6a1a38edbaebbfb983c00e379a45a142a95a86ef
+      - name: aquasecurity:trivy:PkgID
+        value: libffi8@3.4.8-2
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: libffi
+      - name: aquasecurity:trivy:SrcRelease
+        value: "2"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 3.4.8
+      purl: pkg:deb/debian/libffi8@3.4.8-2?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+      type: library
+      version: 3.4.8-2
+    - bom-ref: pkg:deb/debian/libgcc-s1@14.2.0-19?arch=amd64&distro=debian-13.5
+      name: libgcc-s1
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libgcc-s1@14.2.0-19
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: gcc-14
+      - name: aquasecurity:trivy:SrcRelease
+        value: "19"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 14.2.0
+      purl: pkg:deb/debian/libgcc-s1@14.2.0-19?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+      type: library
+      version: 14.2.0-19
+    - bom-ref: pkg:deb/debian/libgdbm6t64@1.24-2?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-3.0-or-later
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GFDL-1.3-no-invariants-or-later
+      - license:
+          id: GPL-3.0-only
+      - license:
+          id: GPL-2.0-only
+      name: libgdbm6t64
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:c529e1b2553946dcc9afa2d77e33a75f23d3702e0b4a7911b67e2f1fe45a4939
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:e113665b194b20ba7e9093ef6a1a38edbaebbfb983c00e379a45a142a95a86ef
+      - name: aquasecurity:trivy:PkgID
+        value: libgdbm6t64@1.24-2
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: gdbm
+      - name: aquasecurity:trivy:SrcRelease
+        value: "2"
+      - name: aquasecurity:trivy:SrcVersion
+        value: "1.24"
+      purl: pkg:deb/debian/libgdbm6t64@1.24-2?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Nicolas Mora <babelouest@debian.org>
+      type: library
+      version: 1.24-2
+    - bom-ref: pkg:deb/debian/libgmp10@6.3.0%2Bdfsg-3?arch=amd64&distro=debian-13.5&epoch=2
+      licenses:
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: LGPL-3.0-or-later
+      - license:
+          id: GPL-3.0-or-later
+      - license:
+          name: GPL-3.0-or-later WITH Bison-exception
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: GPL-3.0-only
+      - license:
+          id: LGPL-3.0-only
+      name: libgmp10
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libgmp10@2:6.3.0+dfsg-3
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcEpoch
+        value: "2"
+      - name: aquasecurity:trivy:SrcName
+        value: gmp
+      - name: aquasecurity:trivy:SrcRelease
+        value: "3"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 6.3.0+dfsg
+      purl: pkg:deb/debian/libgmp10@6.3.0%2Bdfsg-3?arch=amd64&distro=debian-13.5&epoch=2
+      supplier:
+        name: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+      type: library
+      version: 2:6.3.0+dfsg-3
+    - bom-ref: pkg:deb/debian/libhogweed6t64@3.10.1-1?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: LGPL-3.0-or-later
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: LGPL-2.0-or-later
+      - license:
+          id: LGPL-2.0-only
+      - license:
+          id: MIT
+      - license:
+          name: GPL-3.0-only WITH autoconf-exception+
+      - license:
+          name: public-domain
+      - license:
+          id: GPL-2.0-only
+      - license:
+          name: GAP
+      name: libhogweed6t64
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libhogweed6t64@3.10.1-1
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: nettle
+      - name: aquasecurity:trivy:SrcRelease
+        value: "1"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 3.10.1
+      purl: pkg:deb/debian/libhogweed6t64@3.10.1-1?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Magnus Holmgren <holmgren@debian.org>
+      type: library
+      version: 3.10.1-1
+    - bom-ref: pkg:deb/debian/liblastlog2-2@2.41-5?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: GPL-3.0-or-later
+      - license:
+          id: LGPL-2.1-or-later
+      - license:
+          name: public-domain
+      - license:
+          id: BSD-4-Clause
+      - license:
+          id: MIT
+      - license:
+          id: ISC
+      - license:
+          id: BSD-3-Clause
+      - license:
+          name: BSLA
+      - license:
+          id: LGPL-2.0-or-later
+      - license:
+          id: BSD-2-Clause
+      - license:
+          id: LGPL-3.0-or-later
+      - license:
+          id: GPL-3.0-only
+      - license:
+          id: LGPL-2.0-only
+      - license:
+          id: LGPL-2.1-only
+      - license:
+          id: LGPL-3.0-only
+      name: liblastlog2-2
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: liblastlog2-2@2.41-5
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: util-linux
+      - name: aquasecurity:trivy:SrcRelease
+        value: "5"
+      - name: aquasecurity:trivy:SrcVersion
+        value: "2.41"
+      purl: pkg:deb/debian/liblastlog2-2@2.41-5?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Chris Hofstaedtler <zeha@debian.org>
+      type: library
+      version: 2.41-5
+    - bom-ref: pkg:deb/debian/liblz4-1@1.10.0-4?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: BSD-2-Clause
+      - license:
+          id: GPL-2.0-only
+      name: liblz4-1
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: liblz4-1@1.10.0-4
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: lz4
+      - name: aquasecurity:trivy:SrcRelease
+        value: "4"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 1.10.0
+      purl: pkg:deb/debian/liblz4-1@1.10.0-4?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+      type: library
+      version: 1.10.0-4
+    - bom-ref: pkg:deb/debian/liblzma5@5.8.1-1?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: 0BSD
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: LGPL-2.1-or-later
+      - license:
+          id: FSFULLR
+      - license:
+          name: GPL-3.0-or-later WITH Autoconf-exception-macro
+      - license:
+          name: none
+      - license:
+          name: PD
+      - license:
+          name: permissive-nowarranty
+      - license:
+          id: FSFUL
+      - license:
+          name: noderivs
+      - license:
+          name: PD-debian
+      - license:
+          id: LGPL-2.1-only
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: GPL-3.0-only
+      name: liblzma5
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: liblzma5@5.8.1-1
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: xz-utils
+      - name: aquasecurity:trivy:SrcRelease
+        value: "1"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 5.8.1
+      purl: pkg:deb/debian/liblzma5@5.8.1-1?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Sebastian Andrzej Siewior <sebastian@breakpoint.cc>
+      type: library
+      version: 5.8.1-1
+    - bom-ref: pkg:deb/debian/libmd0@1.1.0-2%2Bb1?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: BSD-3-Clause
+      - license:
+          name: BSD-3-clause-Aaron-D-Gifford
+      - license:
+          id: BSD-2-Clause
+      - license:
+          id: BSD-2-Clause-NetBSD
+      - license:
+          id: ISC
+      - license:
+          id: Beerware
+      - license:
+          name: public-domain-md4
+      - license:
+          name: public-domain-md5
+      - license:
+          name: public-domain-sha1
+      name: libmd0
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libmd0@1.1.0-2+b1
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: libmd
+      - name: aquasecurity:trivy:SrcRelease
+        value: "2"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 1.1.0
+      purl: pkg:deb/debian/libmd0@1.1.0-2%2Bb1?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Guillem Jover <guillem@debian.org>
+      type: library
+      version: 1.1.0-2+b1
+    - bom-ref: pkg:deb/debian/libmount1@2.41-5?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: GPL-3.0-or-later
+      - license:
+          id: LGPL-2.1-or-later
+      - license:
+          name: public-domain
+      - license:
+          id: BSD-4-Clause
+      - license:
+          id: MIT
+      - license:
+          id: ISC
+      - license:
+          id: BSD-3-Clause
+      - license:
+          name: BSLA
+      - license:
+          id: LGPL-2.0-or-later
+      - license:
+          id: BSD-2-Clause
+      - license:
+          id: LGPL-3.0-or-later
+      - license:
+          id: GPL-3.0-only
+      - license:
+          id: LGPL-2.0-only
+      - license:
+          id: LGPL-2.1-only
+      - license:
+          id: LGPL-3.0-only
+      name: libmount1
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libmount1@2.41-5
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: util-linux
+      - name: aquasecurity:trivy:SrcRelease
+        value: "5"
+      - name: aquasecurity:trivy:SrcVersion
+        value: "2.41"
+      purl: pkg:deb/debian/libmount1@2.41-5?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Chris Hofstaedtler <zeha@debian.org>
+      type: library
+      version: 2.41-5
+    - bom-ref: pkg:deb/debian/libncursesw6@6.5%2B20250216-2?arch=amd64&distro=debian-13.5
+      name: libncursesw6
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:c529e1b2553946dcc9afa2d77e33a75f23d3702e0b4a7911b67e2f1fe45a4939
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:e113665b194b20ba7e9093ef6a1a38edbaebbfb983c00e379a45a142a95a86ef
+      - name: aquasecurity:trivy:PkgID
+        value: libncursesw6@6.5+20250216-2
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: ncurses
+      - name: aquasecurity:trivy:SrcRelease
+        value: "2"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 6.5+20250216
+      purl: pkg:deb/debian/libncursesw6@6.5%2B20250216-2?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Ncurses Maintainers <ncurses@packages.debian.org>
+      type: library
+      version: 6.5+20250216-2
+    - bom-ref: pkg:deb/debian/libnettle8t64@3.10.1-1?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: LGPL-3.0-or-later
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: LGPL-2.0-or-later
+      - license:
+          id: LGPL-2.0-only
+      - license:
+          id: MIT
+      - license:
+          name: GPL-3.0-only WITH autoconf-exception+
+      - license:
+          name: public-domain
+      - license:
+          id: GPL-2.0-only
+      - license:
+          name: GAP
+      name: libnettle8t64
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libnettle8t64@3.10.1-1
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: nettle
+      - name: aquasecurity:trivy:SrcRelease
+        value: "1"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 3.10.1
+      purl: pkg:deb/debian/libnettle8t64@3.10.1-1?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Magnus Holmgren <holmgren@debian.org>
+      type: library
+      version: 3.10.1-1
+    - bom-ref: pkg:deb/debian/libpam-modules-bin@1.7.0-5?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: BSD-3-Clause
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-1.0-only
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: GPL-3.0-only
+      - license:
+          name: GPL-3.0-or-later WITH Bison-exception
+      - license:
+          name: BSD-tcp-wrappers
+      - license:
+          id: LGPL-2.0-or-later
+      - license:
+          id: LGPL-2.0-only
+      - license:
+          name: public-domain
+      - license:
+          id: Beerware
+      name: libpam-modules-bin
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libpam-modules-bin@1.7.0-5
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: pam
+      - name: aquasecurity:trivy:SrcRelease
+        value: "5"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 1.7.0
+      purl: pkg:deb/debian/libpam-modules-bin@1.7.0-5?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Sam Hartman <hartmans@debian.org>
+      type: library
+      version: 1.7.0-5
+    - bom-ref: pkg:deb/debian/libpam-modules@1.7.0-5?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: BSD-3-Clause
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-1.0-only
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: GPL-3.0-only
+      - license:
+          name: GPL-3.0-or-later WITH Bison-exception
+      - license:
+          name: BSD-tcp-wrappers
+      - license:
+          id: LGPL-2.0-or-later
+      - license:
+          id: LGPL-2.0-only
+      - license:
+          name: public-domain
+      - license:
+          id: Beerware
+      name: libpam-modules
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libpam-modules@1.7.0-5
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: pam
+      - name: aquasecurity:trivy:SrcRelease
+        value: "5"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 1.7.0
+      purl: pkg:deb/debian/libpam-modules@1.7.0-5?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Sam Hartman <hartmans@debian.org>
+      type: library
+      version: 1.7.0-5
+    - bom-ref: pkg:deb/debian/libpam-runtime@1.7.0-5?arch=all&distro=debian-13.5
+      licenses:
+      - license:
+          id: BSD-3-Clause
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-1.0-only
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: GPL-3.0-only
+      - license:
+          name: GPL-3.0-or-later WITH Bison-exception
+      - license:
+          name: BSD-tcp-wrappers
+      - license:
+          id: LGPL-2.0-or-later
+      - license:
+          id: LGPL-2.0-only
+      - license:
+          name: public-domain
+      - license:
+          id: Beerware
+      name: libpam-runtime
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libpam-runtime@1.7.0-5
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: pam
+      - name: aquasecurity:trivy:SrcRelease
+        value: "5"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 1.7.0
+      purl: pkg:deb/debian/libpam-runtime@1.7.0-5?arch=all&distro=debian-13.5
+      supplier:
+        name: Sam Hartman <hartmans@debian.org>
+      type: library
+      version: 1.7.0-5
+    - bom-ref: pkg:deb/debian/libpam0g@1.7.0-5?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: BSD-3-Clause
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-1.0-only
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: GPL-3.0-only
+      - license:
+          name: GPL-3.0-or-later WITH Bison-exception
+      - license:
+          name: BSD-tcp-wrappers
+      - license:
+          id: LGPL-2.0-or-later
+      - license:
+          id: LGPL-2.0-only
+      - license:
+          name: public-domain
+      - license:
+          id: Beerware
+      name: libpam0g
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libpam0g@1.7.0-5
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: pam
+      - name: aquasecurity:trivy:SrcRelease
+        value: "5"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 1.7.0
+      purl: pkg:deb/debian/libpam0g@1.7.0-5?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Sam Hartman <hartmans@debian.org>
+      type: library
+      version: 1.7.0-5
+    - bom-ref: pkg:deb/debian/libpcre2-8-0@10.46-1~deb13u1?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          name: BSD-3-clause-Cambridge WITH BINARY-LIBRARY-LIKE-PACKAGES-exception
+      - license:
+          id: BSD-3-Clause
+      - license:
+          id: X11
+      - license:
+          id: BSD-2-Clause
+      - license:
+          name: public-domain
+      name: libpcre2-8-0
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libpcre2-8-0@10.46-1~deb13u1
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: pcre2
+      - name: aquasecurity:trivy:SrcRelease
+        value: 1~deb13u1
+      - name: aquasecurity:trivy:SrcVersion
+        value: "10.46"
+      purl: pkg:deb/debian/libpcre2-8-0@10.46-1~deb13u1?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Matthew Vernon <matthew@debian.org>
+      type: library
+      version: 10.46-1~deb13u1
+    - bom-ref: pkg:deb/debian/libreadline8t64@8.2-6?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-3.0-or-later
+      - license:
+          id: GPL-3.0-only
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: GFDL-1.3-no-invariants-or-later
+      - license:
+          id: GFDL-1.3-or-later
+      - license:
+          name: ISC-no-attribution
+      name: libreadline8t64
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:c529e1b2553946dcc9afa2d77e33a75f23d3702e0b4a7911b67e2f1fe45a4939
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:e113665b194b20ba7e9093ef6a1a38edbaebbfb983c00e379a45a142a95a86ef
+      - name: aquasecurity:trivy:PkgID
+        value: libreadline8t64@8.2-6
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: readline
+      - name: aquasecurity:trivy:SrcRelease
+        value: "6"
+      - name: aquasecurity:trivy:SrcVersion
+        value: "8.2"
+      purl: pkg:deb/debian/libreadline8t64@8.2-6?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Matthias Klose <doko@debian.org>
+      type: library
+      version: 8.2-6
+    - bom-ref: pkg:deb/debian/libseccomp2@2.6.0-2?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: LGPL-2.1-only
+      name: libseccomp2
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libseccomp2@2.6.0-2
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: libseccomp
+      - name: aquasecurity:trivy:SrcRelease
+        value: "2"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 2.6.0
+      purl: pkg:deb/debian/libseccomp2@2.6.0-2?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Kees Cook <kees@debian.org>
+      type: library
+      version: 2.6.0-2
+    - bom-ref: pkg:deb/debian/libselinux1@3.8.1-1?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          name: public-domain
+      - license:
+          id: GPL-2.0-only
+      name: libselinux1
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libselinux1@3.8.1-1
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: libselinux
+      - name: aquasecurity:trivy:SrcRelease
+        value: "1"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 3.8.1
+      purl: pkg:deb/debian/libselinux1@3.8.1-1?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Debian SELinux maintainers <selinux-devel@lists.alioth.debian.org>
+      type: library
+      version: 3.8.1-1
+    - bom-ref: pkg:deb/debian/libsemanage-common@3.8.1-1?arch=all&distro=debian-13.5
+      licenses:
+      - license:
+          id: LGPL-2.1-or-later
+      - license:
+          id: LGPL-2.1-only
+      - license:
+          id: GPL-2.0-only
+      name: libsemanage-common
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libsemanage-common@3.8.1-1
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: libsemanage
+      - name: aquasecurity:trivy:SrcRelease
+        value: "1"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 3.8.1
+      purl: pkg:deb/debian/libsemanage-common@3.8.1-1?arch=all&distro=debian-13.5
+      supplier:
+        name: Debian SELinux maintainers <selinux-devel@lists.alioth.debian.org>
+      type: library
+      version: 3.8.1-1
+    - bom-ref: pkg:deb/debian/libsemanage2@3.8.1-1?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: LGPL-2.1-or-later
+      - license:
+          id: LGPL-2.1-only
+      - license:
+          id: GPL-2.0-only
+      name: libsemanage2
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libsemanage2@3.8.1-1
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: libsemanage
+      - name: aquasecurity:trivy:SrcRelease
+        value: "1"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 3.8.1
+      purl: pkg:deb/debian/libsemanage2@3.8.1-1?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Debian SELinux maintainers <selinux-devel@lists.alioth.debian.org>
+      type: library
+      version: 3.8.1-1
+    - bom-ref: pkg:deb/debian/libsepol2@3.8.1-1?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: LGPL-2.1-or-later
+      - license:
+          id: LGPL-2.1-only
+      - license:
+          id: Zlib
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: GPL-2.0-or-later
+      name: libsepol2
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libsepol2@3.8.1-1
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: libsepol
+      - name: aquasecurity:trivy:SrcRelease
+        value: "1"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 3.8.1
+      purl: pkg:deb/debian/libsepol2@3.8.1-1?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Debian SELinux maintainers <selinux-devel@lists.alioth.debian.org>
+      type: library
+      version: 3.8.1-1
+    - bom-ref: pkg:deb/debian/libsmartcols1@2.41-5?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: GPL-3.0-or-later
+      - license:
+          id: LGPL-2.1-or-later
+      - license:
+          name: public-domain
+      - license:
+          id: BSD-4-Clause
+      - license:
+          id: MIT
+      - license:
+          id: ISC
+      - license:
+          id: BSD-3-Clause
+      - license:
+          name: BSLA
+      - license:
+          id: LGPL-2.0-or-later
+      - license:
+          id: BSD-2-Clause
+      - license:
+          id: LGPL-3.0-or-later
+      - license:
+          id: GPL-3.0-only
+      - license:
+          id: LGPL-2.0-only
+      - license:
+          id: LGPL-2.1-only
+      - license:
+          id: LGPL-3.0-only
+      name: libsmartcols1
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libsmartcols1@2.41-5
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: util-linux
+      - name: aquasecurity:trivy:SrcRelease
+        value: "5"
+      - name: aquasecurity:trivy:SrcVersion
+        value: "2.41"
+      purl: pkg:deb/debian/libsmartcols1@2.41-5?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Chris Hofstaedtler <zeha@debian.org>
+      type: library
+      version: 2.41-5
+    - bom-ref: pkg:deb/debian/libsqlite3-0@3.46.1-7%2Bdeb13u1?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          name: public-domain
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-2.0-only
+      name: libsqlite3-0
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libsqlite3-0@3.46.1-7+deb13u1
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: sqlite3
+      - name: aquasecurity:trivy:SrcRelease
+        value: 7+deb13u1
+      - name: aquasecurity:trivy:SrcVersion
+        value: 3.46.1
+      purl: pkg:deb/debian/libsqlite3-0@3.46.1-7%2Bdeb13u1?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+      type: library
+      version: 3.46.1-7+deb13u1
+    - bom-ref: pkg:deb/debian/libssl3t64@3.5.6-1~deb13u1?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: Apache-2.0
+      - license:
+          id: Artistic-2.0
+      - license:
+          id: GPL-1.0-or-later
+      - license:
+          id: GPL-1.0-only
+      name: libssl3t64
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libssl3t64@3.5.6-1~deb13u1
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: openssl
+      - name: aquasecurity:trivy:SrcRelease
+        value: 1~deb13u1
+      - name: aquasecurity:trivy:SrcVersion
+        value: 3.5.6
+      purl: pkg:deb/debian/libssl3t64@3.5.6-1~deb13u1?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Debian OpenSSL Team <pkg-openssl-devel@alioth-lists.debian.net>
+      type: library
+      version: 3.5.6-1~deb13u1
+    - bom-ref: pkg:deb/debian/libstdc%2B%2B6@14.2.0-19?arch=amd64&distro=debian-13.5
+      name: libstdc++6
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libstdc++6@14.2.0-19
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: gcc-14
+      - name: aquasecurity:trivy:SrcRelease
+        value: "19"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 14.2.0
+      purl: pkg:deb/debian/libstdc%2B%2B6@14.2.0-19?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+      type: library
+      version: 14.2.0-19
+    - bom-ref: pkg:deb/debian/libsystemd0@257.13-1~deb13u1?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: LGPL-2.1-or-later
+      - license:
+          id: CC0-1.0
+      - license:
+          name: GPL-2.0-only WITH Linux-syscall-note-exception
+      - license:
+          id: MIT
+      - license:
+          name: public-domain
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: LGPL-2.1-only
+      name: libsystemd0
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libsystemd0@257.13-1~deb13u1
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: systemd
+      - name: aquasecurity:trivy:SrcRelease
+        value: 1~deb13u1
+      - name: aquasecurity:trivy:SrcVersion
+        value: "257.13"
+      purl: pkg:deb/debian/libsystemd0@257.13-1~deb13u1?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Debian systemd Maintainers <pkg-systemd-maintainers@lists.alioth.debian.org>
+      type: library
+      version: 257.13-1~deb13u1
+    - bom-ref: pkg:deb/debian/libtinfo6@6.5%2B20250216-2?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          name: MIT-X11
+      - license:
+          id: X11
+      - license:
+          id: BSD-3-Clause
+      name: libtinfo6
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libtinfo6@6.5+20250216-2
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: ncurses
+      - name: aquasecurity:trivy:SrcRelease
+        value: "2"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 6.5+20250216
+      purl: pkg:deb/debian/libtinfo6@6.5%2B20250216-2?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Ncurses Maintainers <ncurses@packages.debian.org>
+      type: library
+      version: 6.5+20250216-2
+    - bom-ref: pkg:deb/debian/libudev1@257.13-1~deb13u1?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: LGPL-2.1-or-later
+      - license:
+          id: CC0-1.0
+      - license:
+          name: GPL-2.0-only WITH Linux-syscall-note-exception
+      - license:
+          id: MIT
+      - license:
+          name: public-domain
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: LGPL-2.1-only
+      name: libudev1
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libudev1@257.13-1~deb13u1
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: systemd
+      - name: aquasecurity:trivy:SrcRelease
+        value: 1~deb13u1
+      - name: aquasecurity:trivy:SrcVersion
+        value: "257.13"
+      purl: pkg:deb/debian/libudev1@257.13-1~deb13u1?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Debian systemd Maintainers <pkg-systemd-maintainers@lists.alioth.debian.org>
+      type: library
+      version: 257.13-1~deb13u1
+    - bom-ref: pkg:deb/debian/libuuid1@2.41-5?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: GPL-3.0-or-later
+      - license:
+          id: LGPL-2.1-or-later
+      - license:
+          name: public-domain
+      - license:
+          id: BSD-4-Clause
+      - license:
+          id: MIT
+      - license:
+          id: ISC
+      - license:
+          id: BSD-3-Clause
+      - license:
+          name: BSLA
+      - license:
+          id: LGPL-2.0-or-later
+      - license:
+          id: BSD-2-Clause
+      - license:
+          id: LGPL-3.0-or-later
+      - license:
+          id: GPL-3.0-only
+      - license:
+          id: LGPL-2.0-only
+      - license:
+          id: LGPL-2.1-only
+      - license:
+          id: LGPL-3.0-only
+      name: libuuid1
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libuuid1@2.41-5
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: util-linux
+      - name: aquasecurity:trivy:SrcRelease
+        value: "5"
+      - name: aquasecurity:trivy:SrcVersion
+        value: "2.41"
+      purl: pkg:deb/debian/libuuid1@2.41-5?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Chris Hofstaedtler <zeha@debian.org>
+      type: library
+      version: 2.41-5
+    - bom-ref: pkg:deb/debian/libxxhash0@0.8.3-2?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: BSD-2-Clause
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-2.0-only
+      name: libxxhash0
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libxxhash0@0.8.3-2
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: xxhash
+      - name: aquasecurity:trivy:SrcRelease
+        value: "2"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 0.8.3
+      purl: pkg:deb/debian/libxxhash0@0.8.3-2?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Josue Ortega <josue@debian.org>
+      type: library
+      version: 0.8.3-2
+    - bom-ref: pkg:deb/debian/libzstd1@1.5.7%2Bdfsg-1?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: BSD-3-Clause
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: Zlib
+      - license:
+          id: MIT
+      name: libzstd1
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: libzstd1@1.5.7+dfsg-1
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: libzstd
+      - name: aquasecurity:trivy:SrcRelease
+        value: "1"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 1.5.7+dfsg
+      purl: pkg:deb/debian/libzstd1@1.5.7%2Bdfsg-1?arch=amd64&distro=debian-13.5
+      supplier:
+        name: RPM packaging team <team+pkg-rpm@tracker.debian.org>
+      type: library
+      version: 1.5.7+dfsg-1
+    - bom-ref: pkg:deb/debian/login.defs@4.17.4-2?arch=all&distro=debian-13.5&epoch=1
+      licenses:
+      - license:
+          id: BSD-3-Clause
+      - license:
+          id: GPL-1.0-only
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-2.0-only
+      name: login.defs
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: login.defs@1:4.17.4-2
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcEpoch
+        value: "1"
+      - name: aquasecurity:trivy:SrcName
+        value: shadow
+      - name: aquasecurity:trivy:SrcRelease
+        value: "2"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 4.17.4
+      purl: pkg:deb/debian/login.defs@4.17.4-2?arch=all&distro=debian-13.5&epoch=1
+      supplier:
+        name: Shadow package maintainers <pkg-shadow-devel@lists.alioth.debian.org>
+      type: library
+      version: 1:4.17.4-2
+    - bom-ref: pkg:deb/debian/login@4.16.0-2%2Breally2.41-5?arch=amd64&distro=debian-13.5&epoch=1
+      licenses:
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: GPL-3.0-or-later
+      - license:
+          id: LGPL-2.1-or-later
+      - license:
+          name: public-domain
+      - license:
+          id: BSD-4-Clause
+      - license:
+          id: MIT
+      - license:
+          id: ISC
+      - license:
+          id: BSD-3-Clause
+      - license:
+          name: BSLA
+      - license:
+          id: LGPL-2.0-or-later
+      - license:
+          id: BSD-2-Clause
+      - license:
+          id: LGPL-3.0-or-later
+      - license:
+          id: GPL-3.0-only
+      - license:
+          id: LGPL-2.0-only
+      - license:
+          id: LGPL-2.1-only
+      - license:
+          id: LGPL-3.0-only
+      name: login
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: login@1:4.16.0-2+really2.41-5
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: util-linux
+      - name: aquasecurity:trivy:SrcRelease
+        value: "5"
+      - name: aquasecurity:trivy:SrcVersion
+        value: "2.41"
+      purl: pkg:deb/debian/login@4.16.0-2%2Breally2.41-5?arch=amd64&distro=debian-13.5&epoch=1
+      supplier:
+        name: Chris Hofstaedtler <zeha@debian.org>
+      type: library
+      version: 1:4.16.0-2+really2.41-5
+    - bom-ref: pkg:deb/debian/mawk@1.3.4.20250131-1?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: X11
+      - license:
+          id: CC-BY-3.0
+      name: mawk
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: mawk@1.3.4.20250131-1
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: mawk
+      - name: aquasecurity:trivy:SrcRelease
+        value: "1"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 1.3.4.20250131
+      purl: pkg:deb/debian/mawk@1.3.4.20250131-1?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Boyuan Yang <byang@debian.org>
+      type: library
+      version: 1.3.4.20250131-1
+    - bom-ref: pkg:deb/debian/mount@2.41-5?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: GPL-3.0-or-later
+      - license:
+          id: LGPL-2.1-or-later
+      - license:
+          name: public-domain
+      - license:
+          id: BSD-4-Clause
+      - license:
+          id: MIT
+      - license:
+          id: ISC
+      - license:
+          id: BSD-3-Clause
+      - license:
+          name: BSLA
+      - license:
+          id: LGPL-2.0-or-later
+      - license:
+          id: BSD-2-Clause
+      - license:
+          id: LGPL-3.0-or-later
+      - license:
+          id: GPL-3.0-only
+      - license:
+          id: LGPL-2.0-only
+      - license:
+          id: LGPL-2.1-only
+      - license:
+          id: LGPL-3.0-only
+      name: mount
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: mount@2.41-5
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: util-linux
+      - name: aquasecurity:trivy:SrcRelease
+        value: "5"
+      - name: aquasecurity:trivy:SrcVersion
+        value: "2.41"
+      purl: pkg:deb/debian/mount@2.41-5?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Chris Hofstaedtler <zeha@debian.org>
+      type: library
+      version: 2.41-5
+    - bom-ref: pkg:deb/debian/ncurses-base@6.5%2B20250216-2?arch=all&distro=debian-13.5
+      licenses:
+      - license:
+          name: MIT-X11
+      - license:
+          id: X11
+      - license:
+          id: BSD-3-Clause
+      name: ncurses-base
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: ncurses-base@6.5+20250216-2
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: ncurses
+      - name: aquasecurity:trivy:SrcRelease
+        value: "2"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 6.5+20250216
+      purl: pkg:deb/debian/ncurses-base@6.5%2B20250216-2?arch=all&distro=debian-13.5
+      supplier:
+        name: Ncurses Maintainers <ncurses@packages.debian.org>
+      type: library
+      version: 6.5+20250216-2
+    - bom-ref: pkg:deb/debian/ncurses-bin@6.5%2B20250216-2?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          name: MIT-X11
+      - license:
+          id: X11
+      - license:
+          id: BSD-3-Clause
+      name: ncurses-bin
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: ncurses-bin@6.5+20250216-2
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: ncurses
+      - name: aquasecurity:trivy:SrcRelease
+        value: "2"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 6.5+20250216
+      purl: pkg:deb/debian/ncurses-bin@6.5%2B20250216-2?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Ncurses Maintainers <ncurses@packages.debian.org>
+      type: library
+      version: 6.5+20250216-2
+    - bom-ref: pkg:deb/debian/netbase@6.5?arch=all&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-2.0-only
+      name: netbase
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:ae0096d57d7f18e7861848f1103983488102f78517c11444120d8a938884de54
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:4a9dde5cdde190bfa0a3ab17863a083e66ea9636b157638c315357dfa476ba76
+      - name: aquasecurity:trivy:PkgID
+        value: netbase@6.5
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: netbase
+      - name: aquasecurity:trivy:SrcVersion
+        value: "6.5"
+      purl: pkg:deb/debian/netbase@6.5?arch=all&distro=debian-13.5
+      supplier:
+        name: Marco d'Itri <md@linux.it>
+      type: library
+      version: "6.5"
+    - bom-ref: pkg:deb/debian/openssl-provider-legacy@3.5.6-1~deb13u1?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: Apache-2.0
+      - license:
+          id: Artistic-2.0
+      - license:
+          id: GPL-1.0-or-later
+      - license:
+          id: GPL-1.0-only
+      name: openssl-provider-legacy
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: openssl-provider-legacy@3.5.6-1~deb13u1
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: openssl
+      - name: aquasecurity:trivy:SrcRelease
+        value: 1~deb13u1
+      - name: aquasecurity:trivy:SrcVersion
+        value: 3.5.6
+      purl: pkg:deb/debian/openssl-provider-legacy@3.5.6-1~deb13u1?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Debian OpenSSL Team <pkg-openssl-devel@alioth-lists.debian.net>
+      type: library
+      version: 3.5.6-1~deb13u1
+    - bom-ref: pkg:deb/debian/openssl@3.5.6-1~deb13u1?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: Apache-2.0
+      - license:
+          id: Artistic-2.0
+      - license:
+          id: GPL-1.0-or-later
+      - license:
+          id: GPL-1.0-only
+      name: openssl
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:ae0096d57d7f18e7861848f1103983488102f78517c11444120d8a938884de54
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:4a9dde5cdde190bfa0a3ab17863a083e66ea9636b157638c315357dfa476ba76
+      - name: aquasecurity:trivy:PkgID
+        value: openssl@3.5.6-1~deb13u1
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: openssl
+      - name: aquasecurity:trivy:SrcRelease
+        value: 1~deb13u1
+      - name: aquasecurity:trivy:SrcVersion
+        value: 3.5.6
+      purl: pkg:deb/debian/openssl@3.5.6-1~deb13u1?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Debian OpenSSL Team <pkg-openssl-devel@alioth-lists.debian.net>
+      type: library
+      version: 3.5.6-1~deb13u1
+    - bom-ref: pkg:deb/debian/passwd@4.17.4-2?arch=amd64&distro=debian-13.5&epoch=1
+      licenses:
+      - license:
+          id: BSD-3-Clause
+      - license:
+          id: GPL-1.0-only
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-2.0-only
+      name: passwd
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: passwd@1:4.17.4-2
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcEpoch
+        value: "1"
+      - name: aquasecurity:trivy:SrcName
+        value: shadow
+      - name: aquasecurity:trivy:SrcRelease
+        value: "2"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 4.17.4
+      purl: pkg:deb/debian/passwd@4.17.4-2?arch=amd64&distro=debian-13.5&epoch=1
+      supplier:
+        name: Shadow package maintainers <pkg-shadow-devel@lists.alioth.debian.org>
+      type: library
+      version: 1:4.17.4-2
+    - bom-ref: pkg:deb/debian/perl-base@5.40.1-6?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-1.0-or-later
+      - license:
+          id: Artistic-2.0
+      - license:
+          id: MIT
+      - license:
+          name: REGCOMP
+      - license:
+          name: GPL-2.0-only WITH bison-exception+
+      - license:
+          name: Unicode
+      - license:
+          name: BZIP
+      - license:
+          id: Zlib
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: FSFAP
+      - license:
+          name: BSD-3-Clause WITH weird-numbering
+      - license:
+          id: CC0-1.0
+      - license:
+          name: TEXT-TABS
+      - license:
+          name: BSD-4-clause-POWERDOG
+      - license:
+          name: BSD-3-clause-GENERIC
+      - license:
+          id: BSD-3-Clause
+      - license:
+          name: SDBM-PUBLIC-DOMAIN
+      - license:
+          name: DONT-CHANGE-THE-GPL
+      - license:
+          id: Artistic-dist
+      - license:
+          id: LGPL-2.1-only
+      - license:
+          id: GPL-1.0-only
+      - license:
+          id: GPL-2.0-only
+      - license:
+          name: Artistic-2
+      name: perl-base
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: perl-base@5.40.1-6
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: perl
+      - name: aquasecurity:trivy:SrcRelease
+        value: "6"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 5.40.1
+      purl: pkg:deb/debian/perl-base@5.40.1-6?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Niko Tyni <ntyni@debian.org>
+      type: library
+      version: 5.40.1-6
+    - bom-ref: pkg:deb/debian/readline-common@8.2-6?arch=all&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-3.0-or-later
+      - license:
+          id: GPL-3.0-only
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: GFDL-1.3-no-invariants-or-later
+      - license:
+          id: GFDL-1.3-or-later
+      - license:
+          name: ISC-no-attribution
+      name: readline-common
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:c529e1b2553946dcc9afa2d77e33a75f23d3702e0b4a7911b67e2f1fe45a4939
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:e113665b194b20ba7e9093ef6a1a38edbaebbfb983c00e379a45a142a95a86ef
+      - name: aquasecurity:trivy:PkgID
+        value: readline-common@8.2-6
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: readline
+      - name: aquasecurity:trivy:SrcRelease
+        value: "6"
+      - name: aquasecurity:trivy:SrcVersion
+        value: "8.2"
+      purl: pkg:deb/debian/readline-common@8.2-6?arch=all&distro=debian-13.5
+      supplier:
+        name: Matthias Klose <doko@debian.org>
+      type: library
+      version: 8.2-6
+    - bom-ref: pkg:deb/debian/sed@4.9-2%2Bdeb13u1?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-3.0-or-later
+      - license:
+          id: GPL-3.0-only
+      - license:
+          id: X11
+      - license:
+          id: GFDL-1.3-no-invariants-or-later
+      - license:
+          id: GFDL-1.3-only
+      - license:
+          id: ISC
+      - license:
+          id: BSD-4-Clause-UC
+      - license:
+          name: BSL-1
+      - license:
+          name: pcre
+      name: sed
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: sed@4.9-2+deb13u1
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: sed
+      - name: aquasecurity:trivy:SrcRelease
+        value: 2+deb13u1
+      - name: aquasecurity:trivy:SrcVersion
+        value: "4.9"
+      purl: pkg:deb/debian/sed@4.9-2%2Bdeb13u1?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Clint Adams <clint@debian.org>
+      type: library
+      version: 4.9-2+deb13u1
+    - bom-ref: pkg:deb/debian/sqv@1.3.0-3%2Bb2?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: LGPL-2.0-or-later
+      - license:
+          id: LGPL-2.0-only
+      name: sqv
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: sqv@1.3.0-3+b2
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: rust-sequoia-sqv
+      - name: aquasecurity:trivy:SrcRelease
+        value: "3"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 1.3.0
+      purl: pkg:deb/debian/sqv@1.3.0-3%2Bb2?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+      type: library
+      version: 1.3.0-3+b2
+    - bom-ref: pkg:deb/debian/sysvinit-utils@3.14-4?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: LGPL-2.1-or-later
+      - license:
+          id: GPL-3.0-only
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: LGPL-2.1-only
+      name: sysvinit-utils
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: sysvinit-utils@3.14-4
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: sysvinit
+      - name: aquasecurity:trivy:SrcRelease
+        value: "4"
+      - name: aquasecurity:trivy:SrcVersion
+        value: "3.14"
+      purl: pkg:deb/debian/sysvinit-utils@3.14-4?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Debian sysvinit maintainers <debian-init-diversity@chiark.greenend.org.uk>
+      type: library
+      version: 3.14-4
+    - bom-ref: pkg:deb/debian/tar@1.35%2Bdfsg-3.1?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-3.0-or-later
+      - license:
+          id: GPL-3.0-only
+      - license:
+          name: GPL-3.0-or-later WITH Bison-exception
+      - license:
+          id: LGPL-2.1-or-later
+      - license:
+          id: LGPL-2.1-only
+      - license:
+          id: LGPL-3.0-or-later
+      - license:
+          id: LGPL-3.0-only
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-2.0-only
+      name: tar
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: tar@1.35+dfsg-3.1
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: tar
+      - name: aquasecurity:trivy:SrcRelease
+        value: "3.1"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 1.35+dfsg
+      purl: pkg:deb/debian/tar@1.35%2Bdfsg-3.1?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Janos Lenart <ocsi@debian.org>
+      type: library
+      version: 1.35+dfsg-3.1
+    - bom-ref: pkg:deb/debian/tzdata@2026b-0%2Bdeb13u1?arch=all&distro=debian-13.5
+      licenses:
+      - license:
+          name: public-domain
+      name: tzdata
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: tzdata@2026b-0+deb13u1
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: tzdata
+      - name: aquasecurity:trivy:SrcRelease
+        value: 0+deb13u1
+      - name: aquasecurity:trivy:SrcVersion
+        value: 2026b
+      purl: pkg:deb/debian/tzdata@2026b-0%2Bdeb13u1?arch=all&distro=debian-13.5
+      supplier:
+        name: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+      type: library
+      version: 2026b-0+deb13u1
+    - bom-ref: pkg:deb/debian/util-linux@2.41-5?arch=amd64&distro=debian-13.5
+      licenses:
+      - license:
+          id: GPL-2.0-or-later
+      - license:
+          id: GPL-2.0-only
+      - license:
+          id: GPL-3.0-or-later
+      - license:
+          id: LGPL-2.1-or-later
+      - license:
+          name: public-domain
+      - license:
+          id: BSD-4-Clause
+      - license:
+          id: MIT
+      - license:
+          id: ISC
+      - license:
+          id: BSD-3-Clause
+      - license:
+          name: BSLA
+      - license:
+          id: LGPL-2.0-or-later
+      - license:
+          id: BSD-2-Clause
+      - license:
+          id: LGPL-3.0-or-later
+      - license:
+          id: GPL-3.0-only
+      - license:
+          id: LGPL-2.0-only
+      - license:
+          id: LGPL-2.1-only
+      - license:
+          id: LGPL-3.0-only
+      name: util-linux
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: util-linux@2.41-5
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcName
+        value: util-linux
+      - name: aquasecurity:trivy:SrcRelease
+        value: "5"
+      - name: aquasecurity:trivy:SrcVersion
+        value: "2.41"
+      purl: pkg:deb/debian/util-linux@2.41-5?arch=amd64&distro=debian-13.5
+      supplier:
+        name: Chris Hofstaedtler <zeha@debian.org>
+      type: library
+      version: 2.41-5
+    - bom-ref: pkg:deb/debian/zlib1g@1.3.dfsg%2Breally1.3.1-1%2Bb1?arch=amd64&distro=debian-13.5&epoch=1
+      licenses:
+      - license:
+          id: Zlib
+      name: zlib1g
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:8211d5969d2e6cabcd3775ba7882f8a4be2f00a910be9154dae5e9fddfddca94
+      - name: aquasecurity:trivy:PkgID
+        value: zlib1g@1:1.3.dfsg+really1.3.1-1+b1
+      - name: aquasecurity:trivy:PkgType
+        value: debian
+      - name: aquasecurity:trivy:SrcEpoch
+        value: "1"
+      - name: aquasecurity:trivy:SrcName
+        value: zlib
+      - name: aquasecurity:trivy:SrcRelease
+        value: "1"
+      - name: aquasecurity:trivy:SrcVersion
+        value: 1.3.dfsg+really1.3.1
+      purl: pkg:deb/debian/zlib1g@1.3.dfsg%2Breally1.3.1-1%2Bb1?arch=amd64&distro=debian-13.5&epoch=1
+      supplier:
+        name: Mark Brown <broonie@debian.org>
+      type: library
+      version: 1:1.3.dfsg+really1.3.1-1+b1
+    - bom-ref: pkg:pypi/blinker@1.9.0
+      licenses:
+      - license:
+          id: MIT
+      name: blinker
+      properties:
+      - name: aquasecurity:trivy:FilePath
+        value: usr/local/lib/python3.12/site-packages/blinker-1.9.0.dist-info/METADATA
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:2d189e0a3977128a57e4237dcfa87aa09fa11f22481fa0c5e99e794a6d22b31b
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:239b1e5f945bab96987fe1385b72a7497317a5ee6f4404dd2ec5f9c335645d36
+      - name: aquasecurity:trivy:PkgType
+        value: python-pkg
+      purl: pkg:pypi/blinker@1.9.0
+      type: library
+      version: 1.9.0
+    - bom-ref: pkg:pypi/certifi@2026.5.20
+      licenses:
+      - license:
+          id: MPL-2.0
+      name: certifi
+      properties:
+      - name: aquasecurity:trivy:FilePath
+        value: usr/local/lib/python3.12/site-packages/certifi-2026.5.20.dist-info/METADATA
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:2d189e0a3977128a57e4237dcfa87aa09fa11f22481fa0c5e99e794a6d22b31b
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:239b1e5f945bab96987fe1385b72a7497317a5ee6f4404dd2ec5f9c335645d36
+      - name: aquasecurity:trivy:PkgType
+        value: python-pkg
+      purl: pkg:pypi/certifi@2026.5.20
+      type: library
+      version: 2026.5.20
+    - bom-ref: pkg:pypi/charset-normalizer@3.4.7
+      licenses:
+      - license:
+          id: MIT
+      name: charset-normalizer
+      properties:
+      - name: aquasecurity:trivy:FilePath
+        value: usr/local/lib/python3.12/site-packages/charset_normalizer-3.4.7.dist-info/METADATA
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:2d189e0a3977128a57e4237dcfa87aa09fa11f22481fa0c5e99e794a6d22b31b
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:239b1e5f945bab96987fe1385b72a7497317a5ee6f4404dd2ec5f9c335645d36
+      - name: aquasecurity:trivy:PkgType
+        value: python-pkg
+      purl: pkg:pypi/charset-normalizer@3.4.7
+      type: library
+      version: 3.4.7
+    - bom-ref: pkg:pypi/click@8.4.1
+      licenses:
+      - license:
+          id: BSD-3-Clause
+      name: click
+      properties:
+      - name: aquasecurity:trivy:FilePath
+        value: usr/local/lib/python3.12/site-packages/click-8.4.1.dist-info/METADATA
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:2d189e0a3977128a57e4237dcfa87aa09fa11f22481fa0c5e99e794a6d22b31b
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:239b1e5f945bab96987fe1385b72a7497317a5ee6f4404dd2ec5f9c335645d36
+      - name: aquasecurity:trivy:PkgType
+        value: python-pkg
+      purl: pkg:pypi/click@8.4.1
+      type: library
+      version: 8.4.1
+    - bom-ref: pkg:pypi/flask@3.0.3
+      licenses:
+      - license:
+          id: BSD-3-Clause
+      name: Flask
+      properties:
+      - name: aquasecurity:trivy:FilePath
+        value: usr/local/lib/python3.12/site-packages/flask-3.0.3.dist-info/METADATA
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:2d189e0a3977128a57e4237dcfa87aa09fa11f22481fa0c5e99e794a6d22b31b
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:239b1e5f945bab96987fe1385b72a7497317a5ee6f4404dd2ec5f9c335645d36
+      - name: aquasecurity:trivy:PkgType
+        value: python-pkg
+      purl: pkg:pypi/flask@3.0.3
+      type: library
+      version: 3.0.3
+    - bom-ref: pkg:pypi/idna@3.16
+      licenses:
+      - license:
+          id: BSD-3-Clause
+      name: idna
+      properties:
+      - name: aquasecurity:trivy:FilePath
+        value: usr/local/lib/python3.12/site-packages/idna-3.16.dist-info/METADATA
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:2d189e0a3977128a57e4237dcfa87aa09fa11f22481fa0c5e99e794a6d22b31b
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:239b1e5f945bab96987fe1385b72a7497317a5ee6f4404dd2ec5f9c335645d36
+      - name: aquasecurity:trivy:PkgType
+        value: python-pkg
+      purl: pkg:pypi/idna@3.16
+      type: library
+      version: "3.16"
+    - bom-ref: pkg:pypi/itsdangerous@2.2.0
+      licenses:
+      - license:
+          id: BSD-3-Clause
+      name: itsdangerous
+      properties:
+      - name: aquasecurity:trivy:FilePath
+        value: usr/local/lib/python3.12/site-packages/itsdangerous-2.2.0.dist-info/METADATA
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:2d189e0a3977128a57e4237dcfa87aa09fa11f22481fa0c5e99e794a6d22b31b
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:239b1e5f945bab96987fe1385b72a7497317a5ee6f4404dd2ec5f9c335645d36
+      - name: aquasecurity:trivy:PkgType
+        value: python-pkg
+      purl: pkg:pypi/itsdangerous@2.2.0
+      type: library
+      version: 2.2.0
+    - bom-ref: pkg:pypi/jinja2@3.1.6
+      licenses:
+      - license:
+          id: BSD-3-Clause
+      name: Jinja2
+      properties:
+      - name: aquasecurity:trivy:FilePath
+        value: usr/local/lib/python3.12/site-packages/jinja2-3.1.6.dist-info/METADATA
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:2d189e0a3977128a57e4237dcfa87aa09fa11f22481fa0c5e99e794a6d22b31b
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:239b1e5f945bab96987fe1385b72a7497317a5ee6f4404dd2ec5f9c335645d36
+      - name: aquasecurity:trivy:PkgType
+        value: python-pkg
+      purl: pkg:pypi/jinja2@3.1.6
+      type: library
+      version: 3.1.6
+    - bom-ref: pkg:pypi/markupsafe@3.0.3
+      licenses:
+      - license:
+          id: BSD-3-Clause
+      name: MarkupSafe
+      properties:
+      - name: aquasecurity:trivy:FilePath
+        value: usr/local/lib/python3.12/site-packages/markupsafe-3.0.3.dist-info/METADATA
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:2d189e0a3977128a57e4237dcfa87aa09fa11f22481fa0c5e99e794a6d22b31b
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:239b1e5f945bab96987fe1385b72a7497317a5ee6f4404dd2ec5f9c335645d36
+      - name: aquasecurity:trivy:PkgType
+        value: python-pkg
+      purl: pkg:pypi/markupsafe@3.0.3
+      type: library
+      version: 3.0.3
+    - bom-ref: pkg:pypi/pip@25.0.1
+      licenses:
+      - license:
+          id: MIT
+      name: pip
+      properties:
+      - name: aquasecurity:trivy:FilePath
+        value: usr/local/lib/python3.12/site-packages/pip-25.0.1.dist-info/METADATA
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:c529e1b2553946dcc9afa2d77e33a75f23d3702e0b4a7911b67e2f1fe45a4939
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:e113665b194b20ba7e9093ef6a1a38edbaebbfb983c00e379a45a142a95a86ef
+      - name: aquasecurity:trivy:PkgType
+        value: python-pkg
+      purl: pkg:pypi/pip@25.0.1
+      type: library
+      version: 25.0.1
+    - bom-ref: pkg:pypi/requests@2.32.3
+      licenses:
+      - license:
+          id: Apache-2.0
+      name: requests
+      properties:
+      - name: aquasecurity:trivy:FilePath
+        value: usr/local/lib/python3.12/site-packages/requests-2.32.3.dist-info/METADATA
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:2d189e0a3977128a57e4237dcfa87aa09fa11f22481fa0c5e99e794a6d22b31b
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:239b1e5f945bab96987fe1385b72a7497317a5ee6f4404dd2ec5f9c335645d36
+      - name: aquasecurity:trivy:PkgType
+        value: python-pkg
+      purl: pkg:pypi/requests@2.32.3
+      type: library
+      version: 2.32.3
+    - bom-ref: pkg:pypi/urllib3@2.7.0
+      licenses:
+      - license:
+          id: MIT
+      name: urllib3
+      properties:
+      - name: aquasecurity:trivy:FilePath
+        value: usr/local/lib/python3.12/site-packages/urllib3-2.7.0.dist-info/METADATA
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:2d189e0a3977128a57e4237dcfa87aa09fa11f22481fa0c5e99e794a6d22b31b
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:239b1e5f945bab96987fe1385b72a7497317a5ee6f4404dd2ec5f9c335645d36
+      - name: aquasecurity:trivy:PkgType
+        value: python-pkg
+      purl: pkg:pypi/urllib3@2.7.0
+      type: library
+      version: 2.7.0
+    - bom-ref: pkg:pypi/werkzeug@3.1.8
+      licenses:
+      - license:
+          id: BSD-3-Clause
+      name: Werkzeug
+      properties:
+      - name: aquasecurity:trivy:FilePath
+        value: usr/local/lib/python3.12/site-packages/werkzeug-3.1.8.dist-info/METADATA
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:2d189e0a3977128a57e4237dcfa87aa09fa11f22481fa0c5e99e794a6d22b31b
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:239b1e5f945bab96987fe1385b72a7497317a5ee6f4404dd2ec5f9c335645d36
+      - name: aquasecurity:trivy:PkgType
+        value: python-pkg
+      purl: pkg:pypi/werkzeug@3.1.8
+      type: library
+      version: 3.1.8
+    dependencies:
+    - dependsOn:
+      - pkg:deb/debian/apt@3.0.3?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/bash@5.2.37-2%2Bb9?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/bsdutils@2.41-5?arch=amd64&distro=debian-13.5&epoch=1
+      - pkg:deb/debian/ca-certificates@20250419?arch=all&distro=debian-13.5
+      - pkg:deb/debian/coreutils@9.7-3?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/dash@0.5.12-12?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/diffutils@3.10-4?arch=amd64&distro=debian-13.5&epoch=1
+      - pkg:deb/debian/dpkg@1.22.22?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/findutils@4.10.0-3?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/grep@3.11-4?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/gzip@1.13-1?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/hostname@3.25?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/init-system-helpers@1.69~deb13u1?arch=all&distro=debian-13.5
+      - pkg:deb/debian/libc-bin@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libdb5.3t64@5.3.28%2Bdfsg2-9?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libffi8@3.4.8-2?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libgdbm6t64@1.24-2?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/liblastlog2-2@2.41-5?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libmount1@2.41-5?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libncursesw6@6.5%2B20250216-2?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libpam-modules-bin@1.7.0-5?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libreadline8t64@8.2-6?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libsmartcols1@2.41-5?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libuuid1@2.41-5?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/login@4.16.0-2%2Breally2.41-5?arch=amd64&distro=debian-13.5&epoch=1
+      - pkg:deb/debian/mawk@1.3.4.20250131-1?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/mount@2.41-5?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/ncurses-base@6.5%2B20250216-2?arch=all&distro=debian-13.5
+      - pkg:deb/debian/ncurses-bin@6.5%2B20250216-2?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/netbase@6.5?arch=all&distro=debian-13.5
+      - pkg:deb/debian/perl-base@5.40.1-6?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/sed@4.9-2%2Bdeb13u1?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/sysvinit-utils@3.14-4?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/tzdata@2026b-0%2Bdeb13u1?arch=all&distro=debian-13.5
+      - pkg:deb/debian/util-linux@2.41-5?arch=amd64&distro=debian-13.5
+      ref: 7a45c3d9-8218-40d1-80d5-52988bf78f1c
+    - dependsOn:
+      - pkg:deb/debian/passwd@4.17.4-2?arch=amd64&distro=debian-13.5&epoch=1
+      ref: pkg:deb/debian/adduser@3.152?arch=all&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/adduser@3.152?arch=all&distro=debian-13.5
+      - pkg:deb/debian/base-passwd@3.6.7?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/debian-archive-keyring@2025.1?arch=all&distro=debian-13.5
+      - pkg:deb/debian/libapt-pkg7.0@3.0.3?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libgcc-s1@14.2.0-19?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libseccomp2@2.6.0-2?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libssl3t64@3.5.6-1~deb13u1?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libstdc%2B%2B6@14.2.0-19?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libsystemd0@257.13-1~deb13u1?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/sqv@1.3.0-3%2Bb2?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/apt@3.0.3?arch=amd64&distro=debian-13.5
+    - dependsOn: []
+      ref: pkg:deb/debian/base-files@13.8%2Bdeb13u5?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libdebconfclient0@0.280?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libselinux1@3.8.1-1?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/base-passwd@3.6.7?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/base-files@13.8%2Bdeb13u5?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/debianutils@5.23.2?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/bash@5.2.37-2%2Bb9?arch=amd64&distro=debian-13.5
+    - dependsOn: []
+      ref: pkg:deb/debian/bsdutils@2.41-5?arch=amd64&distro=debian-13.5&epoch=1
+    - dependsOn:
+      - pkg:deb/debian/debconf@1.5.91?arch=all&distro=debian-13.5
+      - pkg:deb/debian/openssl@3.5.6-1~deb13u1?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/ca-certificates@20250419?arch=all&distro=debian-13.5
+    - dependsOn: []
+      ref: pkg:deb/debian/coreutils@9.7-3?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/debianutils@5.23.2?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/dash@0.5.12-12?arch=amd64&distro=debian-13.5
+    - dependsOn: []
+      ref: pkg:deb/debian/debconf@1.5.91?arch=all&distro=debian-13.5
+    - dependsOn: []
+      ref: pkg:deb/debian/debian-archive-keyring@2025.1?arch=all&distro=debian-13.5
+    - dependsOn: []
+      ref: pkg:deb/debian/debianutils@5.23.2?arch=amd64&distro=debian-13.5
+    - dependsOn: []
+      ref: pkg:deb/debian/diffutils@3.10-4?arch=amd64&distro=debian-13.5&epoch=1
+    - dependsOn:
+      - pkg:deb/debian/tar@1.35%2Bdfsg-3.1?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/dpkg@1.22.22?arch=amd64&distro=debian-13.5
+    - dependsOn: []
+      ref: pkg:deb/debian/findutils@4.10.0-3?arch=amd64&distro=debian-13.5
+    - dependsOn: []
+      ref: pkg:deb/debian/gcc-14-base@14.2.0-19?arch=amd64&distro=debian-13.5
+    - dependsOn: []
+      ref: pkg:deb/debian/grep@3.11-4?arch=amd64&distro=debian-13.5
+    - dependsOn: []
+      ref: pkg:deb/debian/gzip@1.13-1?arch=amd64&distro=debian-13.5
+    - dependsOn: []
+      ref: pkg:deb/debian/hostname@3.25?arch=amd64&distro=debian-13.5
+    - dependsOn: []
+      ref: pkg:deb/debian/init-system-helpers@1.69~deb13u1?arch=all&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libacl1@2.3.2-2%2Bb1?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libbz2-1.0@1.0.8-6?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libgcc-s1@14.2.0-19?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/liblz4-1@1.10.0-4?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/liblzma5@5.8.1-1?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libssl3t64@3.5.6-1~deb13u1?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libstdc%2B%2B6@14.2.0-19?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libsystemd0@257.13-1~deb13u1?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libudev1@257.13-1~deb13u1?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libxxhash0@0.8.3-2?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libzstd1@1.5.7%2Bdfsg-1?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/zlib1g@1.3.dfsg%2Breally1.3.1-1%2Bb1?arch=amd64&distro=debian-13.5&epoch=1
+      ref: pkg:deb/debian/libapt-pkg7.0@3.0.3?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libattr1@2.5.2-3?arch=amd64&distro=debian-13.5&epoch=1
+    - dependsOn: []
+      ref: pkg:deb/debian/libaudit-common@4.0.2-2?arch=all&distro=debian-13.5&epoch=1
+    - dependsOn:
+      - pkg:deb/debian/libaudit-common@4.0.2-2?arch=all&distro=debian-13.5&epoch=1
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libcap-ng0@0.8.5-4%2Bb1?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libaudit1@4.0.2-2%2Bb2?arch=amd64&distro=debian-13.5&epoch=1
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libblkid1@2.41-5?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libmd0@1.1.0-2%2Bb1?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libbsd0@0.12.2-2?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libbz2-1.0@1.0.8-6?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libc-bin@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libgcc-s1@14.2.0-19?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libcap-ng0@0.8.5-4%2Bb1?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libcap2@2.75-10%2Bdeb13u1%2Bb1?arch=amd64&distro=debian-13.5&epoch=1
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libcrypt1@4.4.38-1?arch=amd64&distro=debian-13.5&epoch=1
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libdb5.3t64@5.3.28%2Bdfsg2-9?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libdebconfclient0@0.280?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libffi8@3.4.8-2?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/gcc-14-base@14.2.0-19?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libgcc-s1@14.2.0-19?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libgdbm6t64@1.24-2?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libgmp10@6.3.0%2Bdfsg-3?arch=amd64&distro=debian-13.5&epoch=2
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libgmp10@6.3.0%2Bdfsg-3?arch=amd64&distro=debian-13.5&epoch=2
+      - pkg:deb/debian/libnettle8t64@3.10.1-1?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libhogweed6t64@3.10.1-1?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libsqlite3-0@3.46.1-7%2Bdeb13u1?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/liblastlog2-2@2.41-5?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libxxhash0@0.8.3-2?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/liblz4-1@1.10.0-4?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/liblzma5@5.8.1-1?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libmd0@1.1.0-2%2Bb1?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libblkid1@2.41-5?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libselinux1@3.8.1-1?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libmount1@2.41-5?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libtinfo6@6.5%2B20250216-2?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libncursesw6@6.5%2B20250216-2?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libnettle8t64@3.10.1-1?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libaudit1@4.0.2-2%2Bb2?arch=amd64&distro=debian-13.5&epoch=1
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libcrypt1@4.4.38-1?arch=amd64&distro=debian-13.5&epoch=1
+      - pkg:deb/debian/libpam0g@1.7.0-5?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libselinux1@3.8.1-1?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libsystemd0@257.13-1~deb13u1?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libpam-modules-bin@1.7.0-5?arch=amd64&distro=debian-13.5
+    - dependsOn: []
+      ref: pkg:deb/debian/libpam-modules@1.7.0-5?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/debconf@1.5.91?arch=all&distro=debian-13.5
+      - pkg:deb/debian/libpam-modules@1.7.0-5?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libpam-runtime@1.7.0-5?arch=all&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/debconf@1.5.91?arch=all&distro=debian-13.5
+      - pkg:deb/debian/libaudit1@4.0.2-2%2Bb2?arch=amd64&distro=debian-13.5&epoch=1
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libpam0g@1.7.0-5?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libpcre2-8-0@10.46-1~deb13u1?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libtinfo6@6.5%2B20250216-2?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/readline-common@8.2-6?arch=all&distro=debian-13.5
+      ref: pkg:deb/debian/libreadline8t64@8.2-6?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libseccomp2@2.6.0-2?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libpcre2-8-0@10.46-1~deb13u1?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libselinux1@3.8.1-1?arch=amd64&distro=debian-13.5
+    - dependsOn: []
+      ref: pkg:deb/debian/libsemanage-common@3.8.1-1?arch=all&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libaudit1@4.0.2-2%2Bb2?arch=amd64&distro=debian-13.5&epoch=1
+      - pkg:deb/debian/libbz2-1.0@1.0.8-6?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libselinux1@3.8.1-1?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libsemanage-common@3.8.1-1?arch=all&distro=debian-13.5
+      - pkg:deb/debian/libsepol2@3.8.1-1?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libsemanage2@3.8.1-1?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libsepol2@3.8.1-1?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libsmartcols1@2.41-5?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libsqlite3-0@3.46.1-7%2Bdeb13u1?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libzstd1@1.5.7%2Bdfsg-1?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/openssl-provider-legacy@3.5.6-1~deb13u1?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/zlib1g@1.3.dfsg%2Breally1.3.1-1%2Bb1?arch=amd64&distro=debian-13.5&epoch=1
+      ref: pkg:deb/debian/libssl3t64@3.5.6-1~deb13u1?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/gcc-14-base@14.2.0-19?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libgcc-s1@14.2.0-19?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libstdc%2B%2B6@14.2.0-19?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libcap2@2.75-10%2Bdeb13u1%2Bb1?arch=amd64&distro=debian-13.5&epoch=1
+      ref: pkg:deb/debian/libsystemd0@257.13-1~deb13u1?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libtinfo6@6.5%2B20250216-2?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libcap2@2.75-10%2Bdeb13u1%2Bb1?arch=amd64&distro=debian-13.5&epoch=1
+      ref: pkg:deb/debian/libudev1@257.13-1~deb13u1?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libuuid1@2.41-5?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libxxhash0@0.8.3-2?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/libzstd1@1.5.7%2Bdfsg-1?arch=amd64&distro=debian-13.5
+    - dependsOn: []
+      ref: pkg:deb/debian/login.defs@4.17.4-2?arch=all&distro=debian-13.5&epoch=1
+    - dependsOn:
+      - pkg:deb/debian/libaudit1@4.0.2-2%2Bb2?arch=amd64&distro=debian-13.5&epoch=1
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libcrypt1@4.4.38-1?arch=amd64&distro=debian-13.5&epoch=1
+      - pkg:deb/debian/libpam-modules@1.7.0-5?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libpam-runtime@1.7.0-5?arch=all&distro=debian-13.5
+      - pkg:deb/debian/libpam0g@1.7.0-5?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/login@4.16.0-2%2Breally2.41-5?arch=amd64&distro=debian-13.5&epoch=1
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/mawk@1.3.4.20250131-1?arch=amd64&distro=debian-13.5
+    - dependsOn: []
+      ref: pkg:deb/debian/mount@2.41-5?arch=amd64&distro=debian-13.5
+    - dependsOn: []
+      ref: pkg:deb/debian/ncurses-base@6.5%2B20250216-2?arch=all&distro=debian-13.5
+    - dependsOn: []
+      ref: pkg:deb/debian/ncurses-bin@6.5%2B20250216-2?arch=amd64&distro=debian-13.5
+    - dependsOn: []
+      ref: pkg:deb/debian/netbase@6.5?arch=all&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libssl3t64@3.5.6-1~deb13u1?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/openssl-provider-legacy@3.5.6-1~deb13u1?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libssl3t64@3.5.6-1~deb13u1?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/openssl@3.5.6-1~deb13u1?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/base-passwd@3.6.7?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libacl1@2.3.2-2%2Bb1?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libattr1@2.5.2-3?arch=amd64&distro=debian-13.5&epoch=1
+      - pkg:deb/debian/libaudit1@4.0.2-2%2Bb2?arch=amd64&distro=debian-13.5&epoch=1
+      - pkg:deb/debian/libbsd0@0.12.2-2?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libcrypt1@4.4.38-1?arch=amd64&distro=debian-13.5&epoch=1
+      - pkg:deb/debian/libpam-modules@1.7.0-5?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libpam0g@1.7.0-5?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libselinux1@3.8.1-1?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libsemanage2@3.8.1-1?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/login.defs@4.17.4-2?arch=all&distro=debian-13.5&epoch=1
+      ref: pkg:deb/debian/passwd@4.17.4-2?arch=amd64&distro=debian-13.5&epoch=1
+    - dependsOn: []
+      ref: pkg:deb/debian/perl-base@5.40.1-6?arch=amd64&distro=debian-13.5
+    - dependsOn: []
+      ref: pkg:deb/debian/readline-common@8.2-6?arch=all&distro=debian-13.5
+    - dependsOn: []
+      ref: pkg:deb/debian/sed@4.9-2%2Bdeb13u1?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libgcc-s1@14.2.0-19?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libgmp10@6.3.0%2Bdfsg-3?arch=amd64&distro=debian-13.5&epoch=2
+      - pkg:deb/debian/libhogweed6t64@3.10.1-1?arch=amd64&distro=debian-13.5
+      - pkg:deb/debian/libnettle8t64@3.10.1-1?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/sqv@1.3.0-3%2Bb2?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/sysvinit-utils@3.14-4?arch=amd64&distro=debian-13.5
+    - dependsOn: []
+      ref: pkg:deb/debian/tar@1.35%2Bdfsg-3.1?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/debconf@1.5.91?arch=all&distro=debian-13.5
+      ref: pkg:deb/debian/tzdata@2026b-0%2Bdeb13u1?arch=all&distro=debian-13.5
+    - dependsOn: []
+      ref: pkg:deb/debian/util-linux@2.41-5?arch=amd64&distro=debian-13.5
+    - dependsOn:
+      - pkg:deb/debian/libc6@2.41-12%2Bdeb13u3?arch=amd64&distro=debian-13.5
+      ref: pkg:deb/debian/zlib1g@1.3.dfsg%2Breally1.3.1-1%2Bb1?arch=amd64&distro=debian-13.5&epoch=1
+    - dependsOn:
+      - 7a45c3d9-8218-40d1-80d5-52988bf78f1c
+      - pkg:pypi/blinker@1.9.0
+      - pkg:pypi/certifi@2026.5.20
+      - pkg:pypi/charset-normalizer@3.4.7
+      - pkg:pypi/click@8.4.1
+      - pkg:pypi/flask@3.0.3
+      - pkg:pypi/idna@3.16
+      - pkg:pypi/itsdangerous@2.2.0
+      - pkg:pypi/jinja2@3.1.6
+      - pkg:pypi/markupsafe@3.0.3
+      - pkg:pypi/pip@25.0.1
+      - pkg:pypi/requests@2.32.3
+      - pkg:pypi/urllib3@2.7.0
+      - pkg:pypi/werkzeug@3.1.8
+      ref: pkg:oci/python-server@sha256%3Af4c72d8e76069a4643dd3f6568499bfd254a8c8faf5d94992b63a0fe2a70da68?arch=amd64&repository_url=ghcr.io%2Fystkfujii%2Fplayground_supply-chain-guard%2Fpython-server
+    - dependsOn: []
+      ref: pkg:pypi/blinker@1.9.0
+    - dependsOn: []
+      ref: pkg:pypi/certifi@2026.5.20
+    - dependsOn: []
+      ref: pkg:pypi/charset-normalizer@3.4.7
+    - dependsOn: []
+      ref: pkg:pypi/click@8.4.1
+    - dependsOn: []
+      ref: pkg:pypi/flask@3.0.3
+    - dependsOn: []
+      ref: pkg:pypi/idna@3.16
+    - dependsOn: []
+      ref: pkg:pypi/itsdangerous@2.2.0
+    - dependsOn: []
+      ref: pkg:pypi/jinja2@3.1.6
+    - dependsOn: []
+      ref: pkg:pypi/markupsafe@3.0.3
+    - dependsOn: []
+      ref: pkg:pypi/pip@25.0.1
+    - dependsOn: []
+      ref: pkg:pypi/requests@2.32.3
+    - dependsOn: []
+      ref: pkg:pypi/urllib3@2.7.0
+    - dependsOn: []
+      ref: pkg:pypi/werkzeug@3.1.8
+    metadata:
+      component:
+        bom-ref: pkg:oci/python-server@sha256%3Af4c72d8e76069a4643dd3f6568499bfd254a8c8faf5d94992b63a0fe2a70da68?arch=amd64&repository_url=ghcr.io%2Fystkfujii%2Fplayground_supply-chain-guard%2Fpython-server
+        name: ghcr.io/ystkfujii/playground_supply-chain-guard/python-server:stable@sha256:f4c72d8e76069a4643dd3f6568499bfd254a8c8faf5d94992b63a0fe2a70da68
+        properties:
+        - name: aquasecurity:trivy:DiffID
+          value: sha256:0cfbcf3df115dc6392563c259c96a5978cf467fcb0ce3193ddf7cf0b9d42732a
+        - name: aquasecurity:trivy:DiffID
+          value: sha256:219a998c60509502b47b97f1158067d5dd62640d2d689560d32cfd5594f6bc40
+        - name: aquasecurity:trivy:DiffID
+          value: sha256:2d189e0a3977128a57e4237dcfa87aa09fa11f22481fa0c5e99e794a6d22b31b
+        - name: aquasecurity:trivy:DiffID
+          value: sha256:50716f64c7eaf52590a84b9b841487220626cd18a63c1e0546dd9c4fe767c03e
+        - name: aquasecurity:trivy:DiffID
+          value: sha256:644711a636647eb69e54897b19900cf3586dd1c970aa3c3dbea01650cab87e40
+        - name: aquasecurity:trivy:DiffID
+          value: sha256:6872606a6b819a8348189e0d99b8e730aa74d558c158d96f1dd2406a7c6baaf7
+        - name: aquasecurity:trivy:DiffID
+          value: sha256:92c34b0000be7986d275bb44ca21e453a7da6692f255e5588255d4771613ecc1
+        - name: aquasecurity:trivy:DiffID
+          value: sha256:ae0096d57d7f18e7861848f1103983488102f78517c11444120d8a938884de54
+        - name: aquasecurity:trivy:DiffID
+          value: sha256:c529e1b2553946dcc9afa2d77e33a75f23d3702e0b4a7911b67e2f1fe45a4939
+        - name: aquasecurity:trivy:DiffID
+          value: sha256:fe64b2f114ee5d167145ae039b8251644d46004b91c6a6af37f04e0e66f4ba85
+        - name: aquasecurity:trivy:ImageID
+          value: sha256:ea9a96d8d519aa8a4a5c53bb03a0f4e6cbfdfec121dd2d827ddc7ba9a489b149
+        - name: aquasecurity:trivy:Reference
+          value: ghcr.io/ystkfujii/playground_supply-chain-guard/python-server@sha256:f4c72d8e76069a4643dd3f6568499bfd254a8c8faf5d94992b63a0fe2a70da68
+        - name: aquasecurity:trivy:RepoDigest
+          value: ghcr.io/ystkfujii/playground_supply-chain-guard/python-server@sha256:f4c72d8e76069a4643dd3f6568499bfd254a8c8faf5d94992b63a0fe2a70da68
+        - name: aquasecurity:trivy:SchemaVersion
+          value: "2"
+        - name: aquasecurity:trivy:Size
+          value: "131465728"
+        purl: pkg:oci/python-server@sha256%3Af4c72d8e76069a4643dd3f6568499bfd254a8c8faf5d94992b63a0fe2a70da68?arch=amd64&repository_url=ghcr.io%2Fystkfujii%2Fplayground_supply-chain-guard%2Fpython-server
+        type: container
+      timestamp: "2026-05-24T09:52:46+00:00"
+      tools:
+        components:
+        - group: aquasecurity
+          name: trivy
+          type: application
+          version: 0.69.3
+    serialNumber: urn:uuid:a4ddf572-6eb7-42b6-9134-eceef825b54f
+    specVersion: "1.6"
+    version: 1
+  registry:
+    server: ghcr.io
+  scanner:
+    name: Trivy
+    vendor: Aqua Security
+    version: 0.69.3
+  summary:
+    componentsCount: 102
+    dependenciesCount: 102
+  updateTimestamp: "2026-05-24T09:52:46Z"

@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-server
+  namespace: demo-python
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: python-server
+  template:
+    metadata:
+      labels:
+        app: python-server
+    spec:
+      containers:
+        - name: app
+          image: ghcr.io/ystkfujii/playground_supply-chain-guard/python-server:stable@sha256:dummy 

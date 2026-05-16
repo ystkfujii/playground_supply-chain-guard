@@ -1,0 +1,755 @@
+apiVersion: aquasecurity.github.io/v1alpha1
+kind: SbomReport
+metadata:
+  creationTimestamp: "2026-05-24T09:52:53Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/managed-by: trivy-operator
+    resource-spec-hash: 6b48b6cbc7
+    trivy-operator.container.name: app
+    trivy-operator.resource.kind: ReplicaSet
+    trivy-operator.resource.name: app-767474f677
+    trivy-operator.resource.namespace: demo
+  name: replicaset-app-767474f677-app
+  namespace: demo
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: false
+    controller: true
+    kind: ReplicaSet
+    name: app-767474f677
+    uid: c4d5c729-c69d-4d39-87ca-0b16efdcbee1
+  resourceVersion: "33474"
+  uid: f2a8a0bb-e979-479e-8751-bed0179c805d
+report:
+  artifact:
+    digest: sha256:9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+    repository: ystkfujii/playground_supply-chain-guard/go-server
+    tag: stable
+  components:
+    bomFormat: CycloneDX
+    components:
+    - bom-ref: 1a217040-0864-4da0-b5eb-78a0900c9220
+      name: server
+      properties:
+      - name: aquasecurity:trivy:Class
+        value: lang-pkgs
+      - name: aquasecurity:trivy:Type
+        value: gobinary
+      type: application
+    - bom-ref: f42e8148-dac8-497c-9af0-75b7fa78a14e
+      name: alpine
+      properties:
+      - name: aquasecurity:trivy:Class
+        value: os-pkgs
+      - name: aquasecurity:trivy:Type
+        value: alpine
+      type: operating-system
+      version: 3.21.7
+    - bom-ref: pkg:apk/alpine/alpine-baselayout-data@3.6.8-r1?arch=x86_64&distro=3.21.7
+      hashes:
+      - alg: SHA-1
+        content: 7979a835bc317cedb997d3a42f3b10be86a8d18a
+      licenses:
+      - license:
+          id: GPL-2.0-only
+      name: alpine-baselayout-data
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:897d797d2723cf0e318402f4d6f37d51b011517e5cf09246b22155f0fa90dc81
+      - name: aquasecurity:trivy:PkgID
+        value: alpine-baselayout-data@3.6.8-r1
+      - name: aquasecurity:trivy:PkgType
+        value: alpine
+      - name: aquasecurity:trivy:SrcName
+        value: alpine-baselayout
+      - name: aquasecurity:trivy:SrcVersion
+        value: 3.6.8-r1
+      purl: pkg:apk/alpine/alpine-baselayout-data@3.6.8-r1?arch=x86_64&distro=3.21.7
+      supplier:
+        name: Natanael Copa <ncopa@alpinelinux.org>
+      type: library
+      version: 3.6.8-r1
+    - bom-ref: pkg:apk/alpine/alpine-baselayout@3.6.8-r1?arch=x86_64&distro=3.21.7
+      hashes:
+      - alg: SHA-1
+        content: eceb5e3555e7f7f8925dc248d557fcc744d573d6
+      licenses:
+      - license:
+          id: GPL-2.0-only
+      name: alpine-baselayout
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:897d797d2723cf0e318402f4d6f37d51b011517e5cf09246b22155f0fa90dc81
+      - name: aquasecurity:trivy:PkgID
+        value: alpine-baselayout@3.6.8-r1
+      - name: aquasecurity:trivy:PkgType
+        value: alpine
+      - name: aquasecurity:trivy:SrcName
+        value: alpine-baselayout
+      - name: aquasecurity:trivy:SrcVersion
+        value: 3.6.8-r1
+      purl: pkg:apk/alpine/alpine-baselayout@3.6.8-r1?arch=x86_64&distro=3.21.7
+      supplier:
+        name: Natanael Copa <ncopa@alpinelinux.org>
+      type: library
+      version: 3.6.8-r1
+    - bom-ref: pkg:apk/alpine/alpine-keys@2.5-r0?arch=x86_64&distro=3.21.7
+      hashes:
+      - alg: SHA-1
+        content: 91014bfdba0e7f7b4505159466e9f19871606a59
+      licenses:
+      - license:
+          id: MIT
+      name: alpine-keys
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:897d797d2723cf0e318402f4d6f37d51b011517e5cf09246b22155f0fa90dc81
+      - name: aquasecurity:trivy:PkgID
+        value: alpine-keys@2.5-r0
+      - name: aquasecurity:trivy:PkgType
+        value: alpine
+      - name: aquasecurity:trivy:SrcName
+        value: alpine-keys
+      - name: aquasecurity:trivy:SrcVersion
+        value: 2.5-r0
+      purl: pkg:apk/alpine/alpine-keys@2.5-r0?arch=x86_64&distro=3.21.7
+      supplier:
+        name: Natanael Copa <ncopa@alpinelinux.org>
+      type: library
+      version: 2.5-r0
+    - bom-ref: pkg:apk/alpine/alpine-release@3.21.7-r0?arch=x86_64&distro=3.21.7
+      hashes:
+      - alg: SHA-1
+        content: f9466e1c771948501b823693dd34879fb94b4604
+      licenses:
+      - license:
+          id: MIT
+      name: alpine-release
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:897d797d2723cf0e318402f4d6f37d51b011517e5cf09246b22155f0fa90dc81
+      - name: aquasecurity:trivy:PkgID
+        value: alpine-release@3.21.7-r0
+      - name: aquasecurity:trivy:PkgType
+        value: alpine
+      - name: aquasecurity:trivy:SrcName
+        value: alpine-base
+      - name: aquasecurity:trivy:SrcVersion
+        value: 3.21.7-r0
+      purl: pkg:apk/alpine/alpine-release@3.21.7-r0?arch=x86_64&distro=3.21.7
+      supplier:
+        name: Natanael Copa <ncopa@alpinelinux.org>
+      type: library
+      version: 3.21.7-r0
+    - bom-ref: pkg:apk/alpine/apk-tools@2.14.6-r3?arch=x86_64&distro=3.21.7
+      hashes:
+      - alg: SHA-1
+        content: 9704358d1b44fa771e0a0a3a527d8a26830e3eba
+      licenses:
+      - license:
+          id: GPL-2.0-only
+      name: apk-tools
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:897d797d2723cf0e318402f4d6f37d51b011517e5cf09246b22155f0fa90dc81
+      - name: aquasecurity:trivy:PkgID
+        value: apk-tools@2.14.6-r3
+      - name: aquasecurity:trivy:PkgType
+        value: alpine
+      - name: aquasecurity:trivy:SrcName
+        value: apk-tools
+      - name: aquasecurity:trivy:SrcVersion
+        value: 2.14.6-r3
+      purl: pkg:apk/alpine/apk-tools@2.14.6-r3?arch=x86_64&distro=3.21.7
+      supplier:
+        name: Natanael Copa <ncopa@alpinelinux.org>
+      type: library
+      version: 2.14.6-r3
+    - bom-ref: pkg:apk/alpine/busybox-binsh@1.37.0-r14?arch=x86_64&distro=3.21.7
+      hashes:
+      - alg: SHA-1
+        content: e9b6cac12f5408585ae488f77ca6ca5d6aa6259d
+      licenses:
+      - license:
+          id: GPL-2.0-only
+      name: busybox-binsh
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:897d797d2723cf0e318402f4d6f37d51b011517e5cf09246b22155f0fa90dc81
+      - name: aquasecurity:trivy:PkgID
+        value: busybox-binsh@1.37.0-r14
+      - name: aquasecurity:trivy:PkgType
+        value: alpine
+      - name: aquasecurity:trivy:SrcName
+        value: busybox
+      - name: aquasecurity:trivy:SrcVersion
+        value: 1.37.0-r14
+      purl: pkg:apk/alpine/busybox-binsh@1.37.0-r14?arch=x86_64&distro=3.21.7
+      supplier:
+        name: Sören Tempel <soeren+alpine@soeren-tempel.net>
+      type: library
+      version: 1.37.0-r14
+    - bom-ref: pkg:apk/alpine/busybox@1.37.0-r14?arch=x86_64&distro=3.21.7
+      hashes:
+      - alg: SHA-1
+        content: a7fc9d0c26eac3c681f2e03f339af312011e443e
+      licenses:
+      - license:
+          id: GPL-2.0-only
+      name: busybox
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:897d797d2723cf0e318402f4d6f37d51b011517e5cf09246b22155f0fa90dc81
+      - name: aquasecurity:trivy:PkgID
+        value: busybox@1.37.0-r14
+      - name: aquasecurity:trivy:PkgType
+        value: alpine
+      - name: aquasecurity:trivy:SrcName
+        value: busybox
+      - name: aquasecurity:trivy:SrcVersion
+        value: 1.37.0-r14
+      purl: pkg:apk/alpine/busybox@1.37.0-r14?arch=x86_64&distro=3.21.7
+      supplier:
+        name: Sören Tempel <soeren+alpine@soeren-tempel.net>
+      type: library
+      version: 1.37.0-r14
+    - bom-ref: pkg:apk/alpine/ca-certificates-bundle@20260413-r0?arch=x86_64&distro=3.21.7
+      hashes:
+      - alg: SHA-1
+        content: 4f5528d14760e2c06533016b300cbf736eb49345
+      licenses:
+      - license:
+          id: MPL-2.0
+      - license:
+          id: MIT
+      name: ca-certificates-bundle
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:897d797d2723cf0e318402f4d6f37d51b011517e5cf09246b22155f0fa90dc81
+      - name: aquasecurity:trivy:PkgID
+        value: ca-certificates-bundle@20260413-r0
+      - name: aquasecurity:trivy:PkgType
+        value: alpine
+      - name: aquasecurity:trivy:SrcName
+        value: ca-certificates
+      - name: aquasecurity:trivy:SrcVersion
+        value: 20260413-r0
+      purl: pkg:apk/alpine/ca-certificates-bundle@20260413-r0?arch=x86_64&distro=3.21.7
+      supplier:
+        name: Natanael Copa <ncopa@alpinelinux.org>
+      type: library
+      version: 20260413-r0
+    - bom-ref: pkg:apk/alpine/libcrypto3@3.3.7-r0?arch=x86_64&distro=3.21.7
+      hashes:
+      - alg: SHA-1
+        content: 443fd710f1d273fb8804b3a54b087472ddcded4a
+      licenses:
+      - license:
+          id: Apache-2.0
+      name: libcrypto3
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:897d797d2723cf0e318402f4d6f37d51b011517e5cf09246b22155f0fa90dc81
+      - name: aquasecurity:trivy:PkgID
+        value: libcrypto3@3.3.7-r0
+      - name: aquasecurity:trivy:PkgType
+        value: alpine
+      - name: aquasecurity:trivy:SrcName
+        value: openssl
+      - name: aquasecurity:trivy:SrcVersion
+        value: 3.3.7-r0
+      purl: pkg:apk/alpine/libcrypto3@3.3.7-r0?arch=x86_64&distro=3.21.7
+      supplier:
+        name: Natanael Copa <ncopa@alpinelinux.org>
+      type: library
+      version: 3.3.7-r0
+    - bom-ref: pkg:apk/alpine/libssl3@3.3.7-r0?arch=x86_64&distro=3.21.7
+      hashes:
+      - alg: SHA-1
+        content: 2feb92416a1904ea7f8b73c8a3cf0eaac109f934
+      licenses:
+      - license:
+          id: Apache-2.0
+      name: libssl3
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:897d797d2723cf0e318402f4d6f37d51b011517e5cf09246b22155f0fa90dc81
+      - name: aquasecurity:trivy:PkgID
+        value: libssl3@3.3.7-r0
+      - name: aquasecurity:trivy:PkgType
+        value: alpine
+      - name: aquasecurity:trivy:SrcName
+        value: openssl
+      - name: aquasecurity:trivy:SrcVersion
+        value: 3.3.7-r0
+      purl: pkg:apk/alpine/libssl3@3.3.7-r0?arch=x86_64&distro=3.21.7
+      supplier:
+        name: Natanael Copa <ncopa@alpinelinux.org>
+      type: library
+      version: 3.3.7-r0
+    - bom-ref: pkg:apk/alpine/musl-utils@1.2.5-r11?arch=x86_64&distro=3.21.7
+      hashes:
+      - alg: SHA-1
+        content: 7eef349dc5d90f1b57b7b90cefce2fdd63d344f5
+      licenses:
+      - license:
+          id: MIT
+      - license:
+          id: BSD-2-Clause
+      - license:
+          id: GPL-2.0-or-later
+      name: musl-utils
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:897d797d2723cf0e318402f4d6f37d51b011517e5cf09246b22155f0fa90dc81
+      - name: aquasecurity:trivy:PkgID
+        value: musl-utils@1.2.5-r11
+      - name: aquasecurity:trivy:PkgType
+        value: alpine
+      - name: aquasecurity:trivy:SrcName
+        value: musl
+      - name: aquasecurity:trivy:SrcVersion
+        value: 1.2.5-r11
+      purl: pkg:apk/alpine/musl-utils@1.2.5-r11?arch=x86_64&distro=3.21.7
+      supplier:
+        name: Natanael Copa <ncopa@alpinelinux.org>
+      type: library
+      version: 1.2.5-r11
+    - bom-ref: pkg:apk/alpine/musl@1.2.5-r11?arch=x86_64&distro=3.21.7
+      hashes:
+      - alg: SHA-1
+        content: 2aecf113bb0506f95daedf916ec044adca45cab3
+      licenses:
+      - license:
+          id: MIT
+      name: musl
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:897d797d2723cf0e318402f4d6f37d51b011517e5cf09246b22155f0fa90dc81
+      - name: aquasecurity:trivy:PkgID
+        value: musl@1.2.5-r11
+      - name: aquasecurity:trivy:PkgType
+        value: alpine
+      - name: aquasecurity:trivy:SrcName
+        value: musl
+      - name: aquasecurity:trivy:SrcVersion
+        value: 1.2.5-r11
+      purl: pkg:apk/alpine/musl@1.2.5-r11?arch=x86_64&distro=3.21.7
+      supplier:
+        name: Natanael Copa <ncopa@alpinelinux.org>
+      type: library
+      version: 1.2.5-r11
+    - bom-ref: pkg:apk/alpine/scanelf@1.3.8-r1?arch=x86_64&distro=3.21.7
+      hashes:
+      - alg: SHA-1
+        content: 77729f7622baeaafb6feaf7486f4f5452c1c7b62
+      licenses:
+      - license:
+          id: GPL-2.0-only
+      name: scanelf
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:897d797d2723cf0e318402f4d6f37d51b011517e5cf09246b22155f0fa90dc81
+      - name: aquasecurity:trivy:PkgID
+        value: scanelf@1.3.8-r1
+      - name: aquasecurity:trivy:PkgType
+        value: alpine
+      - name: aquasecurity:trivy:SrcName
+        value: pax-utils
+      - name: aquasecurity:trivy:SrcVersion
+        value: 1.3.8-r1
+      purl: pkg:apk/alpine/scanelf@1.3.8-r1?arch=x86_64&distro=3.21.7
+      supplier:
+        name: Natanael Copa <ncopa@alpinelinux.org>
+      type: library
+      version: 1.3.8-r1
+    - bom-ref: pkg:apk/alpine/ssl_client@1.37.0-r14?arch=x86_64&distro=3.21.7
+      hashes:
+      - alg: SHA-1
+        content: 07f8874a42ad31bf4083351c8c236b18815e9614
+      licenses:
+      - license:
+          id: GPL-2.0-only
+      name: ssl_client
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:897d797d2723cf0e318402f4d6f37d51b011517e5cf09246b22155f0fa90dc81
+      - name: aquasecurity:trivy:PkgID
+        value: ssl_client@1.37.0-r14
+      - name: aquasecurity:trivy:PkgType
+        value: alpine
+      - name: aquasecurity:trivy:SrcName
+        value: busybox
+      - name: aquasecurity:trivy:SrcVersion
+        value: 1.37.0-r14
+      purl: pkg:apk/alpine/ssl_client@1.37.0-r14?arch=x86_64&distro=3.21.7
+      supplier:
+        name: Sören Tempel <soeren+alpine@soeren-tempel.net>
+      type: library
+      version: 1.37.0-r14
+    - bom-ref: pkg:apk/alpine/zlib@1.3.2-r0?arch=x86_64&distro=3.21.7
+      hashes:
+      - alg: SHA-1
+        content: e4f3a131611717aa6ef7723de1335a7b1fbf0523
+      licenses:
+      - license:
+          id: Zlib
+      name: zlib
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:897d797d2723cf0e318402f4d6f37d51b011517e5cf09246b22155f0fa90dc81
+      - name: aquasecurity:trivy:PkgID
+        value: zlib@1.3.2-r0
+      - name: aquasecurity:trivy:PkgType
+        value: alpine
+      - name: aquasecurity:trivy:SrcName
+        value: zlib
+      - name: aquasecurity:trivy:SrcVersion
+        value: 1.3.2-r0
+      purl: pkg:apk/alpine/zlib@1.3.2-r0?arch=x86_64&distro=3.21.7
+      supplier:
+        name: Natanael Copa <ncopa@alpinelinux.org>
+      type: library
+      version: 1.3.2-r0
+    - bom-ref: pkg:golang/github.com/labstack/echo/v4@v4.15.2
+      name: github.com/labstack/echo/v4
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:eedfd6e00764b58237f6d24bed51996202f07ee6397e60552d748b475912ac85
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:9a9fcefecadbfb173d042a38b499ec8188ece7c869c70c989084e31712cd4fd8
+      - name: aquasecurity:trivy:PkgID
+        value: github.com/labstack/echo/v4@v4.15.2
+      - name: aquasecurity:trivy:PkgType
+        value: gobinary
+      purl: pkg:golang/github.com/labstack/echo/v4@v4.15.2
+      type: library
+      version: v4.15.2
+    - bom-ref: pkg:golang/github.com/labstack/gommon@v0.5.0
+      name: github.com/labstack/gommon
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:eedfd6e00764b58237f6d24bed51996202f07ee6397e60552d748b475912ac85
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:9a9fcefecadbfb173d042a38b499ec8188ece7c869c70c989084e31712cd4fd8
+      - name: aquasecurity:trivy:PkgID
+        value: github.com/labstack/gommon@v0.5.0
+      - name: aquasecurity:trivy:PkgType
+        value: gobinary
+      purl: pkg:golang/github.com/labstack/gommon@v0.5.0
+      type: library
+      version: v0.5.0
+    - bom-ref: pkg:golang/github.com/mattn/go-colorable@v0.1.14
+      name: github.com/mattn/go-colorable
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:eedfd6e00764b58237f6d24bed51996202f07ee6397e60552d748b475912ac85
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:9a9fcefecadbfb173d042a38b499ec8188ece7c869c70c989084e31712cd4fd8
+      - name: aquasecurity:trivy:PkgID
+        value: github.com/mattn/go-colorable@v0.1.14
+      - name: aquasecurity:trivy:PkgType
+        value: gobinary
+      purl: pkg:golang/github.com/mattn/go-colorable@v0.1.14
+      type: library
+      version: v0.1.14
+    - bom-ref: pkg:golang/github.com/mattn/go-isatty@v0.0.22
+      name: github.com/mattn/go-isatty
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:eedfd6e00764b58237f6d24bed51996202f07ee6397e60552d748b475912ac85
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:9a9fcefecadbfb173d042a38b499ec8188ece7c869c70c989084e31712cd4fd8
+      - name: aquasecurity:trivy:PkgID
+        value: github.com/mattn/go-isatty@v0.0.22
+      - name: aquasecurity:trivy:PkgType
+        value: gobinary
+      purl: pkg:golang/github.com/mattn/go-isatty@v0.0.22
+      type: library
+      version: v0.0.22
+    - bom-ref: pkg:golang/github.com/valyala/bytebufferpool@v1.0.0
+      name: github.com/valyala/bytebufferpool
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:eedfd6e00764b58237f6d24bed51996202f07ee6397e60552d748b475912ac85
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:9a9fcefecadbfb173d042a38b499ec8188ece7c869c70c989084e31712cd4fd8
+      - name: aquasecurity:trivy:PkgID
+        value: github.com/valyala/bytebufferpool@v1.0.0
+      - name: aquasecurity:trivy:PkgType
+        value: gobinary
+      purl: pkg:golang/github.com/valyala/bytebufferpool@v1.0.0
+      type: library
+      version: v1.0.0
+    - bom-ref: pkg:golang/github.com/valyala/fasttemplate@v1.2.2
+      name: github.com/valyala/fasttemplate
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:eedfd6e00764b58237f6d24bed51996202f07ee6397e60552d748b475912ac85
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:9a9fcefecadbfb173d042a38b499ec8188ece7c869c70c989084e31712cd4fd8
+      - name: aquasecurity:trivy:PkgID
+        value: github.com/valyala/fasttemplate@v1.2.2
+      - name: aquasecurity:trivy:PkgType
+        value: gobinary
+      purl: pkg:golang/github.com/valyala/fasttemplate@v1.2.2
+      type: library
+      version: v1.2.2
+    - bom-ref: pkg:golang/golang.org/x/crypto@v0.50.0
+      name: golang.org/x/crypto
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:eedfd6e00764b58237f6d24bed51996202f07ee6397e60552d748b475912ac85
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:9a9fcefecadbfb173d042a38b499ec8188ece7c869c70c989084e31712cd4fd8
+      - name: aquasecurity:trivy:PkgID
+        value: golang.org/x/crypto@v0.50.0
+      - name: aquasecurity:trivy:PkgType
+        value: gobinary
+      purl: pkg:golang/golang.org/x/crypto@v0.50.0
+      type: library
+      version: v0.50.0
+    - bom-ref: pkg:golang/golang.org/x/net@v0.53.0
+      name: golang.org/x/net
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:eedfd6e00764b58237f6d24bed51996202f07ee6397e60552d748b475912ac85
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:9a9fcefecadbfb173d042a38b499ec8188ece7c869c70c989084e31712cd4fd8
+      - name: aquasecurity:trivy:PkgID
+        value: golang.org/x/net@v0.53.0
+      - name: aquasecurity:trivy:PkgType
+        value: gobinary
+      purl: pkg:golang/golang.org/x/net@v0.53.0
+      type: library
+      version: v0.53.0
+    - bom-ref: pkg:golang/golang.org/x/sys@v0.43.0
+      name: golang.org/x/sys
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:eedfd6e00764b58237f6d24bed51996202f07ee6397e60552d748b475912ac85
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:9a9fcefecadbfb173d042a38b499ec8188ece7c869c70c989084e31712cd4fd8
+      - name: aquasecurity:trivy:PkgID
+        value: golang.org/x/sys@v0.43.0
+      - name: aquasecurity:trivy:PkgType
+        value: gobinary
+      purl: pkg:golang/golang.org/x/sys@v0.43.0
+      type: library
+      version: v0.43.0
+    - bom-ref: pkg:golang/golang.org/x/text@v0.36.0
+      name: golang.org/x/text
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:eedfd6e00764b58237f6d24bed51996202f07ee6397e60552d748b475912ac85
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:9a9fcefecadbfb173d042a38b499ec8188ece7c869c70c989084e31712cd4fd8
+      - name: aquasecurity:trivy:PkgID
+        value: golang.org/x/text@v0.36.0
+      - name: aquasecurity:trivy:PkgType
+        value: gobinary
+      purl: pkg:golang/golang.org/x/text@v0.36.0
+      type: library
+      version: v0.36.0
+    - bom-ref: pkg:golang/golang.org/x/time@v0.15.0
+      name: golang.org/x/time
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:eedfd6e00764b58237f6d24bed51996202f07ee6397e60552d748b475912ac85
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:9a9fcefecadbfb173d042a38b499ec8188ece7c869c70c989084e31712cd4fd8
+      - name: aquasecurity:trivy:PkgID
+        value: golang.org/x/time@v0.15.0
+      - name: aquasecurity:trivy:PkgType
+        value: gobinary
+      purl: pkg:golang/golang.org/x/time@v0.15.0
+      type: library
+      version: v0.15.0
+    - bom-ref: pkg:golang/stdlib@v1.26.3
+      name: stdlib
+      properties:
+      - name: aquasecurity:trivy:LayerDiffID
+        value: sha256:eedfd6e00764b58237f6d24bed51996202f07ee6397e60552d748b475912ac85
+      - name: aquasecurity:trivy:LayerDigest
+        value: sha256:9a9fcefecadbfb173d042a38b499ec8188ece7c869c70c989084e31712cd4fd8
+      - name: aquasecurity:trivy:PkgID
+        value: stdlib@v1.26.3
+      - name: aquasecurity:trivy:PkgType
+        value: gobinary
+      purl: pkg:golang/stdlib@v1.26.3
+      type: library
+      version: v1.26.3
+    dependencies:
+    - dependsOn:
+      - pkg:golang/github.com/labstack/echo/v4@v4.15.2
+      - pkg:golang/github.com/labstack/gommon@v0.5.0
+      - pkg:golang/github.com/mattn/go-colorable@v0.1.14
+      - pkg:golang/github.com/mattn/go-isatty@v0.0.22
+      - pkg:golang/github.com/valyala/bytebufferpool@v1.0.0
+      - pkg:golang/github.com/valyala/fasttemplate@v1.2.2
+      - pkg:golang/golang.org/x/crypto@v0.50.0
+      - pkg:golang/golang.org/x/net@v0.53.0
+      - pkg:golang/golang.org/x/sys@v0.43.0
+      - pkg:golang/golang.org/x/text@v0.36.0
+      - pkg:golang/golang.org/x/time@v0.15.0
+      - pkg:golang/stdlib@v1.26.3
+      ref: 1a217040-0864-4da0-b5eb-78a0900c9220
+    - dependsOn:
+      - pkg:apk/alpine/alpine-baselayout@3.6.8-r1?arch=x86_64&distro=3.21.7
+      - pkg:apk/alpine/alpine-release@3.21.7-r0?arch=x86_64&distro=3.21.7
+      - pkg:apk/alpine/apk-tools@2.14.6-r3?arch=x86_64&distro=3.21.7
+      - pkg:apk/alpine/musl-utils@1.2.5-r11?arch=x86_64&distro=3.21.7
+      - pkg:apk/alpine/ssl_client@1.37.0-r14?arch=x86_64&distro=3.21.7
+      ref: f42e8148-dac8-497c-9af0-75b7fa78a14e
+    - dependsOn: []
+      ref: pkg:apk/alpine/alpine-baselayout-data@3.6.8-r1?arch=x86_64&distro=3.21.7
+    - dependsOn:
+      - pkg:apk/alpine/alpine-baselayout-data@3.6.8-r1?arch=x86_64&distro=3.21.7
+      - pkg:apk/alpine/busybox-binsh@1.37.0-r14?arch=x86_64&distro=3.21.7
+      ref: pkg:apk/alpine/alpine-baselayout@3.6.8-r1?arch=x86_64&distro=3.21.7
+    - dependsOn: []
+      ref: pkg:apk/alpine/alpine-keys@2.5-r0?arch=x86_64&distro=3.21.7
+    - dependsOn:
+      - pkg:apk/alpine/alpine-keys@2.5-r0?arch=x86_64&distro=3.21.7
+      ref: pkg:apk/alpine/alpine-release@3.21.7-r0?arch=x86_64&distro=3.21.7
+    - dependsOn:
+      - pkg:apk/alpine/ca-certificates-bundle@20260413-r0?arch=x86_64&distro=3.21.7
+      - pkg:apk/alpine/libcrypto3@3.3.7-r0?arch=x86_64&distro=3.21.7
+      - pkg:apk/alpine/libssl3@3.3.7-r0?arch=x86_64&distro=3.21.7
+      - pkg:apk/alpine/musl@1.2.5-r11?arch=x86_64&distro=3.21.7
+      - pkg:apk/alpine/zlib@1.3.2-r0?arch=x86_64&distro=3.21.7
+      ref: pkg:apk/alpine/apk-tools@2.14.6-r3?arch=x86_64&distro=3.21.7
+    - dependsOn:
+      - pkg:apk/alpine/busybox@1.37.0-r14?arch=x86_64&distro=3.21.7
+      ref: pkg:apk/alpine/busybox-binsh@1.37.0-r14?arch=x86_64&distro=3.21.7
+    - dependsOn:
+      - pkg:apk/alpine/musl@1.2.5-r11?arch=x86_64&distro=3.21.7
+      ref: pkg:apk/alpine/busybox@1.37.0-r14?arch=x86_64&distro=3.21.7
+    - dependsOn: []
+      ref: pkg:apk/alpine/ca-certificates-bundle@20260413-r0?arch=x86_64&distro=3.21.7
+    - dependsOn:
+      - pkg:apk/alpine/musl@1.2.5-r11?arch=x86_64&distro=3.21.7
+      ref: pkg:apk/alpine/libcrypto3@3.3.7-r0?arch=x86_64&distro=3.21.7
+    - dependsOn:
+      - pkg:apk/alpine/libcrypto3@3.3.7-r0?arch=x86_64&distro=3.21.7
+      - pkg:apk/alpine/musl@1.2.5-r11?arch=x86_64&distro=3.21.7
+      ref: pkg:apk/alpine/libssl3@3.3.7-r0?arch=x86_64&distro=3.21.7
+    - dependsOn:
+      - pkg:apk/alpine/musl@1.2.5-r11?arch=x86_64&distro=3.21.7
+      - pkg:apk/alpine/scanelf@1.3.8-r1?arch=x86_64&distro=3.21.7
+      ref: pkg:apk/alpine/musl-utils@1.2.5-r11?arch=x86_64&distro=3.21.7
+    - dependsOn: []
+      ref: pkg:apk/alpine/musl@1.2.5-r11?arch=x86_64&distro=3.21.7
+    - dependsOn:
+      - pkg:apk/alpine/musl@1.2.5-r11?arch=x86_64&distro=3.21.7
+      ref: pkg:apk/alpine/scanelf@1.3.8-r1?arch=x86_64&distro=3.21.7
+    - dependsOn:
+      - pkg:apk/alpine/libcrypto3@3.3.7-r0?arch=x86_64&distro=3.21.7
+      - pkg:apk/alpine/libssl3@3.3.7-r0?arch=x86_64&distro=3.21.7
+      - pkg:apk/alpine/musl@1.2.5-r11?arch=x86_64&distro=3.21.7
+      ref: pkg:apk/alpine/ssl_client@1.37.0-r14?arch=x86_64&distro=3.21.7
+    - dependsOn:
+      - pkg:apk/alpine/musl@1.2.5-r11?arch=x86_64&distro=3.21.7
+      ref: pkg:apk/alpine/zlib@1.3.2-r0?arch=x86_64&distro=3.21.7
+    - dependsOn: []
+      ref: pkg:golang/github.com/labstack/echo/v4@v4.15.2
+    - dependsOn: []
+      ref: pkg:golang/github.com/labstack/gommon@v0.5.0
+    - dependsOn: []
+      ref: pkg:golang/github.com/mattn/go-colorable@v0.1.14
+    - dependsOn: []
+      ref: pkg:golang/github.com/mattn/go-isatty@v0.0.22
+    - dependsOn: []
+      ref: pkg:golang/github.com/valyala/bytebufferpool@v1.0.0
+    - dependsOn: []
+      ref: pkg:golang/github.com/valyala/fasttemplate@v1.2.2
+    - dependsOn: []
+      ref: pkg:golang/golang.org/x/crypto@v0.50.0
+    - dependsOn: []
+      ref: pkg:golang/golang.org/x/net@v0.53.0
+    - dependsOn: []
+      ref: pkg:golang/golang.org/x/sys@v0.43.0
+    - dependsOn: []
+      ref: pkg:golang/golang.org/x/text@v0.36.0
+    - dependsOn: []
+      ref: pkg:golang/golang.org/x/time@v0.15.0
+    - dependsOn: []
+      ref: pkg:golang/stdlib@v1.26.3
+    - dependsOn:
+      - 1a217040-0864-4da0-b5eb-78a0900c9220
+      - f42e8148-dac8-497c-9af0-75b7fa78a14e
+      ref: pkg:oci/go-server@sha256%3A9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922?arch=amd64&repository_url=ghcr.io%2Fystkfujii%2Fplayground_supply-chain-guard%2Fgo-server
+    metadata:
+      component:
+        bom-ref: pkg:oci/go-server@sha256%3A9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922?arch=amd64&repository_url=ghcr.io%2Fystkfujii%2Fplayground_supply-chain-guard%2Fgo-server
+        name: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server:stable@sha256:9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+        properties:
+        - name: aquasecurity:trivy:DiffID
+          value: sha256:1519b5d08e3feb969c1a21bdf1c2e232f996e6aa185f386f34dda678c58d8cf0
+        - name: aquasecurity:trivy:DiffID
+          value: sha256:7211d01aba8fa2e9eb71ad34395cd313df5fc51a6b69b92d2dfad32cc37759cb
+        - name: aquasecurity:trivy:DiffID
+          value: sha256:eedfd6e00764b58237f6d24bed51996202f07ee6397e60552d748b475912ac85
+        - name: aquasecurity:trivy:ImageID
+          value: sha256:dc43b47ec6a5190090f2f9f951050565f03916a27a7d8c7eda78789db28353c1
+        - name: aquasecurity:trivy:Reference
+          value: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@sha256:9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+        - name: aquasecurity:trivy:RepoDigest
+          value: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server@sha256:9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922
+        - name: aquasecurity:trivy:SchemaVersion
+          value: "2"
+        - name: aquasecurity:trivy:Size
+          value: "14898176"
+        purl: pkg:oci/go-server@sha256%3A9c94e5e3dd83d5f4dc46f92d103235e1ec45caa8a1bf7cc2360e5f722920f922?arch=amd64&repository_url=ghcr.io%2Fystkfujii%2Fplayground_supply-chain-guard%2Fgo-server
+        type: container
+      timestamp: "2026-05-24T09:52:53+00:00"
+      tools:
+        components:
+        - group: aquasecurity
+          name: trivy
+          type: application
+          version: 0.69.3
+    serialNumber: urn:uuid:9e8e704d-8146-4579-bb46-774a06ad1668
+    specVersion: "1.6"
+    version: 1
+  registry:
+    server: ghcr.io
+  scanner:
+    name: Trivy
+    vendor: Aqua Security
+    version: 0.69.3
+  summary:
+    componentsCount: 30
+    dependenciesCount: 30
+  updateTimestamp: "2026-05-24T09:52:53Z"

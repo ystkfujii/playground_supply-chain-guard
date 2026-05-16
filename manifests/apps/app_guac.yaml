@@ -1,0 +1,42 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: guac
+  namespace: argocd
+spec:
+  project: default
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: guac
+  syncPolicy: 
+    syncOptions:
+      - CreateNamespace=true
+  source:
+    repoURL: https://guacsec.github.io/helm-charts
+    chart: guac
+    targetRevision: 0.8.0
+    helm:
+      releaseName: guac
+      values: |
+        imagePullSecrets: []
+
+        guac:
+          graphqlServer:
+            debug: true
+
+          visualizer:
+            enabled: true
+
+          sampleData:
+            ingest: false
+
+          observability:
+            deployServiceMonitor: false
+
+        nats:
+          enabled: true
+
+        minio:
+          enabled: true
+          persistence:
+            enabled: false

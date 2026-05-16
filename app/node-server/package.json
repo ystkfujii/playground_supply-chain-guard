@@ -1,0 +1,17 @@
+{
+  "name": "kubescape-demo-node",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Small Node.js app for Kubescape/SBOM demos",
+  "license": "UNLICENSED",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "axios": "1.7.7",
+    "express": "4.18.3",
+    "helmet": "7.1.0",
+    "uuid": "9.0.1"
+  }
+}

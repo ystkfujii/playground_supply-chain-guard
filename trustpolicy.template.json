@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "trustPolicies": [
+    {
+      "name": "notation-go-handson-policy",
+      "registryScopes": ["__REGISTRY_SCOPE__"],
+      "signatureVerification": {
+        "level": "strict"
+      },
+      "trustStores": ["ca:__TRUST_STORE__"],
+      "trustedIdentities": ["*"]
+    }
+  ]
+}

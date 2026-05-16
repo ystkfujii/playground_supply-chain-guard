@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: go-server
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/ystkfujii/playground_supply-chain-guard
+    targetRevision: main
+    path: manifests/go-server
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: demo
+  syncPolicy: {}

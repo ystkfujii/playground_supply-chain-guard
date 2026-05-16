@@ -1,0 +1,25 @@
+apiVersion: argocd-image-updater.argoproj.io/v1alpha1
+kind: ImageUpdater
+metadata:
+  name: go-server
+  namespace: argocd
+spec:
+  applicationRefs:
+    - namePattern: go-server
+      images:
+        - alias: go-server
+          imageName: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server:stable
+          commonUpdateSettings:
+            updateStrategy: digest
+    - namePattern: node-server
+      images:
+        - alias: node-server
+          imageName: ghcr.io/ystkfujii/playground_supply-chain-guard/node-server:stable
+          commonUpdateSettings:
+            updateStrategy: digest
+    - namePattern: python-server
+      images:
+        - alias: python-server
+          imageName: ghcr.io/ystkfujii/playground_supply-chain-guard/python-server:stable
+          commonUpdateSettings:
+            updateStrategy: digest

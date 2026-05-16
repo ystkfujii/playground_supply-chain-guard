@@ -1,0 +1,88 @@
+name: Build and Push Docker Image
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+  id-token: write
+  attestations: write
+
+jobs:
+  build-attest-and-sign:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - app: python-server
+            context: app/python-server
+            image_suffix: python-server
+            sbom_file: python-server.sbom.spdx.json
+
+          - app: node-server
+            context: app/node-server
+            image_suffix: node-server
+            sbom_file: node-server.sbom.spdx.json
+            
+          - app: go-server
+            context: app/go-server
+            image_suffix: go-server
+            sbom_file: go-server.sbom.spdx.json
+
+    env:
+      IMAGE_NAME: ghcr.io/${{ github.repository }}/${{ matrix.image_suffix }}
+      IMAGE_TAG: stable
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push ${{ matrix.app }}
+        uses: docker/build-push-action@v6
+        id: build
+        with:
+          context: ${{ matrix.context }}
+          push: true
+          tags: ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
+
+      - name: Attest build provenance
+        uses: actions/attest@v4
+        with:
+          subject-name: ${{ env.IMAGE_NAME }}
+          subject-digest: ${{ steps.build.outputs.digest }}
+          push-to-registry: true
+          create-storage-record: false
+
+      - name: Generate SBOM
+        uses: anchore/sbom-action@v0
+        with:
+          image: ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
+          format: spdx-json
+          output-file: ${{ matrix.sbom_file }}
+          artifact-name: ${{ matrix.app }}-sbom
+          upload-artifact: true
+
+      - name: Attest SBOM
+        uses: actions/attest@v4
+        with:
+          subject-name: ${{ env.IMAGE_NAME }}
+          subject-digest: ${{ steps.build.outputs.digest }}
+          sbom-path: ${{ matrix.sbom_file }}
+          push-to-registry: true
+          create-storage-record: false
+
+      - name: Debug image digest
+        run: |
+          echo "app: ${{ matrix.app }}"
+          echo "build digest: ${{ steps.build.outputs.digest }}"
+          echo "image: ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}"

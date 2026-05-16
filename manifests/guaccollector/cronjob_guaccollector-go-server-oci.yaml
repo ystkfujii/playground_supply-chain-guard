@@ -1,0 +1,85 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: guaccollector-go-server-oci
+  namespace: guac
+spec:
+  schedule: "*/30 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: Never
+
+          volumes:
+            - name: work
+              emptyDir: {}
+
+          initContainers:
+            - name: extract-sbom-from-attestation
+              image: alpine:3.22
+              env:
+                - name: IMAGE_REF
+                  value: ghcr.io/ystkfujii/playground_supply-chain-guard/go-server:stable
+                - name: IMAGE
+                  value: oci://ghcr.io/ystkfujii/playground_supply-chain-guard/go-server:stable
+                - name: REPO
+                  value: ystkfujii/playground_supply-chain-guard
+                - name: OWNER
+                  value: ystkfujii
+              command:
+                - /bin/sh
+                - -c
+              args:
+                - |
+                  set -eu
+
+                  apk add --no-cache github-cli ca-certificates curl jq skopeo
+
+                  DIGEST="$(skopeo inspect --format '{{.Digest}}' "docker://${IMAGE_REF}")"
+
+                  echo "Image digest: ${DIGEST}"
+
+                  curl -fsSL \
+                    -X POST \
+                    -H "Accept: application/vnd.github+json" \
+                    -H "X-GitHub-Api-Version: 2022-11-28" \
+                    "https://api.github.com/users/${OWNER}/attestations/bulk-list" \
+                    -d "{\"subject_digests\":[\"${DIGEST}\"],\"predicate_type\":\"https://spdx.dev/Document/v2.3\"}" \
+                    > /work/attestation-info.json
+
+                  jq -c '.attestations[].bundle' /work/attestation-info.json \
+                    > /work/bundle.jsonl
+
+                  test -s /work/bundle.jsonl
+
+                  gh attestation verify "$IMAGE" \
+                    -R "$REPO" \
+                    --bundle /work/bundle.jsonl \
+                    --predicate-type https://spdx.dev/Document/v2.3 \
+                    --format json \
+                    --jq '.[].verificationResult.statement.predicate' \
+                    > /work/sbom.spdx.json
+
+                  test -s /work/sbom.spdx.json
+
+                  echo "Extracted SBOM:"
+                  head -c 200 /work/sbom.spdx.json
+                  echo
+              volumeMounts:
+                - name: work
+                  mountPath: /work
+
+          containers:
+            - name: ingest-to-guac
+              image: ghcr.io/guacsec/guac:v1.1.0
+              command:
+                - /opt/guac/guacone
+              args:
+                - --gql-addr=http://graphql-server:8080/query
+                - collect
+                - files
+                - /work/sbom.spdx.json
+              volumeMounts:
+                - name: work
+                  mountPath: /work

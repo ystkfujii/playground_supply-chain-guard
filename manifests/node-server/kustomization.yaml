@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - deployment.yaml
+  - ns.yaml
+
+images:
+  - name: ghcr.io/ystkfujii/playground_supply-chain-guard/node-server
+    newName: ghcr.io/ystkfujii/playground_supply-chain-guard/node-server
+    newTag: stable
+    digest: sha256:81841d6132e1adfd8d21c2f3cc1df844ac139e769b629e000d9959a8bfbb7386
