@@ -1,0 +1,34 @@
+name: Build and Push Docker Image
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+  id-token: write
+  attestations: write
+
+steps:
+  - uses: actions/checkout@v4
+
+  - uses: docker/login-action@v3
+    with:
+      registry: ghcr.io
+      username: ${{ github.actor }}
+      password: ${{ secrets.GITHUB_TOKEN }}
+
+  - uses: docker/build-push-action@v6
+    id: build
+    with:
+      context: app/go-server
+      push: true
+      tags: ghcr.io/${{ github.repository }}/go-server:${{ github.sha }}
+
+  - uses: actions/attest@v4
+    with:
+      subject-name: ghcr.io/${{ github.repository }}/go-server
+      subject-digest: ${{ steps.build.outputs.digest }}
+      push-to-registry: true

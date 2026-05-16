@@ -1,0 +1,21 @@
+frontend:
+  apiBaseUrl: "http://localhost:8090"
+
+apiServer:
+  extraEnv:
+  - name: ALPINE_CORS_ENABLED
+    value: "true"
+  - name: ALPINE_CORS_ALLOW_ORIGIN
+    value: "http://localhost:8090"
+  - name: ALPINE_CORS_ALLOW_METHODS
+    value: "GET, POST, PUT, DELETE, OPTIONS"
+  - name: ALPINE_CORS_ALLOW_HEADERS
+    value: "Origin, Content-Type, Authorization, X-Requested-With, Content-Length, Accept, X-Api-Key, X-Total-Count"
+  - name: ALPINE_CORS_EXPOSE_HEADERS
+    value: "Origin, Content-Type, Authorization, X-Requested-With, Content-Length, Accept, X-Api-Key, X-Total-Count"
+  - name: ALPINE_CORS_ALLOW_CREDENTIALS
+    value: "true"
+
+common:
+  secretKey:
+    createSecret: true
