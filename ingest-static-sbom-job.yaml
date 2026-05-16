@@ -1,0 +1,28 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ingest-static-nginx-sbom
+  namespace: guac
+spec:
+  backoffLimit: 1
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: guacone
+        image: ghcr.io/guacsec/guac:v1.1.0
+        command: ["/opt/guac/guacone"]
+        args:
+        - collect
+        - files
+        - /sbom/nginx-alpine.cdx.json
+        - --gql-addr=http://graphql-server:8080/query
+        - --csub-addr=collectsub:2782
+        volumeMounts:
+        - name: sbom
+          mountPath: /sbom
+          readOnly: true
+      volumes:
+      - name: sbom
+        configMap:
+          name: static-nginx-sbom

@@ -1,0 +1,21 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: guac-kubescape-collect-once
+  namespace: guac
+spec:
+  backoffLimit: 1
+  template:
+    spec:
+      restartPolicy: Never
+      serviceAccountName: guac-kubescape-collector
+      containers:
+      - name: collector
+        image: ghcr.io/guacsec/guac:v1.1.0
+        command: ["/opt/guac/guacone"]
+        args:
+        - collect
+        - kubescape
+        - --kubescape-namespace=kubescape
+        - --gql-addr=http://graphql-server:8080/query
+        - --csub-addr=collectsub:2782

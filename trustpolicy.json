@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "trustPolicies": [
+    {
+      "name": "notation-go-handson-policy",
+      "registryScopes": ["ghcr.io/ystkfujii/playground_supplychain/go-server"],
+      "signatureVerification": {
+        "level": "strict"
+      },
+      "trustStores": ["ca:notation-demo"],
+      "trustedIdentities": ["*"]
+    }
+  ]
+}
