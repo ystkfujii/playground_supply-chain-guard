@@ -12,7 +12,9 @@ spec:
       releaseName: kubescape-operator
       valuesObject:
         capabilities:
+          configurationScan: disable
           continuousScan: enable
+          nodeSbomGeneration: enable
           vulnerabilityScan: enable
         clusterName: kind-kind-cluster
     chart: kubescape-operator

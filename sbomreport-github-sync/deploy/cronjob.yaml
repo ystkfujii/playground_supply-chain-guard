@@ -1,0 +1,82 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: sbomreport-github-sync
+  namespace: trivy-system
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: sbomreport-github-sync
+rules:
+  - apiGroups: ["aquasecurity.github.io"]
+    resources: ["sbomreports"]
+    verbs: ["get", "list"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: sbomreport-github-sync
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: sbomreport-github-sync
+subjects:
+  - kind: ServiceAccount
+    name: sbomreport-github-sync
+    namespace: trivy-system
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: sbomreport-github-sync
+  namespace: trivy-system
+spec:
+  schedule: "17 * * * *"
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 3
+  jobTemplate:
+    spec:
+      backoffLimit: 1
+      template:
+        spec:
+          serviceAccountName: sbomreport-github-sync
+          restartPolicy: Never
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 65532
+            runAsGroup: 65532
+            fsGroup: 65532
+          containers:
+            - name: sync
+              image: ghcr.io/ystkfujii/playground_supply-chain-guard/sbomreport-github-sync:dev
+              imagePullPolicy: IfNotPresent
+              args: ["sync"]
+              env:
+                - name: GITHUB_TOKEN
+                  valueFrom:
+                    secretKeyRef:
+                      name: sbomreport-github-sync
+                      key: github-token
+                - name: GITHUB_OWNER
+                  value: ystkfujii
+                - name: GITHUB_REPO
+                  value: playground_supply-chain-guard
+                - name: GITHUB_BRANCH
+                  value: sbomreport-github-sync
+                - name: GITHUB_PATH_PREFIX
+                  value: sbomreports
+                - name: CLUSTER_NAME
+                  value: kind-kind
+                - name: SBOMREPORT_CONTENT
+                  value: cyclonedx
+                - name: DELETE_MISSING
+                  value: "true"
+              resources:
+                requests:
+                  cpu: 10m
+                  memory: 64Mi
+                limits:
+                  cpu: 500m
+                  memory: 256Mi

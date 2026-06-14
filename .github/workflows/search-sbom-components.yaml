@@ -46,5 +46,16 @@ jobs:
         run: |
           set -euo pipefail
 
-          chmod +x ./script/search-sbom-components.sh
-          ./script/search-sbom-components.sh ./sbomreports "${{ inputs.key }}"
+          mkdir -p ./outputs
+
+          output_file="./outputs/sbom-component-search-${{ github.run_id }}.tsv"
+
+          ./script/search-sbom-components.sh ./sbomreports "${{ inputs.key }}" \
+            | tee "$output_file"
+
+      - name: Upload search result
+        uses: actions/upload-artifact@v4
+        with:
+          name: sbom-component-search-result
+          path: ./outputs/sbom-component-search-${{ github.run_id }}.tsv
+          retention-days: 7
