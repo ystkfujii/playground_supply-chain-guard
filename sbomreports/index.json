@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T10:21:55Z",
+  "generatedAt": "2026-06-14T10:26:18Z",
   "clusterName": "kind-kind",
   "content": "cyclonedx",
   "reports": [
@@ -200,6 +200,20 @@
     },
     {
       "namespace": "guac",
+      "name": "replicaset-collectsub-547c7476d-collectsub",
+      "file": "sbomreports/guac/replicaset-collectsub-547c7476d-collectsub.json",
+      "resourceKind": "ReplicaSet",
+      "resourceName": "collectsub-547c7476d",
+      "resourceNamespace": "guac",
+      "containerName": "collectsub",
+      "artifactRepository": "guacsec/guac",
+      "artifactTag": "v1.0.1",
+      "artifactDigest": "sha256:34ca3dc7d5a21340904f753fd2483b1a4305e8223a6969f315b6bf7e2fb27d3e",
+      "creationTimestamp": "2026-06-14T10:25:21Z",
+      "resourceVersion": "84834"
+    },
+    {
+      "namespace": "guac",
       "name": "replicaset-depsdev-collector-59df87cc88-depsdev-collector",
       "file": "sbomreports/guac/replicaset-depsdev-collector-59df87cc88-depsdev-collector.json",
       "resourceKind": "ReplicaSet",
@@ -267,6 +281,20 @@
       "artifactDigest": "sha256:34ca3dc7d5a21340904f753fd2483b1a4305e8223a6969f315b6bf7e2fb27d3e",
       "creationTimestamp": "2026-06-14T03:40:19Z",
       "resourceVersion": "4540"
+    },
+    {
+      "namespace": "guac",
+      "name": "replicaset-osv-certifier-dfb69b869-osv-certifier",
+      "file": "sbomreports/guac/replicaset-osv-certifier-dfb69b869-osv-certifier.json",
+      "resourceKind": "ReplicaSet",
+      "resourceName": "osv-certifier-dfb69b869",
+      "resourceNamespace": "guac",
+      "containerName": "osv-certifier",
+      "artifactRepository": "guacsec/guac",
+      "artifactTag": "v1.0.1",
+      "artifactDigest": "sha256:34ca3dc7d5a21340904f753fd2483b1a4305e8223a6969f315b6bf7e2fb27d3e",
+      "creationTimestamp": "2026-06-14T10:25:21Z",
+      "resourceVersion": "84842"
     },
     {
       "namespace": "guac",
@@ -466,6 +494,20 @@
     },
     {
       "namespace": "kubescape",
+      "name": "replicaset-synchronizer-98fc58869-synchronizer",
+      "file": "sbomreports/kubescape/replicaset-synchronizer-98fc58869-synchronizer.json",
+      "resourceKind": "ReplicaSet",
+      "resourceName": "synchronizer-98fc58869",
+      "resourceNamespace": "kubescape",
+      "containerName": "synchronizer",
+      "artifactRepository": "kubescape/synchronizer",
+      "artifactTag": "v0.0.147",
+      "artifactDigest": "sha256:adad19e1173f415b35a35424f07581f8b678524bbf0d4991095595b267261328",
+      "creationTimestamp": "2026-06-14T10:24:14Z",
+      "resourceVersion": "84579"
+    },
+    {
+      "namespace": "kubescape",
       "name": "replicaset-synchronizer-b6b5bdbbc-synchronizer",
       "file": "sbomreports/kubescape/replicaset-synchronizer-b6b5bdbbc-synchronizer.json",
       "resourceKind": "ReplicaSet",
@@ -477,6 +519,34 @@
       "artifactDigest": "sha256:adad19e1173f415b35a35424f07581f8b678524bbf0d4991095595b267261328",
       "creationTimestamp": "2026-06-14T06:23:37Z",
       "resourceVersion": "37857"
+    },
+    {
+      "namespace": "sbom-test",
+      "name": "pod-nginx-nginx",
+      "file": "sbomreports/sbom-test/pod-nginx-nginx.json",
+      "resourceKind": "Pod",
+      "resourceName": "nginx",
+      "resourceNamespace": "sbom-test",
+      "containerName": "nginx",
+      "artifactRepository": "library/nginx",
+      "artifactTag": "1.25.1",
+      "artifactDigest": "sha256:67f9a4f10d147a6e04629340e6493c9703300ca23a2f7f3aa56fe615d75d31ca",
+      "creationTimestamp": "2026-06-14T10:25:38Z",
+      "resourceVersion": "84923"
+    },
+    {
+      "namespace": "sbom-test2",
+      "name": "pod-nginx-nginx",
+      "file": "sbomreports/sbom-test2/pod-nginx-nginx.json",
+      "resourceKind": "Pod",
+      "resourceName": "nginx",
+      "resourceNamespace": "sbom-test2",
+      "containerName": "nginx",
+      "artifactRepository": "library/nginx",
+      "artifactTag": "1.24.0",
+      "artifactDigest": "sha256:f6daac2445b0ce70e64d77442ccf62839f3f1b4c24bf6746a857eff014e798c8",
+      "creationTimestamp": "2026-06-14T10:25:36Z",
+      "resourceVersion": "84901"
     }
   ]
 }
