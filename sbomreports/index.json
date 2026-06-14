@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T10:41:25Z",
+  "generatedAt": "2026-06-14T11:05:20Z",
   "clusterName": "kind-kind",
   "content": "cyclonedx",
   "reports": [
@@ -141,6 +141,20 @@
       "artifactDigest": "sha256:0bcd60beb93f4427c29cf3a669743caf58490e98ded4380c33c09f092734a6ab",
       "creationTimestamp": "2026-06-14T03:41:15Z",
       "resourceVersion": "5028"
+    },
+    {
+      "namespace": "demo",
+      "name": "replicaset-app-5978f5d5c7-app",
+      "file": "sbomreports/demo/replicaset-app-5978f5d5c7-app.json",
+      "resourceKind": "ReplicaSet",
+      "resourceName": "app-5978f5d5c7",
+      "resourceNamespace": "demo",
+      "containerName": "app",
+      "artifactRepository": "ystkfujii/playground_supply-chain-guard/go-server",
+      "artifactTag": "stable",
+      "artifactDigest": "sha256:e9131e8bf44c8025e08bc2cafe44c485099e661b0b03f39c95dc9cf041e35f35",
+      "creationTimestamp": "2026-06-14T11:04:46Z",
+      "resourceVersion": "92490"
     },
     {
       "namespace": "demo",
