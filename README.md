@@ -63,3 +63,8 @@ kubectl -n argocd rollout status deploy/argocd-server --timeout=300s
 kubectl -n argocd rollout status deploy/argocd-repo-server --timeout=300s
 kubectl -n argocd rollout status statefulset/argocd-application-controller --timeout=300s
 ```
+
+
+```
+go install github.com/CycloneDX/sbom-utility@latest
+```

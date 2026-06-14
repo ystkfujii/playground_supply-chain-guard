@@ -1,0 +1,50 @@
+name: Search SBOM Components
+
+on:
+  workflow_dispatch:
+    inputs:
+      key:
+        description: "Search key for SBOM components"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  search:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install jq
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq
+
+      - name: Install sbom-utility
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          version="$(curl -sSfL https://api.github.com/repos/CycloneDX/sbom-utility/releases/latest | jq -r '.tag_name')"
+          asset="sbom-utility-${version}-linux-amd64.tar.gz"
+
+          curl -sSfL \
+            -o /tmp/sbom-utility.tar.gz \
+            "https://github.com/CycloneDX/sbom-utility/releases/download/${version}/${asset}"
+
+          tar -xzf /tmp/sbom-utility.tar.gz -C /tmp
+          sudo install -m 0755 /tmp/sbom-utility /usr/local/bin/sbom-utility
+
+          sbom-utility version
+
+      - name: Run SBOM component search
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          chmod +x ./script/search-sbom-components.sh
+          ./script/search-sbom-components.sh ./sbomreports "${{ inputs.key }}"
