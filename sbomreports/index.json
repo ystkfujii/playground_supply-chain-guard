@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-15T17:17:01Z",
+  "generatedAt": "2026-06-15T18:17:01Z",
   "clusterName": "kind-kind",
   "content": "cyclonedx",
   "reports": [
@@ -200,6 +200,20 @@
     },
     {
       "namespace": "guac",
+      "name": "cronjob-guaccollector-go-server-oci-ingest-to-guac",
+      "file": "sbomreports/guac/cronjob-guaccollector-go-server-oci-ingest-to-guac.json",
+      "resourceKind": "CronJob",
+      "resourceName": "guaccollector-go-server-oci",
+      "resourceNamespace": "guac",
+      "containerName": "ingest-to-guac",
+      "artifactRepository": "guacsec/guac",
+      "artifactTag": "v1.1.0",
+      "artifactDigest": "sha256:1d138a384016bd599e4add5fcd2d86a4ca98c1d859a98b31326a403aa47fcf9f",
+      "creationTimestamp": "2026-06-15T18:00:42Z",
+      "resourceVersion": "444397"
+    },
+    {
+      "namespace": "guac",
       "name": "replicaset-cd-certifier-7f99745df9-cd-certifier",
       "file": "sbomreports/guac/replicaset-cd-certifier-7f99745df9-cd-certifier.json",
       "resourceKind": "ReplicaSet",
@@ -224,7 +238,7 @@
       "artifactTag": "v1.0.1",
       "artifactDigest": "sha256:34ca3dc7d5a21340904f753fd2483b1a4305e8223a6969f315b6bf7e2fb27d3e",
       "creationTimestamp": "2026-06-14T10:25:21Z",
-      "resourceVersion": "84834"
+      "resourceVersion": "438994"
     },
     {
       "namespace": "guac",
