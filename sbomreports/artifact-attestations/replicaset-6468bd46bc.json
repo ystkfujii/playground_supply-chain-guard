@@ -2,7 +2,22 @@
   "bomFormat": "CycloneDX",
   "components": [
     {
-      "bom-ref": "6fd16872-1511-4c53-a22b-584143f3e5c4",
+      "bom-ref": "2c6dd4ca-601a-4881-bccf-db04cd3d40cb",
+      "name": "ko-app/webhook",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "gobinary"
+        }
+      ],
+      "type": "application"
+    },
+    {
+      "bom-ref": "b3b0d8e4-d6e5-49c6-9612-1531aa198b9b",
       "name": "wolfi",
       "properties": [
         {
@@ -16,21 +31,6 @@
       ],
       "type": "operating-system",
       "version": "20230201"
-    },
-    {
-      "bom-ref": "e17ddf2b-6e4c-4b9e-8002-cab6e5e5ff1f",
-      "name": "ko-app/webhook",
-      "properties": [
-        {
-          "name": "aquasecurity:trivy:Class",
-          "value": "lang-pkgs"
-        },
-        {
-          "name": "aquasecurity:trivy:Type",
-          "value": "gobinary"
-        }
-      ],
-      "type": "application"
     },
     {
       "bom-ref": "pkg:apk/wolfi/ca-certificates-bundle@20250619-r6?arch=x86_64\u0026distro=20230201",
@@ -6488,15 +6488,15 @@
   "dependencies": [
     {
       "dependsOn": [
-        "pkg:apk/wolfi/tzdata@2025b-r2?arch=x86_64\u0026distro=20230201"
+        "pkg:golang/github.com/sigstore/policy-controller@v0.13.1%2Bdirty"
       ],
-      "ref": "6fd16872-1511-4c53-a22b-584143f3e5c4"
+      "ref": "2c6dd4ca-601a-4881-bccf-db04cd3d40cb"
     },
     {
       "dependsOn": [
-        "pkg:golang/github.com/sigstore/policy-controller@v0.13.1%2Bdirty"
+        "pkg:apk/wolfi/tzdata@2025b-r2?arch=x86_64\u0026distro=20230201"
       ],
-      "ref": "e17ddf2b-6e4c-4b9e-8002-cab6e5e5ff1f"
+      "ref": "b3b0d8e4-d6e5-49c6-9612-1531aa198b9b"
     },
     {
       "dependsOn": [
@@ -7776,8 +7776,8 @@
     },
     {
       "dependsOn": [
-        "6fd16872-1511-4c53-a22b-584143f3e5c4",
-        "e17ddf2b-6e4c-4b9e-8002-cab6e5e5ff1f"
+        "2c6dd4ca-601a-4881-bccf-db04cd3d40cb",
+        "b3b0d8e4-d6e5-49c6-9612-1531aa198b9b"
       ],
       "ref": "pkg:oci/policy-controller@sha256%3A0bcd60beb93f4427c29cf3a669743caf58490e98ded4380c33c09f092734a6ab?arch=amd64\u0026repository_url=ghcr.io%2Fsigstore%2Fpolicy-controller%2Fpolicy-controller"
     }
@@ -7843,7 +7843,7 @@
       "purl": "pkg:oci/policy-controller@sha256%3A0bcd60beb93f4427c29cf3a669743caf58490e98ded4380c33c09f092734a6ab?arch=amd64\u0026repository_url=ghcr.io%2Fsigstore%2Fpolicy-controller%2Fpolicy-controller",
       "type": "container"
     },
-    "timestamp": "2026-06-14T03:41:15+00:00",
+    "timestamp": "2026-06-15T03:41:40+00:00",
     "tools": {
       "components": [
         {
@@ -7855,7 +7855,7 @@
       ]
     }
   },
-  "serialNumber": "urn:uuid:0f14e59b-eeae-4cde-baef-3f256d665468",
+  "serialNumber": "urn:uuid:6ef07587-8b0e-4381-a99c-8450654fc4d0",
   "specVersion": "1.6",
   "version": 1
 }

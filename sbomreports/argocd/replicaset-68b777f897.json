@@ -2,7 +2,38 @@
   "bomFormat": "CycloneDX",
   "components": [
     {
-      "bom-ref": "5eacbbf1-29ab-405d-9b85-dd0c1cee976d",
+      "bom-ref": "9d35b012-a797-44fc-8c3b-dc318b94ceff",
+      "name": "alpine",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "os-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "alpine"
+        }
+      ],
+      "type": "operating-system",
+      "version": "3.23.4"
+    },
+    {
+      "bom-ref": "a3972681-80d6-4dc6-8e51-018a3b7a7c44",
+      "name": "manager",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "gobinary"
+        }
+      ],
+      "type": "application"
+    },
+    {
+      "bom-ref": "fcca0fd7-eae0-45e4-9d45-2f07780df2a7",
       "name": "./registry-scanner/",
       "properties": [
         {
@@ -23,37 +54,6 @@
         }
       ],
       "type": "library"
-    },
-    {
-      "bom-ref": "94eb59b1-1a70-4ac4-9dea-5e3c515d5599",
-      "name": "manager",
-      "properties": [
-        {
-          "name": "aquasecurity:trivy:Class",
-          "value": "lang-pkgs"
-        },
-        {
-          "name": "aquasecurity:trivy:Type",
-          "value": "gobinary"
-        }
-      ],
-      "type": "application"
-    },
-    {
-      "bom-ref": "ee290a1c-b0ed-4e66-ba4c-2a743ed63ff9",
-      "name": "alpine",
-      "properties": [
-        {
-          "name": "aquasecurity:trivy:Class",
-          "value": "os-pkgs"
-        },
-        {
-          "name": "aquasecurity:trivy:Type",
-          "value": "alpine"
-        }
-      ],
-      "type": "operating-system",
-      "version": "3.23.4"
     },
     {
       "bom-ref": "pkg:apk/alpine/alpine-baselayout-data@3.7.2-r0?arch=x86_64\u0026distro=3.23.4",
@@ -10476,12 +10476,44 @@
   ],
   "dependencies": [
     {
-      "dependsOn": [],
-      "ref": "5eacbbf1-29ab-405d-9b85-dd0c1cee976d"
+      "dependsOn": [
+        "pkg:apk/alpine/alpine-baselayout@3.7.2-r0?arch=x86_64\u0026distro=3.23.4",
+        "pkg:apk/alpine/alpine-release@3.23.4-r0?arch=x86_64\u0026distro=3.23.4",
+        "pkg:apk/alpine/apk-tools@3.0.6-r0?arch=x86_64\u0026distro=3.23.4",
+        "pkg:apk/alpine/aws-cli-pyc@2.32.7-r0?arch=x86_64\u0026distro=3.23.4",
+        "pkg:apk/alpine/aws-cli@2.32.7-r0?arch=x86_64\u0026distro=3.23.4",
+        "pkg:apk/alpine/ca-certificates@20260413-r0?arch=x86_64\u0026distro=3.23.4",
+        "pkg:apk/alpine/git-init-template@2.52.0-r0?arch=x86_64\u0026distro=3.23.4",
+        "pkg:apk/alpine/git@2.52.0-r0?arch=x86_64\u0026distro=3.23.4",
+        "pkg:apk/alpine/gpg-agent@2.4.9-r0?arch=x86_64\u0026distro=3.23.4",
+        "pkg:apk/alpine/gpg@2.4.9-r0?arch=x86_64\u0026distro=3.23.4",
+        "pkg:apk/alpine/musl-utils@1.2.5-r23?arch=x86_64\u0026distro=3.23.4",
+        "pkg:apk/alpine/openssh-client-default@10.2_p1-r0?arch=x86_64\u0026distro=3.23.4",
+        "pkg:apk/alpine/py3-awscrt-pyc@0.29.1-r0?arch=x86_64\u0026distro=3.23.4",
+        "pkg:apk/alpine/py3-certifi-pyc@2025.11.12-r0?arch=x86_64\u0026distro=3.23.4",
+        "pkg:apk/alpine/py3-cffi-pyc@1.17.1-r1?arch=x86_64\u0026distro=3.23.4",
+        "pkg:apk/alpine/py3-colorama-pyc@0.4.6-r6?arch=x86_64\u0026distro=3.23.4",
+        "pkg:apk/alpine/py3-cparser-pyc@2.22-r1?arch=x86_64\u0026distro=3.23.4",
+        "pkg:apk/alpine/py3-cryptography-pyc@46.0.7-r0?arch=x86_64\u0026distro=3.23.4",
+        "pkg:apk/alpine/py3-dateutil-pyc@2.9.0-r2?arch=x86_64\u0026distro=3.23.4",
+        "pkg:apk/alpine/py3-distro-pyc@1.9.0-r2?arch=x86_64\u0026distro=3.23.4",
+        "pkg:apk/alpine/py3-docutils-pyc@0.21.2-r1?arch=x86_64\u0026distro=3.23.4",
+        "pkg:apk/alpine/py3-jmespath-pyc@1.0.1-r4?arch=x86_64\u0026distro=3.23.4",
+        "pkg:apk/alpine/py3-prompt_toolkit-pyc@3.0.51-r0?arch=x86_64\u0026distro=3.23.4",
+        "pkg:apk/alpine/py3-ruamel.yaml-pyc@0.18.16-r0?arch=x86_64\u0026distro=3.23.4",
+        "pkg:apk/alpine/py3-six-pyc@1.17.0-r0?arch=x86_64\u0026distro=3.23.4",
+        "pkg:apk/alpine/py3-urllib3-pyc@2.6.3-r0?arch=x86_64\u0026distro=3.23.4",
+        "pkg:apk/alpine/py3-wcwidth-pyc@0.2.13-r1?arch=x86_64\u0026distro=3.23.4",
+        "pkg:apk/alpine/py3-zipp-pyc@3.23.0-r0?arch=x86_64\u0026distro=3.23.4",
+        "pkg:apk/alpine/python3-pyc@3.12.13-r0?arch=x86_64\u0026distro=3.23.4",
+        "pkg:apk/alpine/ssl_client@1.37.0-r30?arch=x86_64\u0026distro=3.23.4",
+        "pkg:apk/alpine/tini@0.19.0-r3?arch=x86_64\u0026distro=3.23.4"
+      ],
+      "ref": "9d35b012-a797-44fc-8c3b-dc318b94ceff"
     },
     {
       "dependsOn": [
-        "5eacbbf1-29ab-405d-9b85-dd0c1cee976d",
+        "fcca0fd7-eae0-45e4-9d45-2f07780df2a7",
         "pkg:golang/cel.dev/expr@v0.25.1",
         "pkg:golang/cloud.google.com/go/compute/metadata@v0.9.0",
         "pkg:golang/dario.cat/mergo@v1.0.2",
@@ -10667,43 +10699,11 @@
         "pkg:golang/sigs.k8s.io/yaml@v1.6.0",
         "pkg:golang/stdlib@v1.25.9"
       ],
-      "ref": "94eb59b1-1a70-4ac4-9dea-5e3c515d5599"
+      "ref": "a3972681-80d6-4dc6-8e51-018a3b7a7c44"
     },
     {
-      "dependsOn": [
-        "pkg:apk/alpine/alpine-baselayout@3.7.2-r0?arch=x86_64\u0026distro=3.23.4",
-        "pkg:apk/alpine/alpine-release@3.23.4-r0?arch=x86_64\u0026distro=3.23.4",
-        "pkg:apk/alpine/apk-tools@3.0.6-r0?arch=x86_64\u0026distro=3.23.4",
-        "pkg:apk/alpine/aws-cli-pyc@2.32.7-r0?arch=x86_64\u0026distro=3.23.4",
-        "pkg:apk/alpine/aws-cli@2.32.7-r0?arch=x86_64\u0026distro=3.23.4",
-        "pkg:apk/alpine/ca-certificates@20260413-r0?arch=x86_64\u0026distro=3.23.4",
-        "pkg:apk/alpine/git-init-template@2.52.0-r0?arch=x86_64\u0026distro=3.23.4",
-        "pkg:apk/alpine/git@2.52.0-r0?arch=x86_64\u0026distro=3.23.4",
-        "pkg:apk/alpine/gpg-agent@2.4.9-r0?arch=x86_64\u0026distro=3.23.4",
-        "pkg:apk/alpine/gpg@2.4.9-r0?arch=x86_64\u0026distro=3.23.4",
-        "pkg:apk/alpine/musl-utils@1.2.5-r23?arch=x86_64\u0026distro=3.23.4",
-        "pkg:apk/alpine/openssh-client-default@10.2_p1-r0?arch=x86_64\u0026distro=3.23.4",
-        "pkg:apk/alpine/py3-awscrt-pyc@0.29.1-r0?arch=x86_64\u0026distro=3.23.4",
-        "pkg:apk/alpine/py3-certifi-pyc@2025.11.12-r0?arch=x86_64\u0026distro=3.23.4",
-        "pkg:apk/alpine/py3-cffi-pyc@1.17.1-r1?arch=x86_64\u0026distro=3.23.4",
-        "pkg:apk/alpine/py3-colorama-pyc@0.4.6-r6?arch=x86_64\u0026distro=3.23.4",
-        "pkg:apk/alpine/py3-cparser-pyc@2.22-r1?arch=x86_64\u0026distro=3.23.4",
-        "pkg:apk/alpine/py3-cryptography-pyc@46.0.7-r0?arch=x86_64\u0026distro=3.23.4",
-        "pkg:apk/alpine/py3-dateutil-pyc@2.9.0-r2?arch=x86_64\u0026distro=3.23.4",
-        "pkg:apk/alpine/py3-distro-pyc@1.9.0-r2?arch=x86_64\u0026distro=3.23.4",
-        "pkg:apk/alpine/py3-docutils-pyc@0.21.2-r1?arch=x86_64\u0026distro=3.23.4",
-        "pkg:apk/alpine/py3-jmespath-pyc@1.0.1-r4?arch=x86_64\u0026distro=3.23.4",
-        "pkg:apk/alpine/py3-prompt_toolkit-pyc@3.0.51-r0?arch=x86_64\u0026distro=3.23.4",
-        "pkg:apk/alpine/py3-ruamel.yaml-pyc@0.18.16-r0?arch=x86_64\u0026distro=3.23.4",
-        "pkg:apk/alpine/py3-six-pyc@1.17.0-r0?arch=x86_64\u0026distro=3.23.4",
-        "pkg:apk/alpine/py3-urllib3-pyc@2.6.3-r0?arch=x86_64\u0026distro=3.23.4",
-        "pkg:apk/alpine/py3-wcwidth-pyc@0.2.13-r1?arch=x86_64\u0026distro=3.23.4",
-        "pkg:apk/alpine/py3-zipp-pyc@3.23.0-r0?arch=x86_64\u0026distro=3.23.4",
-        "pkg:apk/alpine/python3-pyc@3.12.13-r0?arch=x86_64\u0026distro=3.23.4",
-        "pkg:apk/alpine/ssl_client@1.37.0-r30?arch=x86_64\u0026distro=3.23.4",
-        "pkg:apk/alpine/tini@0.19.0-r3?arch=x86_64\u0026distro=3.23.4"
-      ],
-      "ref": "ee290a1c-b0ed-4e66-ba4c-2a743ed63ff9"
+      "dependsOn": [],
+      "ref": "fcca0fd7-eae0-45e4-9d45-2f07780df2a7"
     },
     {
       "dependsOn": [],
@@ -12264,8 +12264,8 @@
     },
     {
       "dependsOn": [
-        "94eb59b1-1a70-4ac4-9dea-5e3c515d5599",
-        "ee290a1c-b0ed-4e66-ba4c-2a743ed63ff9"
+        "9d35b012-a797-44fc-8c3b-dc318b94ceff",
+        "a3972681-80d6-4dc6-8e51-018a3b7a7c44"
       ],
       "ref": "pkg:oci/argocd-image-updater@sha256%3Ae8624a2dca038cf03eb4bf9a64519795a85401d0d9647be704d252283627edc3?arch=amd64\u0026repository_url=quay.io%2Fargoprojlabs%2Fargocd-image-updater"
     }
@@ -12335,7 +12335,7 @@
       "purl": "pkg:oci/argocd-image-updater@sha256%3Ae8624a2dca038cf03eb4bf9a64519795a85401d0d9647be704d252283627edc3?arch=amd64\u0026repository_url=quay.io%2Fargoprojlabs%2Fargocd-image-updater",
       "type": "container"
     },
-    "timestamp": "2026-06-14T03:40:38+00:00",
+    "timestamp": "2026-06-15T03:40:59+00:00",
     "tools": {
       "components": [
         {
@@ -12347,7 +12347,7 @@
       ]
     }
   },
-  "serialNumber": "urn:uuid:daa1bbf3-3393-49bf-9410-942d9ef4f96a",
+  "serialNumber": "urn:uuid:373c41c3-ad6d-4463-8596-27fde5f7be9b",
   "specVersion": "1.6",
   "version": 1
 }

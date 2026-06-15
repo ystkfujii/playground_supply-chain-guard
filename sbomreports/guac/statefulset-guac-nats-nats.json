@@ -2,7 +2,7 @@
   "bomFormat": "CycloneDX",
   "components": [
     {
-      "bom-ref": "69e45cf4-95f1-4bce-a589-696b90c0501a",
+      "bom-ref": "5c9a01ff-b62e-4486-b0ae-5879d87860cd",
       "name": "usr/local/bin/nats-server",
       "properties": [
         {
@@ -17,7 +17,7 @@
       "type": "application"
     },
     {
-      "bom-ref": "ea2b6cc7-4d0b-453f-925c-4b777761872b",
+      "bom-ref": "78901b2a-ccb4-4c3a-8729-6130572d7aa3",
       "name": "alpine",
       "properties": [
         {
@@ -1121,7 +1121,7 @@
       "dependsOn": [
         "pkg:golang/github.com/nats-io/nats-server/v2"
       ],
-      "ref": "69e45cf4-95f1-4bce-a589-696b90c0501a"
+      "ref": "5c9a01ff-b62e-4486-b0ae-5879d87860cd"
     },
     {
       "dependsOn": [
@@ -1132,7 +1132,7 @@
         "pkg:apk/alpine/libc-utils@0.7.2-r5?arch=x86_64\u0026distro=3.18.2",
         "pkg:apk/alpine/ssl_client@1.36.1-r0?arch=x86_64\u0026distro=3.18.2"
       ],
-      "ref": "ea2b6cc7-4d0b-453f-925c-4b777761872b"
+      "ref": "78901b2a-ccb4-4c3a-8729-6130572d7aa3"
     },
     {
       "dependsOn": [],
@@ -1290,8 +1290,8 @@
     },
     {
       "dependsOn": [
-        "69e45cf4-95f1-4bce-a589-696b90c0501a",
-        "ea2b6cc7-4d0b-453f-925c-4b777761872b"
+        "5c9a01ff-b62e-4486-b0ae-5879d87860cd",
+        "78901b2a-ccb4-4c3a-8729-6130572d7aa3"
       ],
       "ref": "pkg:oci/nats@sha256%3Ad6c6ae7df4a0c5f7aa5ec8035501b7a594d065216aa227265c89909a3c31df96?arch=amd64\u0026repository_url=index.docker.io%2Flibrary%2Fnats"
     }
@@ -1345,7 +1345,7 @@
       "purl": "pkg:oci/nats@sha256%3Ad6c6ae7df4a0c5f7aa5ec8035501b7a594d065216aa227265c89909a3c31df96?arch=amd64\u0026repository_url=index.docker.io%2Flibrary%2Fnats",
       "type": "container"
     },
-    "timestamp": "2026-06-14T03:38:50+00:00",
+    "timestamp": "2026-06-15T03:39:08+00:00",
     "tools": {
       "components": [
         {
@@ -1357,7 +1357,7 @@
       ]
     }
   },
-  "serialNumber": "urn:uuid:202dee44-c971-4cb3-9adb-3cbcfbe8e773",
+  "serialNumber": "urn:uuid:deb070d5-9a70-436d-b052-cadfc040156e",
   "specVersion": "1.6",
   "version": 1
 }

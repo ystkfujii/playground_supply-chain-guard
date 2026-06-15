@@ -2,115 +2,23 @@
   "bomFormat": "CycloneDX",
   "components": [
     {
-      "bom-ref": "2a451017-5b00-4d3f-8638-4abe883a440e",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT"
-          }
-        }
-      ],
-      "name": "ms",
+      "bom-ref": "0cdc7afa-2075-402a-803d-4e2670d736cb",
+      "name": "alpine",
       "properties": [
         {
-          "name": "aquasecurity:trivy:FilePath",
-          "value": "app/node_modules/send/node_modules/ms/package.json"
+          "name": "aquasecurity:trivy:Class",
+          "value": "os-pkgs"
         },
         {
-          "name": "aquasecurity:trivy:LayerDiffID",
-          "value": "sha256:2042c3aade0366a68f2aea60e833293862557707dba5ab6bde4ba368b79343cd"
-        },
-        {
-          "name": "aquasecurity:trivy:LayerDigest",
-          "value": "sha256:ada6ba2cf0cb3ff553803254a16e2ef27d6bca5fb0e4e6fae335d21630973350"
-        },
-        {
-          "name": "aquasecurity:trivy:PkgID",
-          "value": "ms@2.1.3"
-        },
-        {
-          "name": "aquasecurity:trivy:PkgType",
-          "value": "node-pkg"
+          "name": "aquasecurity:trivy:Type",
+          "value": "alpine"
         }
       ],
-      "purl": "pkg:npm/ms@2.1.3",
-      "type": "library",
-      "version": "2.1.3"
+      "type": "operating-system",
+      "version": "3.23.4"
     },
     {
-      "bom-ref": "44c0cdd4-3370-4b84-b5ce-0c555f57ae0f",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT"
-          }
-        }
-      ],
-      "name": "safer-buffer",
-      "properties": [
-        {
-          "name": "aquasecurity:trivy:FilePath",
-          "value": "usr/local/lib/node_modules/npm/node_modules/safer-buffer/package.json"
-        },
-        {
-          "name": "aquasecurity:trivy:LayerDiffID",
-          "value": "sha256:6bb471c7406ae9a3bf9187b352ef8892e3d5ab002b4e0d5e4fdb8a8130d2bd8d"
-        },
-        {
-          "name": "aquasecurity:trivy:LayerDigest",
-          "value": "sha256:eea2c8c31119c028a455d4bf33b2d3db30709fc3cbe5731a86fd418a2f2a047b"
-        },
-        {
-          "name": "aquasecurity:trivy:PkgID",
-          "value": "safer-buffer@2.1.2"
-        },
-        {
-          "name": "aquasecurity:trivy:PkgType",
-          "value": "node-pkg"
-        }
-      ],
-      "purl": "pkg:npm/safer-buffer@2.1.2",
-      "type": "library",
-      "version": "2.1.2"
-    },
-    {
-      "bom-ref": "8a4b48e6-0c3a-4c41-adf4-8064c0833420",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT"
-          }
-        }
-      ],
-      "name": "safer-buffer",
-      "properties": [
-        {
-          "name": "aquasecurity:trivy:FilePath",
-          "value": "app/node_modules/safer-buffer/package.json"
-        },
-        {
-          "name": "aquasecurity:trivy:LayerDiffID",
-          "value": "sha256:2042c3aade0366a68f2aea60e833293862557707dba5ab6bde4ba368b79343cd"
-        },
-        {
-          "name": "aquasecurity:trivy:LayerDigest",
-          "value": "sha256:ada6ba2cf0cb3ff553803254a16e2ef27d6bca5fb0e4e6fae335d21630973350"
-        },
-        {
-          "name": "aquasecurity:trivy:PkgID",
-          "value": "safer-buffer@2.1.2"
-        },
-        {
-          "name": "aquasecurity:trivy:PkgType",
-          "value": "node-pkg"
-        }
-      ],
-      "purl": "pkg:npm/safer-buffer@2.1.2",
-      "type": "library",
-      "version": "2.1.2"
-    },
-    {
-      "bom-ref": "98051142-3d5b-48c0-bde4-508d94a06ee5",
+      "bom-ref": "1fa14a05-f866-4f87-abf7-211c9bbd2cd5",
       "licenses": [
         {
           "license": {
@@ -146,20 +54,112 @@
       "version": "2.1.3"
     },
     {
-      "bom-ref": "b3f1aeab-515e-47db-bae5-096e56808baf",
-      "name": "alpine",
-      "properties": [
+      "bom-ref": "31976f56-9931-448b-b1f7-43ff343f37d8",
+      "licenses": [
         {
-          "name": "aquasecurity:trivy:Class",
-          "value": "os-pkgs"
-        },
-        {
-          "name": "aquasecurity:trivy:Type",
-          "value": "alpine"
+          "license": {
+            "id": "MIT"
+          }
         }
       ],
-      "type": "operating-system",
-      "version": "3.23.4"
+      "name": "ms",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/node_modules/send/node_modules/ms/package.json"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:2042c3aade0366a68f2aea60e833293862557707dba5ab6bde4ba368b79343cd"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:ada6ba2cf0cb3ff553803254a16e2ef27d6bca5fb0e4e6fae335d21630973350"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "ms@2.1.3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "node-pkg"
+        }
+      ],
+      "purl": "pkg:npm/ms@2.1.3",
+      "type": "library",
+      "version": "2.1.3"
+    },
+    {
+      "bom-ref": "dbe1a15f-ecb6-4629-bee1-c96294b51a80",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "name": "safer-buffer",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/node_modules/safer-buffer/package.json"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:2042c3aade0366a68f2aea60e833293862557707dba5ab6bde4ba368b79343cd"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:ada6ba2cf0cb3ff553803254a16e2ef27d6bca5fb0e4e6fae335d21630973350"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "safer-buffer@2.1.2"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "node-pkg"
+        }
+      ],
+      "purl": "pkg:npm/safer-buffer@2.1.2",
+      "type": "library",
+      "version": "2.1.2"
+    },
+    {
+      "bom-ref": "f79f0bd0-f7a1-4c11-b515-774a4c662178",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "name": "safer-buffer",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "usr/local/lib/node_modules/npm/node_modules/safer-buffer/package.json"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:6bb471c7406ae9a3bf9187b352ef8892e3d5ab002b4e0d5e4fdb8a8130d2bd8d"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:eea2c8c31119c028a455d4bf33b2d3db30709fc3cbe5731a86fd418a2f2a047b"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "safer-buffer@2.1.2"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "node-pkg"
+        }
+      ],
+      "purl": "pkg:npm/safer-buffer@2.1.2",
+      "type": "library",
+      "version": "2.1.2"
     },
     {
       "bom-ref": "pkg:apk/alpine/alpine-baselayout-data@3.7.2-r0?arch=x86_64\u0026distro=3.23.4",
@@ -9082,22 +9082,6 @@
   ],
   "dependencies": [
     {
-      "dependsOn": [],
-      "ref": "2a451017-5b00-4d3f-8638-4abe883a440e"
-    },
-    {
-      "dependsOn": [],
-      "ref": "44c0cdd4-3370-4b84-b5ce-0c555f57ae0f"
-    },
-    {
-      "dependsOn": [],
-      "ref": "8a4b48e6-0c3a-4c41-adf4-8064c0833420"
-    },
-    {
-      "dependsOn": [],
-      "ref": "98051142-3d5b-48c0-bde4-508d94a06ee5"
-    },
-    {
       "dependsOn": [
         "pkg:apk/alpine/alpine-baselayout@3.7.2-r0?arch=x86_64\u0026distro=3.23.4",
         "pkg:apk/alpine/alpine-release@3.23.4-r0?arch=x86_64\u0026distro=3.23.4",
@@ -9106,7 +9090,23 @@
         "pkg:apk/alpine/musl-utils@1.2.5-r23?arch=x86_64\u0026distro=3.23.4",
         "pkg:apk/alpine/ssl_client@1.37.0-r30?arch=x86_64\u0026distro=3.23.4"
       ],
-      "ref": "b3f1aeab-515e-47db-bae5-096e56808baf"
+      "ref": "0cdc7afa-2075-402a-803d-4e2670d736cb"
+    },
+    {
+      "dependsOn": [],
+      "ref": "1fa14a05-f866-4f87-abf7-211c9bbd2cd5"
+    },
+    {
+      "dependsOn": [],
+      "ref": "31976f56-9931-448b-b1f7-43ff343f37d8"
+    },
+    {
+      "dependsOn": [],
+      "ref": "dbe1a15f-ecb6-4629-bee1-c96294b51a80"
+    },
+    {
+      "dependsOn": [],
+      "ref": "f79f0bd0-f7a1-4c11-b515-774a4c662178"
     },
     {
       "dependsOn": [],
@@ -10111,11 +10111,11 @@
     },
     {
       "dependsOn": [
-        "2a451017-5b00-4d3f-8638-4abe883a440e",
-        "44c0cdd4-3370-4b84-b5ce-0c555f57ae0f",
-        "8a4b48e6-0c3a-4c41-adf4-8064c0833420",
-        "98051142-3d5b-48c0-bde4-508d94a06ee5",
-        "b3f1aeab-515e-47db-bae5-096e56808baf",
+        "0cdc7afa-2075-402a-803d-4e2670d736cb",
+        "1fa14a05-f866-4f87-abf7-211c9bbd2cd5",
+        "31976f56-9931-448b-b1f7-43ff343f37d8",
+        "dbe1a15f-ecb6-4629-bee1-c96294b51a80",
+        "f79f0bd0-f7a1-4c11-b515-774a4c662178",
         "pkg:npm/%40gar/promise-retry@1.0.3",
         "pkg:npm/%40isaacs/fs-minipass@4.0.1",
         "pkg:npm/%40isaacs/string-locale-compare@1.1.0",
@@ -10411,7 +10411,7 @@
       "purl": "pkg:oci/node-server@sha256%3A81841d6132e1adfd8d21c2f3cc1df844ac139e769b629e000d9959a8bfbb7386?arch=amd64\u0026repository_url=ghcr.io%2Fystkfujii%2Fplayground_supply-chain-guard%2Fnode-server",
       "type": "container"
     },
-    "timestamp": "2026-06-14T03:39:59+00:00",
+    "timestamp": "2026-06-15T03:40:24+00:00",
     "tools": {
       "components": [
         {
@@ -10423,7 +10423,7 @@
       ]
     }
   },
-  "serialNumber": "urn:uuid:a16e8271-c85b-4f05-89e3-4e94fea31606",
+  "serialNumber": "urn:uuid:f9790ff7-674f-4ae9-a988-85e9e4d82a29",
   "specVersion": "1.6",
   "version": 1
 }
