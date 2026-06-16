@@ -4,9 +4,9 @@
   "metadata": {
     "name": "mirror.gcr.io-aquasec-trivy-0.69.3-258d1c",
     "namespace": "kubescape",
-    "uid": "28bb3958-cf12-4c6d-97d4-1a9ed80fc2ae",
+    "uid": "5d55db1a-8989-4066-a123-52ee965674ba",
     "resourceVersion": "2",
-    "creationTimestamp": "2026-06-15T21:43:44Z",
+    "creationTimestamp": "2026-06-16T16:01:34Z",
     "labels": {
       "kubescape.io/image-id": "mirror-gcr-io-aquasec-trivy-sha256-bcc376de8d77cfe086a917230e81",
       "kubescape.io/image-name": "mirror-gcr-io-aquasec-trivy"
@@ -26,7 +26,7 @@
         "version": "v1.32.0"
       },
       "report": {
-        "createdAt": "2026-06-15T21:43:44Z"
+        "createdAt": "2026-06-16T16:01:34Z"
       }
     },
     "syft": {
