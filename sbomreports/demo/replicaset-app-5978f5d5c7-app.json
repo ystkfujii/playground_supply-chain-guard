@@ -2,7 +2,7 @@
   "bomFormat": "CycloneDX",
   "components": [
     {
-      "bom-ref": "33e199c8-0040-438f-9f15-3ccbcc1a214b",
+      "bom-ref": "5f3cd824-d7ae-43c9-81dc-64f43276254f",
       "name": "server",
       "properties": [
         {
@@ -17,7 +17,7 @@
       "type": "application"
     },
     {
-      "bom-ref": "5d5491fb-600a-4814-979d-32a850a0e507",
+      "bom-ref": "9913276b-acf6-435d-8dc8-d6bb1d89c345",
       "name": "alpine",
       "properties": [
         {
@@ -1099,7 +1099,7 @@
         "pkg:golang/golang.org/x/time@v0.15.0",
         "pkg:golang/stdlib@v1.26.3"
       ],
-      "ref": "33e199c8-0040-438f-9f15-3ccbcc1a214b"
+      "ref": "5f3cd824-d7ae-43c9-81dc-64f43276254f"
     },
     {
       "dependsOn": [
@@ -1109,7 +1109,7 @@
         "pkg:apk/alpine/musl-utils@1.2.5-r11?arch=x86_64\u0026distro=3.21.7",
         "pkg:apk/alpine/ssl_client@1.37.0-r14?arch=x86_64\u0026distro=3.21.7"
       ],
-      "ref": "5d5491fb-600a-4814-979d-32a850a0e507"
+      "ref": "9913276b-acf6-435d-8dc8-d6bb1d89c345"
     },
     {
       "dependsOn": [],
@@ -1252,8 +1252,8 @@
     },
     {
       "dependsOn": [
-        "33e199c8-0040-438f-9f15-3ccbcc1a214b",
-        "5d5491fb-600a-4814-979d-32a850a0e507"
+        "5f3cd824-d7ae-43c9-81dc-64f43276254f",
+        "9913276b-acf6-435d-8dc8-d6bb1d89c345"
       ],
       "ref": "pkg:oci/go-server@sha256%3Ae9131e8bf44c8025e08bc2cafe44c485099e661b0b03f39c95dc9cf041e35f35?arch=amd64\u0026repository_url=ghcr.io%2Fystkfujii%2Fplayground_supply-chain-guard%2Fgo-server"
     }
@@ -1299,7 +1299,7 @@
       "purl": "pkg:oci/go-server@sha256%3Ae9131e8bf44c8025e08bc2cafe44c485099e661b0b03f39c95dc9cf041e35f35?arch=amd64\u0026repository_url=ghcr.io%2Fystkfujii%2Fplayground_supply-chain-guard%2Fgo-server",
       "type": "container"
     },
-    "timestamp": "2026-06-15T11:04:59+00:00",
+    "timestamp": "2026-06-16T11:05:13+00:00",
     "tools": {
       "components": [
         {
@@ -1311,7 +1311,7 @@
       ]
     }
   },
-  "serialNumber": "urn:uuid:b6ef9cb8-2a28-4af6-ae85-d5c51bf2ca18",
+  "serialNumber": "urn:uuid:d552a3ac-2c9a-44fe-9f9e-8ed0799aa654",
   "specVersion": "1.6",
   "version": 1
 }
