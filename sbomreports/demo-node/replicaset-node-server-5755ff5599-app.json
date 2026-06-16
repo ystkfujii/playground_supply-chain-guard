@@ -2,23 +2,7 @@
   "bomFormat": "CycloneDX",
   "components": [
     {
-      "bom-ref": "0cdc7afa-2075-402a-803d-4e2670d736cb",
-      "name": "alpine",
-      "properties": [
-        {
-          "name": "aquasecurity:trivy:Class",
-          "value": "os-pkgs"
-        },
-        {
-          "name": "aquasecurity:trivy:Type",
-          "value": "alpine"
-        }
-      ],
-      "type": "operating-system",
-      "version": "3.23.4"
-    },
-    {
-      "bom-ref": "1fa14a05-f866-4f87-abf7-211c9bbd2cd5",
+      "bom-ref": "287c2eb3-d1a3-4397-bce2-e7b88e71166f",
       "licenses": [
         {
           "license": {
@@ -54,7 +38,7 @@
       "version": "2.1.3"
     },
     {
-      "bom-ref": "31976f56-9931-448b-b1f7-43ff343f37d8",
+      "bom-ref": "4068247d-a0ed-44d7-a253-2829f4530b6d",
       "licenses": [
         {
           "license": {
@@ -90,43 +74,23 @@
       "version": "2.1.3"
     },
     {
-      "bom-ref": "dbe1a15f-ecb6-4629-bee1-c96294b51a80",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT"
-          }
-        }
-      ],
-      "name": "safer-buffer",
+      "bom-ref": "4c6b9cb8-aa1d-49f6-b5b9-65645f848311",
+      "name": "alpine",
       "properties": [
         {
-          "name": "aquasecurity:trivy:FilePath",
-          "value": "app/node_modules/safer-buffer/package.json"
+          "name": "aquasecurity:trivy:Class",
+          "value": "os-pkgs"
         },
         {
-          "name": "aquasecurity:trivy:LayerDiffID",
-          "value": "sha256:2042c3aade0366a68f2aea60e833293862557707dba5ab6bde4ba368b79343cd"
-        },
-        {
-          "name": "aquasecurity:trivy:LayerDigest",
-          "value": "sha256:ada6ba2cf0cb3ff553803254a16e2ef27d6bca5fb0e4e6fae335d21630973350"
-        },
-        {
-          "name": "aquasecurity:trivy:PkgID",
-          "value": "safer-buffer@2.1.2"
-        },
-        {
-          "name": "aquasecurity:trivy:PkgType",
-          "value": "node-pkg"
+          "name": "aquasecurity:trivy:Type",
+          "value": "alpine"
         }
       ],
-      "purl": "pkg:npm/safer-buffer@2.1.2",
-      "type": "library",
-      "version": "2.1.2"
+      "type": "operating-system",
+      "version": "3.23.4"
     },
     {
-      "bom-ref": "f79f0bd0-f7a1-4c11-b515-774a4c662178",
+      "bom-ref": "563c992f-bc1b-41ea-972e-fb647f7941b1",
       "licenses": [
         {
           "license": {
@@ -147,6 +111,42 @@
         {
           "name": "aquasecurity:trivy:LayerDigest",
           "value": "sha256:eea2c8c31119c028a455d4bf33b2d3db30709fc3cbe5731a86fd418a2f2a047b"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "safer-buffer@2.1.2"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "node-pkg"
+        }
+      ],
+      "purl": "pkg:npm/safer-buffer@2.1.2",
+      "type": "library",
+      "version": "2.1.2"
+    },
+    {
+      "bom-ref": "e845bab2-5f56-426a-9b0f-71716e5d5363",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "name": "safer-buffer",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "app/node_modules/safer-buffer/package.json"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:2042c3aade0366a68f2aea60e833293862557707dba5ab6bde4ba368b79343cd"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:ada6ba2cf0cb3ff553803254a16e2ef27d6bca5fb0e4e6fae335d21630973350"
         },
         {
           "name": "aquasecurity:trivy:PkgID",
@@ -9082,6 +9082,14 @@
   ],
   "dependencies": [
     {
+      "dependsOn": [],
+      "ref": "287c2eb3-d1a3-4397-bce2-e7b88e71166f"
+    },
+    {
+      "dependsOn": [],
+      "ref": "4068247d-a0ed-44d7-a253-2829f4530b6d"
+    },
+    {
       "dependsOn": [
         "pkg:apk/alpine/alpine-baselayout@3.7.2-r0?arch=x86_64\u0026distro=3.23.4",
         "pkg:apk/alpine/alpine-release@3.23.4-r0?arch=x86_64\u0026distro=3.23.4",
@@ -9090,23 +9098,15 @@
         "pkg:apk/alpine/musl-utils@1.2.5-r23?arch=x86_64\u0026distro=3.23.4",
         "pkg:apk/alpine/ssl_client@1.37.0-r30?arch=x86_64\u0026distro=3.23.4"
       ],
-      "ref": "0cdc7afa-2075-402a-803d-4e2670d736cb"
+      "ref": "4c6b9cb8-aa1d-49f6-b5b9-65645f848311"
     },
     {
       "dependsOn": [],
-      "ref": "1fa14a05-f866-4f87-abf7-211c9bbd2cd5"
+      "ref": "563c992f-bc1b-41ea-972e-fb647f7941b1"
     },
     {
       "dependsOn": [],
-      "ref": "31976f56-9931-448b-b1f7-43ff343f37d8"
-    },
-    {
-      "dependsOn": [],
-      "ref": "dbe1a15f-ecb6-4629-bee1-c96294b51a80"
-    },
-    {
-      "dependsOn": [],
-      "ref": "f79f0bd0-f7a1-4c11-b515-774a4c662178"
+      "ref": "e845bab2-5f56-426a-9b0f-71716e5d5363"
     },
     {
       "dependsOn": [],
@@ -10111,11 +10111,11 @@
     },
     {
       "dependsOn": [
-        "0cdc7afa-2075-402a-803d-4e2670d736cb",
-        "1fa14a05-f866-4f87-abf7-211c9bbd2cd5",
-        "31976f56-9931-448b-b1f7-43ff343f37d8",
-        "dbe1a15f-ecb6-4629-bee1-c96294b51a80",
-        "f79f0bd0-f7a1-4c11-b515-774a4c662178",
+        "287c2eb3-d1a3-4397-bce2-e7b88e71166f",
+        "4068247d-a0ed-44d7-a253-2829f4530b6d",
+        "4c6b9cb8-aa1d-49f6-b5b9-65645f848311",
+        "563c992f-bc1b-41ea-972e-fb647f7941b1",
+        "e845bab2-5f56-426a-9b0f-71716e5d5363",
         "pkg:npm/%40gar/promise-retry@1.0.3",
         "pkg:npm/%40isaacs/fs-minipass@4.0.1",
         "pkg:npm/%40isaacs/string-locale-compare@1.1.0",
@@ -10411,7 +10411,7 @@
       "purl": "pkg:oci/node-server@sha256%3A81841d6132e1adfd8d21c2f3cc1df844ac139e769b629e000d9959a8bfbb7386?arch=amd64\u0026repository_url=ghcr.io%2Fystkfujii%2Fplayground_supply-chain-guard%2Fnode-server",
       "type": "container"
     },
-    "timestamp": "2026-06-15T03:40:24+00:00",
+    "timestamp": "2026-06-16T03:40:51+00:00",
     "tools": {
       "components": [
         {
@@ -10423,7 +10423,7 @@
       ]
     }
   },
-  "serialNumber": "urn:uuid:f9790ff7-674f-4ae9-a988-85e9e4d82a29",
+  "serialNumber": "urn:uuid:767b9ad3-ac5e-4a71-9965-d6f3e9b6c8fb",
   "specVersion": "1.6",
   "version": 1
 }
