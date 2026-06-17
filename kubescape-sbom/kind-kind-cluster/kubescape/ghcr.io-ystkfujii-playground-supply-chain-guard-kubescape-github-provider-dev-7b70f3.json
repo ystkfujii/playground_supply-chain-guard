@@ -4,9 +4,9 @@
   "metadata": {
     "name": "ghcr.io-ystkfujii-playground-supply-chain-guard-kubescape-github-provider-dev-7b70f3",
     "namespace": "kubescape",
-    "uid": "7d4b6286-d8eb-4243-a2ff-7dad782df314",
+    "uid": "1399d1ca-723a-41f5-8005-656aa9a8ee6a",
     "resourceVersion": "2",
-    "creationTimestamp": "2026-06-17T11:01:58Z",
+    "creationTimestamp": "2026-06-17T23:28:42Z",
     "labels": {
       "kubescape.io/image-id": "ghcr-io-ystkfujii-playground-supply-chain-guard-kubescape-githu",
       "kubescape.io/image-name": "ghcr-io-ystkfujii-playground-supply-chain-guard-kubescape-githu"
@@ -26,7 +26,7 @@
         "version": "v1.32.0"
       },
       "report": {
-        "createdAt": "2026-06-17T11:01:58Z"
+        "createdAt": "2026-06-17T23:28:42Z"
       }
     },
     "syft": {
