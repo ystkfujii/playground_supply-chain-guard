@@ -2,7 +2,7 @@
   "bomFormat": "CycloneDX",
   "components": [
     {
-      "bom-ref": "228231a9-b884-4785-ae4e-679c38349236",
+      "bom-ref": "697963fb-796c-4b9b-8a53-3a0096470db6",
       "name": "manager",
       "properties": [
         {
@@ -17,23 +17,7 @@
       "type": "application"
     },
     {
-      "bom-ref": "2478011f-426f-4486-8643-9d6502b9b369",
-      "name": "alpine",
-      "properties": [
-        {
-          "name": "aquasecurity:trivy:Class",
-          "value": "os-pkgs"
-        },
-        {
-          "name": "aquasecurity:trivy:Type",
-          "value": "alpine"
-        }
-      ],
-      "type": "operating-system",
-      "version": "3.23.4"
-    },
-    {
-      "bom-ref": "7b468db8-98f1-4c61-8398-c2298a725f60",
+      "bom-ref": "b231bd15-2d9a-4000-8c3f-8a639da9335c",
       "name": "./registry-scanner/",
       "properties": [
         {
@@ -54,6 +38,22 @@
         }
       ],
       "type": "library"
+    },
+    {
+      "bom-ref": "ef92ca1c-aa66-41ae-84cd-604174f557db",
+      "name": "alpine",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "os-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "alpine"
+        }
+      ],
+      "type": "operating-system",
+      "version": "3.23.4"
     },
     {
       "bom-ref": "pkg:apk/alpine/alpine-baselayout-data@3.7.2-r0?arch=x86_64\u0026distro=3.23.4",
@@ -10477,7 +10477,7 @@
   "dependencies": [
     {
       "dependsOn": [
-        "7b468db8-98f1-4c61-8398-c2298a725f60",
+        "b231bd15-2d9a-4000-8c3f-8a639da9335c",
         "pkg:golang/cel.dev/expr@v0.25.1",
         "pkg:golang/cloud.google.com/go/compute/metadata@v0.9.0",
         "pkg:golang/dario.cat/mergo@v1.0.2",
@@ -10663,7 +10663,11 @@
         "pkg:golang/sigs.k8s.io/yaml@v1.6.0",
         "pkg:golang/stdlib@v1.25.9"
       ],
-      "ref": "228231a9-b884-4785-ae4e-679c38349236"
+      "ref": "697963fb-796c-4b9b-8a53-3a0096470db6"
+    },
+    {
+      "dependsOn": [],
+      "ref": "b231bd15-2d9a-4000-8c3f-8a639da9335c"
     },
     {
       "dependsOn": [
@@ -10699,11 +10703,7 @@
         "pkg:apk/alpine/ssl_client@1.37.0-r30?arch=x86_64\u0026distro=3.23.4",
         "pkg:apk/alpine/tini@0.19.0-r3?arch=x86_64\u0026distro=3.23.4"
       ],
-      "ref": "2478011f-426f-4486-8643-9d6502b9b369"
-    },
-    {
-      "dependsOn": [],
-      "ref": "7b468db8-98f1-4c61-8398-c2298a725f60"
+      "ref": "ef92ca1c-aa66-41ae-84cd-604174f557db"
     },
     {
       "dependsOn": [],
@@ -12264,8 +12264,8 @@
     },
     {
       "dependsOn": [
-        "228231a9-b884-4785-ae4e-679c38349236",
-        "2478011f-426f-4486-8643-9d6502b9b369"
+        "697963fb-796c-4b9b-8a53-3a0096470db6",
+        "ef92ca1c-aa66-41ae-84cd-604174f557db"
       ],
       "ref": "pkg:oci/argocd-image-updater@sha256%3Ae8624a2dca038cf03eb4bf9a64519795a85401d0d9647be704d252283627edc3?arch=amd64\u0026repository_url=quay.io%2Fargoprojlabs%2Fargocd-image-updater"
     }
@@ -12335,7 +12335,7 @@
       "purl": "pkg:oci/argocd-image-updater@sha256%3Ae8624a2dca038cf03eb4bf9a64519795a85401d0d9647be704d252283627edc3?arch=amd64\u0026repository_url=quay.io%2Fargoprojlabs%2Fargocd-image-updater",
       "type": "container"
     },
-    "timestamp": "2026-06-16T03:41:30+00:00",
+    "timestamp": "2026-06-17T03:42:09+00:00",
     "tools": {
       "components": [
         {
@@ -12347,7 +12347,7 @@
       ]
     }
   },
-  "serialNumber": "urn:uuid:45558e3e-c10e-4dfe-af33-424965b3d97e",
+  "serialNumber": "urn:uuid:a5d8bd9e-b2bf-4459-a9d2-24668040e100",
   "specVersion": "1.6",
   "version": 1
 }
