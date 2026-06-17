@@ -2,22 +2,7 @@
   "bomFormat": "CycloneDX",
   "components": [
     {
-      "bom-ref": "5f3cd824-d7ae-43c9-81dc-64f43276254f",
-      "name": "server",
-      "properties": [
-        {
-          "name": "aquasecurity:trivy:Class",
-          "value": "lang-pkgs"
-        },
-        {
-          "name": "aquasecurity:trivy:Type",
-          "value": "gobinary"
-        }
-      ],
-      "type": "application"
-    },
-    {
-      "bom-ref": "9913276b-acf6-435d-8dc8-d6bb1d89c345",
+      "bom-ref": "b216402a-3dfd-4b8f-8bda-90e6fa01dfe7",
       "name": "alpine",
       "properties": [
         {
@@ -31,6 +16,21 @@
       ],
       "type": "operating-system",
       "version": "3.21.7"
+    },
+    {
+      "bom-ref": "f2d9c769-cc82-4b89-a5b2-b241bc6623f0",
+      "name": "server",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "gobinary"
+        }
+      ],
+      "type": "application"
     },
     {
       "bom-ref": "pkg:apk/alpine/alpine-baselayout-data@3.6.8-r1?arch=x86_64\u0026distro=3.21.7",
@@ -1086,6 +1086,16 @@
   "dependencies": [
     {
       "dependsOn": [
+        "pkg:apk/alpine/alpine-baselayout@3.6.8-r1?arch=x86_64\u0026distro=3.21.7",
+        "pkg:apk/alpine/alpine-release@3.21.7-r0?arch=x86_64\u0026distro=3.21.7",
+        "pkg:apk/alpine/apk-tools@2.14.6-r3?arch=x86_64\u0026distro=3.21.7",
+        "pkg:apk/alpine/musl-utils@1.2.5-r11?arch=x86_64\u0026distro=3.21.7",
+        "pkg:apk/alpine/ssl_client@1.37.0-r14?arch=x86_64\u0026distro=3.21.7"
+      ],
+      "ref": "b216402a-3dfd-4b8f-8bda-90e6fa01dfe7"
+    },
+    {
+      "dependsOn": [
         "pkg:golang/github.com/labstack/echo/v4@v4.15.2",
         "pkg:golang/github.com/labstack/gommon@v0.5.0",
         "pkg:golang/github.com/mattn/go-colorable@v0.1.14",
@@ -1099,17 +1109,7 @@
         "pkg:golang/golang.org/x/time@v0.15.0",
         "pkg:golang/stdlib@v1.26.3"
       ],
-      "ref": "5f3cd824-d7ae-43c9-81dc-64f43276254f"
-    },
-    {
-      "dependsOn": [
-        "pkg:apk/alpine/alpine-baselayout@3.6.8-r1?arch=x86_64\u0026distro=3.21.7",
-        "pkg:apk/alpine/alpine-release@3.21.7-r0?arch=x86_64\u0026distro=3.21.7",
-        "pkg:apk/alpine/apk-tools@2.14.6-r3?arch=x86_64\u0026distro=3.21.7",
-        "pkg:apk/alpine/musl-utils@1.2.5-r11?arch=x86_64\u0026distro=3.21.7",
-        "pkg:apk/alpine/ssl_client@1.37.0-r14?arch=x86_64\u0026distro=3.21.7"
-      ],
-      "ref": "9913276b-acf6-435d-8dc8-d6bb1d89c345"
+      "ref": "f2d9c769-cc82-4b89-a5b2-b241bc6623f0"
     },
     {
       "dependsOn": [],
@@ -1252,8 +1252,8 @@
     },
     {
       "dependsOn": [
-        "5f3cd824-d7ae-43c9-81dc-64f43276254f",
-        "9913276b-acf6-435d-8dc8-d6bb1d89c345"
+        "b216402a-3dfd-4b8f-8bda-90e6fa01dfe7",
+        "f2d9c769-cc82-4b89-a5b2-b241bc6623f0"
       ],
       "ref": "pkg:oci/go-server@sha256%3Ae9131e8bf44c8025e08bc2cafe44c485099e661b0b03f39c95dc9cf041e35f35?arch=amd64\u0026repository_url=ghcr.io%2Fystkfujii%2Fplayground_supply-chain-guard%2Fgo-server"
     }
@@ -1299,7 +1299,7 @@
       "purl": "pkg:oci/go-server@sha256%3Ae9131e8bf44c8025e08bc2cafe44c485099e661b0b03f39c95dc9cf041e35f35?arch=amd64\u0026repository_url=ghcr.io%2Fystkfujii%2Fplayground_supply-chain-guard%2Fgo-server",
       "type": "container"
     },
-    "timestamp": "2026-06-16T11:05:13+00:00",
+    "timestamp": "2026-06-17T11:05:29+00:00",
     "tools": {
       "components": [
         {
@@ -1311,7 +1311,7 @@
       ]
     }
   },
-  "serialNumber": "urn:uuid:d552a3ac-2c9a-44fe-9f9e-8ed0799aa654",
+  "serialNumber": "urn:uuid:cfa1872c-e0b7-437f-b3f6-8a8037c2851e",
   "specVersion": "1.6",
   "version": 1
 }
