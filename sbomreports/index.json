@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-18T10:17:01Z",
+  "generatedAt": "2026-06-18T11:17:01Z",
   "clusterName": "kind-kind",
   "content": "cyclonedx",
   "reports": [
@@ -154,7 +154,7 @@
       "artifactTag": "stable",
       "artifactDigest": "sha256:e9131e8bf44c8025e08bc2cafe44c485099e661b0b03f39c95dc9cf041e35f35",
       "creationTimestamp": "2026-06-14T11:04:46Z",
-      "resourceVersion": "913892"
+      "resourceVersion": "1187939"
     },
     {
       "namespace": "demo",
@@ -308,7 +308,7 @@
       "artifactTag": "v1.0.1",
       "artifactDigest": "sha256:34ca3dc7d5a21340904f753fd2483b1a4305e8223a6969f315b6bf7e2fb27d3e",
       "creationTimestamp": "2026-06-14T03:40:19Z",
-      "resourceVersion": "913297"
+      "resourceVersion": "1189930"
     },
     {
       "namespace": "guac",
@@ -322,7 +322,7 @@
       "artifactTag": "v1.0.1",
       "artifactDigest": "sha256:34ca3dc7d5a21340904f753fd2483b1a4305e8223a6969f315b6bf7e2fb27d3e",
       "creationTimestamp": "2026-06-14T10:25:21Z",
-      "resourceVersion": "913322"
+      "resourceVersion": "1189955"
     },
     {
       "namespace": "guac",
@@ -546,7 +546,7 @@
       "artifactTag": "v0.0.147",
       "artifactDigest": "sha256:adad19e1173f415b35a35424f07581f8b678524bbf0d4991095595b267261328",
       "creationTimestamp": "2026-06-14T10:24:14Z",
-      "resourceVersion": "913117"
+      "resourceVersion": "1187234"
     },
     {
       "namespace": "kubescape",
@@ -574,7 +574,7 @@
       "artifactTag": "1.25.1",
       "artifactDigest": "sha256:67f9a4f10d147a6e04629340e6493c9703300ca23a2f7f3aa56fe615d75d31ca",
       "creationTimestamp": "2026-06-14T10:25:38Z",
-      "resourceVersion": "906665"
+      "resourceVersion": "1181082"
     }
   ]
 }
