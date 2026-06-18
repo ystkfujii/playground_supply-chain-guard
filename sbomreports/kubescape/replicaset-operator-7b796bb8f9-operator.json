@@ -2,7 +2,7 @@
   "bomFormat": "CycloneDX",
   "components": [
     {
-      "bom-ref": "bc43a9f5-96d0-460a-8590-f3b6b76beeb1",
+      "bom-ref": "8e2bcaf7-5491-480d-bac6-86a397e45753",
       "name": "debian",
       "properties": [
         {
@@ -18,7 +18,7 @@
       "version": "13.4"
     },
     {
-      "bom-ref": "e39f0a56-7b43-4d8e-a8b9-2f659a32f733",
+      "bom-ref": "df213272-e489-42e1-bf70-e8a91c27367b",
       "name": "usr/bin/operator",
       "properties": [
         {
@@ -8220,13 +8220,13 @@
         "pkg:deb/debian/tzdata-legacy@2026a-0%2Bdeb13u1?arch=all\u0026distro=debian-13.4",
         "pkg:deb/debian/tzdata@2026a-0%2Bdeb13u1?arch=all\u0026distro=debian-13.4"
       ],
-      "ref": "bc43a9f5-96d0-460a-8590-f3b6b76beeb1"
+      "ref": "8e2bcaf7-5491-480d-bac6-86a397e45753"
     },
     {
       "dependsOn": [
         "pkg:golang/github.com/kubescape/operator@v0.2.142-0.20260508091334-37ad38211f98"
       ],
-      "ref": "e39f0a56-7b43-4d8e-a8b9-2f659a32f733"
+      "ref": "df213272-e489-42e1-bf70-e8a91c27367b"
     },
     {
       "dependsOn": [],
@@ -9840,8 +9840,8 @@
     },
     {
       "dependsOn": [
-        "bc43a9f5-96d0-460a-8590-f3b6b76beeb1",
-        "e39f0a56-7b43-4d8e-a8b9-2f659a32f733"
+        "8e2bcaf7-5491-480d-bac6-86a397e45753",
+        "df213272-e489-42e1-bf70-e8a91c27367b"
       ],
       "ref": "pkg:oci/operator@sha256%3Aeef301362c81da2a8260b71234ea696357a5773d94a253615a647272b4d35c48?arch=amd64\u0026repository_url=quay.io%2Fkubescape%2Foperator"
     }
@@ -9935,7 +9935,7 @@
       "purl": "pkg:oci/operator@sha256%3Aeef301362c81da2a8260b71234ea696357a5773d94a253615a647272b4d35c48?arch=amd64\u0026repository_url=quay.io%2Fkubescape%2Foperator",
       "type": "container"
     },
-    "timestamp": "2026-06-17T05:47:11+00:00",
+    "timestamp": "2026-06-18T05:47:41+00:00",
     "tools": {
       "components": [
         {
@@ -9947,7 +9947,7 @@
       ]
     }
   },
-  "serialNumber": "urn:uuid:553ce78f-d0fc-4b99-8a62-e23e53329ae1",
+  "serialNumber": "urn:uuid:02e77f90-7af1-4c6b-b5f4-2c4c799142d2",
   "specVersion": "1.6",
   "version": 1
 }
