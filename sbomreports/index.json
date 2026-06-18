@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-18T03:17:01Z",
+  "generatedAt": "2026-06-18T04:17:01Z",
   "clusterName": "kind-kind",
   "content": "cyclonedx",
   "reports": [
@@ -15,7 +15,7 @@
       "artifactTag": "v3.4.2",
       "artifactDigest": "sha256:c612d570cb6d6ff29afb72932c1bfe98a1ecc234df50f8ea4873fb7066e760fc",
       "creationTimestamp": "2026-06-14T03:41:44Z",
-      "resourceVersion": "829613"
+      "resourceVersion": "1103656"
     },
     {
       "namespace": "argocd",
@@ -29,7 +29,7 @@
       "artifactTag": "v1.2.0",
       "artifactDigest": "sha256:e8624a2dca038cf03eb4bf9a64519795a85401d0d9647be704d252283627edc3",
       "creationTimestamp": "2026-06-14T03:40:38Z",
-      "resourceVersion": "829253"
+      "resourceVersion": "1103367"
     },
     {
       "namespace": "argocd",
@@ -43,7 +43,7 @@
       "artifactTag": "v3.4.2",
       "artifactDigest": "sha256:c612d570cb6d6ff29afb72932c1bfe98a1ecc234df50f8ea4873fb7066e760fc",
       "creationTimestamp": "2026-06-14T03:40:44Z",
-      "resourceVersion": "829181"
+      "resourceVersion": "1103232"
     },
     {
       "namespace": "argocd",
@@ -57,7 +57,7 @@
       "artifactTag": "v2.45.0",
       "artifactDigest": "sha256:b8469881d3cb3a73001506f0d3aaefecb9c45d2311c1e0f405d8ac538316c59d",
       "creationTimestamp": "2026-06-14T03:41:15Z",
-      "resourceVersion": "829448"
+      "resourceVersion": "1103433"
     },
     {
       "namespace": "argocd",
@@ -71,7 +71,7 @@
       "artifactTag": "8.2.3-alpine",
       "artifactDigest": "sha256:08ad0b1d280850169a790dba1393ff7a90aef951fc19632cf4d3ce4f78e679ba",
       "creationTimestamp": "2026-06-14T03:42:13Z",
-      "resourceVersion": "829883"
+      "resourceVersion": "1104185"
     },
     {
       "namespace": "argocd",
@@ -85,7 +85,7 @@
       "artifactTag": "v3.4.2",
       "artifactDigest": "sha256:c612d570cb6d6ff29afb72932c1bfe98a1ecc234df50f8ea4873fb7066e760fc",
       "creationTimestamp": "2026-06-14T03:42:13Z",
-      "resourceVersion": "829884"
+      "resourceVersion": "1104186"
     },
     {
       "namespace": "argocd",
@@ -99,7 +99,7 @@
       "artifactTag": "v3.4.2",
       "artifactDigest": "sha256:c612d570cb6d6ff29afb72932c1bfe98a1ecc234df50f8ea4873fb7066e760fc",
       "creationTimestamp": "2026-06-14T03:39:55Z",
-      "resourceVersion": "828953"
+      "resourceVersion": "1102997"
     },
     {
       "namespace": "argocd",
@@ -113,7 +113,7 @@
       "artifactTag": "v3.4.2",
       "artifactDigest": "sha256:c612d570cb6d6ff29afb72932c1bfe98a1ecc234df50f8ea4873fb7066e760fc",
       "creationTimestamp": "2026-06-14T03:39:56Z",
-      "resourceVersion": "828945"
+      "resourceVersion": "1103023"
     },
     {
       "namespace": "argocd",
@@ -127,7 +127,7 @@
       "artifactTag": "v3.4.2",
       "artifactDigest": "sha256:c612d570cb6d6ff29afb72932c1bfe98a1ecc234df50f8ea4873fb7066e760fc",
       "creationTimestamp": "2026-06-14T03:38:56Z",
-      "resourceVersion": "828574"
+      "resourceVersion": "1102665"
     },
     {
       "namespace": "artifact-attestations",
@@ -140,7 +140,7 @@
       "artifactRepository": "sigstore/policy-controller/policy-controller",
       "artifactDigest": "sha256:0bcd60beb93f4427c29cf3a669743caf58490e98ded4380c33c09f092734a6ab",
       "creationTimestamp": "2026-06-14T03:41:15Z",
-      "resourceVersion": "829456"
+      "resourceVersion": "1103460"
     },
     {
       "namespace": "demo",
@@ -182,7 +182,7 @@
       "artifactTag": "stable",
       "artifactDigest": "sha256:81841d6132e1adfd8d21c2f3cc1df844ac139e769b629e000d9959a8bfbb7386",
       "creationTimestamp": "2026-06-14T03:39:59Z",
-      "resourceVersion": "828983"
+      "resourceVersion": "1103043"
     },
     {
       "namespace": "demo-python",
@@ -196,7 +196,7 @@
       "artifactTag": "stable",
       "artifactDigest": "sha256:f4c72d8e76069a4643dd3f6568499bfd254a8c8faf5d94992b63a0fe2a70da68",
       "creationTimestamp": "2026-06-14T03:41:11Z",
-      "resourceVersion": "829372"
+      "resourceVersion": "1103386"
     },
     {
       "namespace": "guac",
@@ -224,7 +224,7 @@
       "artifactTag": "v1.0.1",
       "artifactDigest": "sha256:34ca3dc7d5a21340904f753fd2483b1a4305e8223a6969f315b6bf7e2fb27d3e",
       "creationTimestamp": "2026-06-14T03:41:03Z",
-      "resourceVersion": "829648"
+      "resourceVersion": "1103744"
     },
     {
       "namespace": "guac",
@@ -266,7 +266,7 @@
       "artifactTag": "v1.0.1",
       "artifactDigest": "sha256:34ca3dc7d5a21340904f753fd2483b1a4305e8223a6969f315b6bf7e2fb27d3e",
       "creationTimestamp": "2026-06-14T03:41:54Z",
-      "resourceVersion": "832033"
+      "resourceVersion": "1106181"
     },
     {
       "namespace": "guac",
@@ -280,7 +280,7 @@
       "artifactTag": "RELEASE.2024-01-11T07-46-16Z",
       "artifactDigest": "sha256:796f75ea413b883cec953cb5f0bd2b6050615e36123f36e39aa5555096a07bc1",
       "creationTimestamp": "2026-06-14T03:41:22Z",
-      "resourceVersion": "829598"
+      "resourceVersion": "1103671"
     },
     {
       "namespace": "guac",
@@ -350,7 +350,7 @@
       "artifactTag": "1.25.1",
       "artifactDigest": "sha256:67f9a4f10d147a6e04629340e6493c9703300ca23a2f7f3aa56fe615d75d31ca",
       "creationTimestamp": "2026-06-14T03:42:28Z",
-      "resourceVersion": "830221"
+      "resourceVersion": "1104447"
     },
     {
       "namespace": "guac",
@@ -364,7 +364,7 @@
       "artifactTag": "2.9.20-alpine",
       "artifactDigest": "sha256:d6c6ae7df4a0c5f7aa5ec8035501b7a594d065216aa227265c89909a3c31df96",
       "creationTimestamp": "2026-06-14T03:38:50Z",
-      "resourceVersion": "828455"
+      "resourceVersion": "1102488"
     },
     {
       "namespace": "guac",
@@ -378,7 +378,7 @@
       "artifactTag": "0.11.0",
       "artifactDigest": "sha256:c3a755eab2cc4702878d8d7bb75b82cd692a2557315cd18a0fac84f77f9253c9",
       "creationTimestamp": "2026-06-14T03:38:50Z",
-      "resourceVersion": "828456"
+      "resourceVersion": "1102487"
     },
     {
       "namespace": "kubescape",
@@ -392,7 +392,7 @@
       "artifactTag": "v0.2.19",
       "artifactDigest": "sha256:0ab6f49fb64bc5d82faacda24a2a55ca7acf9737c4a73e5c5a8a3f91321eb346",
       "creationTimestamp": "2026-06-14T03:39:43Z",
-      "resourceVersion": "828671"
+      "resourceVersion": "1102748"
     },
     {
       "namespace": "kubescape",
@@ -406,7 +406,7 @@
       "artifactTag": "v0.3.119",
       "artifactDigest": "sha256:49312282fb3ff219d5b3951e576238dec3c6aec3601dafc51e773925ef17ae23",
       "creationTimestamp": "2026-06-14T03:38:50Z",
-      "resourceVersion": "828528"
+      "resourceVersion": "1102578"
     },
     {
       "namespace": "kubescape",
@@ -518,7 +518,7 @@
       "artifactTag": "v0.0.274",
       "artifactDigest": "sha256:842bb0bd4e7281778aab49f2348adee6b54cb93d50f3722eb6b192c3b5555553",
       "creationTimestamp": "2026-06-14T03:41:08Z",
-      "resourceVersion": "829529"
+      "resourceVersion": "1103595"
     },
     {
       "namespace": "kubescape",

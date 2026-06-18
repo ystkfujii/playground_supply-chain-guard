@@ -2,7 +2,7 @@
   "bomFormat": "CycloneDX",
   "components": [
     {
-      "bom-ref": "0ace3b2f-c201-45ea-a793-25254adb0511",
+      "bom-ref": "fb7b87c5-688a-402a-855f-3e17d5e2275b",
       "name": "alpine",
       "properties": [
         {
@@ -1120,7 +1120,7 @@
         "pkg:apk/alpine/ssl_client@1.37.0-r20?arch=x86_64\u0026distro=3.22.3",
         "pkg:apk/alpine/tzdata@2025c-r0?arch=x86_64\u0026distro=3.22.3"
       ],
-      "ref": "0ace3b2f-c201-45ea-a793-25254adb0511"
+      "ref": "fb7b87c5-688a-402a-855f-3e17d5e2275b"
     },
     {
       "dependsOn": [
@@ -1265,7 +1265,7 @@
     },
     {
       "dependsOn": [
-        "0ace3b2f-c201-45ea-a793-25254adb0511"
+        "fb7b87c5-688a-402a-855f-3e17d5e2275b"
       ],
       "ref": "pkg:oci/redis@sha256%3A08ad0b1d280850169a790dba1393ff7a90aef951fc19632cf4d3ce4f78e679ba?arch=amd64\u0026repository_url=public.ecr.aws%2Fdocker%2Flibrary%2Fredis"
     }
@@ -1331,7 +1331,7 @@
       "purl": "pkg:oci/redis@sha256%3A08ad0b1d280850169a790dba1393ff7a90aef951fc19632cf4d3ce4f78e679ba?arch=amd64\u0026repository_url=public.ecr.aws%2Fdocker%2Flibrary%2Fredis",
       "type": "container"
     },
-    "timestamp": "2026-06-17T03:43:59+00:00",
+    "timestamp": "2026-06-18T03:45:17+00:00",
     "tools": {
       "components": [
         {
@@ -1343,7 +1343,7 @@
       ]
     }
   },
-  "serialNumber": "urn:uuid:33210a5e-782b-483f-8cd6-9d079625d04c",
+  "serialNumber": "urn:uuid:10d7d88c-e10d-4d89-bf83-75283a9d0fc2",
   "specVersion": "1.6",
   "version": 1
 }
