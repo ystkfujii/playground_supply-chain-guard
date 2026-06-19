@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19T19:17:01Z",
+  "generatedAt": "2026-06-19T20:17:01Z",
   "clusterName": "kind-kind",
   "content": "cyclonedx",
   "reports": [
@@ -350,7 +350,7 @@
       "artifactTag": "v1.0.1",
       "artifactDigest": "sha256:34ca3dc7d5a21340904f753fd2483b1a4305e8223a6969f315b6bf7e2fb27d3e",
       "creationTimestamp": "2026-06-15T04:57:44Z",
-      "resourceVersion": "1123656"
+      "resourceVersion": "1557880"
     },
     {
       "namespace": "guac",
