@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19T09:17:01Z",
+  "generatedAt": "2026-06-19T10:17:01Z",
   "clusterName": "kind-kind",
   "content": "cyclonedx",
   "reports": [
@@ -224,7 +224,7 @@
       "artifactTag": "v1.1.0",
       "artifactDigest": "sha256:1d138a384016bd599e4add5fcd2d86a4ca98c1d859a98b31326a403aa47fcf9f",
       "creationTimestamp": "2026-06-15T18:00:42Z",
-      "resourceVersion": "786700"
+      "resourceVersion": "1449253"
     },
     {
       "namespace": "guac",
@@ -448,7 +448,7 @@
       "artifactTag": "v0.3.142",
       "artifactDigest": "sha256:bcdc0deef55d279834c5fcff737215cf3c0663c4f6adac62a10fe43c58fedbec",
       "creationTimestamp": "2026-06-14T09:34:21Z",
-      "resourceVersion": "1170871"
+      "resourceVersion": "1444706"
     },
     {
       "namespace": "kubescape",
