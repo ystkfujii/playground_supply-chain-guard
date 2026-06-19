@@ -2,7 +2,7 @@
   "bomFormat": "CycloneDX",
   "components": [
     {
-      "bom-ref": "30685af4-6614-46e0-9df3-4efcad9b0151",
+      "bom-ref": "0e71a9dc-ceb6-45ba-833c-06345081a68e",
       "name": "debian",
       "properties": [
         {
@@ -7223,7 +7223,7 @@
         "pkg:deb/debian/tzdata@2026b-0%2Bdeb13u1?arch=all\u0026distro=debian-13.5",
         "pkg:deb/debian/util-linux@2.41-5?arch=amd64\u0026distro=debian-13.5"
       ],
-      "ref": "30685af4-6614-46e0-9df3-4efcad9b0151"
+      "ref": "0e71a9dc-ceb6-45ba-833c-06345081a68e"
     },
     {
       "dependsOn": [
@@ -7778,7 +7778,7 @@
     },
     {
       "dependsOn": [
-        "30685af4-6614-46e0-9df3-4efcad9b0151",
+        "0e71a9dc-ceb6-45ba-833c-06345081a68e",
         "pkg:pypi/blinker@1.9.0",
         "pkg:pypi/certifi@2026.5.20",
         "pkg:pypi/charset-normalizer@3.4.7",
@@ -7917,7 +7917,7 @@
       "purl": "pkg:oci/python-server@sha256%3Af4c72d8e76069a4643dd3f6568499bfd254a8c8faf5d94992b63a0fe2a70da68?arch=amd64\u0026repository_url=ghcr.io%2Fystkfujii%2Fplayground_supply-chain-guard%2Fpython-server",
       "type": "container"
     },
-    "timestamp": "2026-06-18T03:42:41+00:00",
+    "timestamp": "2026-06-19T03:43:02+00:00",
     "tools": {
       "components": [
         {
@@ -7929,7 +7929,7 @@
       ]
     }
   },
-  "serialNumber": "urn:uuid:729006e4-3822-439b-b154-7aa93c94435c",
+  "serialNumber": "urn:uuid:cb3267db-09d4-4a42-b8ce-1aabce14121f",
   "specVersion": "1.6",
   "version": 1
 }

@@ -2,7 +2,7 @@
   "bomFormat": "CycloneDX",
   "components": [
     {
-      "bom-ref": "2b5de11d-5c8c-4ee0-bc79-dc14ac98702d",
+      "bom-ref": "04b77aba-44b9-4bc9-8962-aef83a98792b",
       "name": "manager",
       "properties": [
         {
@@ -17,7 +17,7 @@
       "type": "application"
     },
     {
-      "bom-ref": "607fdf22-2992-4d09-8720-c1f24349d441",
+      "bom-ref": "60ad5146-8a13-443b-8264-33cd3c6d7380",
       "name": "alpine",
       "properties": [
         {
@@ -33,7 +33,7 @@
       "version": "3.23.4"
     },
     {
-      "bom-ref": "b75627c4-de73-4d4b-add7-9c5c6fa75d41",
+      "bom-ref": "65067ed8-b5fc-4606-8c90-7a7b40dbb811",
       "name": "./registry-scanner/",
       "properties": [
         {
@@ -10477,7 +10477,7 @@
   "dependencies": [
     {
       "dependsOn": [
-        "b75627c4-de73-4d4b-add7-9c5c6fa75d41",
+        "65067ed8-b5fc-4606-8c90-7a7b40dbb811",
         "pkg:golang/cel.dev/expr@v0.25.1",
         "pkg:golang/cloud.google.com/go/compute/metadata@v0.9.0",
         "pkg:golang/dario.cat/mergo@v1.0.2",
@@ -10663,7 +10663,7 @@
         "pkg:golang/sigs.k8s.io/yaml@v1.6.0",
         "pkg:golang/stdlib@v1.25.9"
       ],
-      "ref": "2b5de11d-5c8c-4ee0-bc79-dc14ac98702d"
+      "ref": "04b77aba-44b9-4bc9-8962-aef83a98792b"
     },
     {
       "dependsOn": [
@@ -10699,11 +10699,11 @@
         "pkg:apk/alpine/ssl_client@1.37.0-r30?arch=x86_64\u0026distro=3.23.4",
         "pkg:apk/alpine/tini@0.19.0-r3?arch=x86_64\u0026distro=3.23.4"
       ],
-      "ref": "607fdf22-2992-4d09-8720-c1f24349d441"
+      "ref": "60ad5146-8a13-443b-8264-33cd3c6d7380"
     },
     {
       "dependsOn": [],
-      "ref": "b75627c4-de73-4d4b-add7-9c5c6fa75d41"
+      "ref": "65067ed8-b5fc-4606-8c90-7a7b40dbb811"
     },
     {
       "dependsOn": [],
@@ -12264,8 +12264,8 @@
     },
     {
       "dependsOn": [
-        "2b5de11d-5c8c-4ee0-bc79-dc14ac98702d",
-        "607fdf22-2992-4d09-8720-c1f24349d441"
+        "04b77aba-44b9-4bc9-8962-aef83a98792b",
+        "60ad5146-8a13-443b-8264-33cd3c6d7380"
       ],
       "ref": "pkg:oci/argocd-image-updater@sha256%3Ae8624a2dca038cf03eb4bf9a64519795a85401d0d9647be704d252283627edc3?arch=amd64\u0026repository_url=quay.io%2Fargoprojlabs%2Fargocd-image-updater"
     }
@@ -12335,7 +12335,7 @@
       "purl": "pkg:oci/argocd-image-updater@sha256%3Ae8624a2dca038cf03eb4bf9a64519795a85401d0d9647be704d252283627edc3?arch=amd64\u0026repository_url=quay.io%2Fargoprojlabs%2Fargocd-image-updater",
       "type": "container"
     },
-    "timestamp": "2026-06-18T03:42:41+00:00",
+    "timestamp": "2026-06-19T03:43:12+00:00",
     "tools": {
       "components": [
         {
@@ -12347,7 +12347,7 @@
       ]
     }
   },
-  "serialNumber": "urn:uuid:e5c34000-3c3d-463d-becf-a104ea676124",
+  "serialNumber": "urn:uuid:fe05f023-b2c1-4048-b1d9-5e35cb688066",
   "specVersion": "1.6",
   "version": 1
 }

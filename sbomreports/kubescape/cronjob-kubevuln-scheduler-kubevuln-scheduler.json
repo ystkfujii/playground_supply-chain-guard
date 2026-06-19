@@ -2,7 +2,7 @@
   "bomFormat": "CycloneDX",
   "components": [
     {
-      "bom-ref": "28d900c3-a42a-4c44-a0b2-b1ee305ddcd5",
+      "bom-ref": "880f140f-39db-4e76-bee7-2e2b2bef578c",
       "name": "usr/bin/http_request",
       "properties": [
         {
@@ -17,7 +17,7 @@
       "type": "application"
     },
     {
-      "bom-ref": "483fff7f-5971-40a4-a618-05e597913007",
+      "bom-ref": "b7c1238c-5e66-4516-8d0b-7a3390720b3b",
       "name": "debian",
       "properties": [
         {
@@ -366,7 +366,7 @@
       "dependsOn": [
         "pkg:golang/github.com/kubescape/http-request@v0.2.17-0.20260414192407-54071cdccbbe"
       ],
-      "ref": "28d900c3-a42a-4c44-a0b2-b1ee305ddcd5"
+      "ref": "880f140f-39db-4e76-bee7-2e2b2bef578c"
     },
     {
       "dependsOn": [
@@ -376,7 +376,7 @@
         "pkg:deb/debian/tzdata-legacy@2026a-0%2Bdeb13u1?arch=all\u0026distro=debian-13.4",
         "pkg:deb/debian/tzdata@2026a-0%2Bdeb13u1?arch=all\u0026distro=debian-13.4"
       ],
-      "ref": "483fff7f-5971-40a4-a618-05e597913007"
+      "ref": "b7c1238c-5e66-4516-8d0b-7a3390720b3b"
     },
     {
       "dependsOn": [],
@@ -420,8 +420,8 @@
     },
     {
       "dependsOn": [
-        "28d900c3-a42a-4c44-a0b2-b1ee305ddcd5",
-        "483fff7f-5971-40a4-a618-05e597913007"
+        "880f140f-39db-4e76-bee7-2e2b2bef578c",
+        "b7c1238c-5e66-4516-8d0b-7a3390720b3b"
       ],
       "ref": "pkg:oci/http-request@sha256%3A0ab6f49fb64bc5d82faacda24a2a55ca7acf9737c4a73e5c5a8a3f91321eb346?arch=amd64\u0026repository_url=quay.io%2Fkubescape%2Fhttp-request"
     }
@@ -519,7 +519,7 @@
       "purl": "pkg:oci/http-request@sha256%3A0ab6f49fb64bc5d82faacda24a2a55ca7acf9737c4a73e5c5a8a3f91321eb346?arch=amd64\u0026repository_url=quay.io%2Fkubescape%2Fhttp-request",
       "type": "container"
     },
-    "timestamp": "2026-06-18T03:40:41+00:00",
+    "timestamp": "2026-06-19T03:40:56+00:00",
     "tools": {
       "components": [
         {
@@ -531,7 +531,7 @@
       ]
     }
   },
-  "serialNumber": "urn:uuid:fd06dfda-4cb0-408a-b017-ae819d59bdaa",
+  "serialNumber": "urn:uuid:af41bc74-ce73-477f-8b94-3370667ccbc1",
   "specVersion": "1.6",
   "version": 1
 }

@@ -2,7 +2,22 @@
   "bomFormat": "CycloneDX",
   "components": [
     {
-      "bom-ref": "27f6ea9c-01c5-4854-9bd6-f5749351dff1",
+      "bom-ref": "53ac67b5-7178-470b-b693-93701c0f9fef",
+      "name": "usr/local/bin/nats-server",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "gobinary"
+        }
+      ],
+      "type": "application"
+    },
+    {
+      "bom-ref": "7e97c64e-c8c0-4218-9ead-ea30a08efb55",
       "name": "alpine",
       "properties": [
         {
@@ -16,21 +31,6 @@
       ],
       "type": "operating-system",
       "version": "3.18.2"
-    },
-    {
-      "bom-ref": "c8309307-5a95-4dc0-b90e-4bf314105e8b",
-      "name": "usr/local/bin/nats-server",
-      "properties": [
-        {
-          "name": "aquasecurity:trivy:Class",
-          "value": "lang-pkgs"
-        },
-        {
-          "name": "aquasecurity:trivy:Type",
-          "value": "gobinary"
-        }
-      ],
-      "type": "application"
     },
     {
       "bom-ref": "pkg:apk/alpine/alpine-baselayout-data@3.4.3-r1?arch=x86_64\u0026distro=3.18.2",
@@ -1119,6 +1119,12 @@
   "dependencies": [
     {
       "dependsOn": [
+        "pkg:golang/github.com/nats-io/nats-server/v2"
+      ],
+      "ref": "53ac67b5-7178-470b-b693-93701c0f9fef"
+    },
+    {
+      "dependsOn": [
         "pkg:apk/alpine/alpine-baselayout@3.4.3-r1?arch=x86_64\u0026distro=3.18.2",
         "pkg:apk/alpine/alpine-keys@2.4-r1?arch=x86_64\u0026distro=3.18.2",
         "pkg:apk/alpine/apk-tools@2.14.0-r2?arch=x86_64\u0026distro=3.18.2",
@@ -1126,13 +1132,7 @@
         "pkg:apk/alpine/libc-utils@0.7.2-r5?arch=x86_64\u0026distro=3.18.2",
         "pkg:apk/alpine/ssl_client@1.36.1-r0?arch=x86_64\u0026distro=3.18.2"
       ],
-      "ref": "27f6ea9c-01c5-4854-9bd6-f5749351dff1"
-    },
-    {
-      "dependsOn": [
-        "pkg:golang/github.com/nats-io/nats-server/v2"
-      ],
-      "ref": "c8309307-5a95-4dc0-b90e-4bf314105e8b"
+      "ref": "7e97c64e-c8c0-4218-9ead-ea30a08efb55"
     },
     {
       "dependsOn": [],
@@ -1290,8 +1290,8 @@
     },
     {
       "dependsOn": [
-        "27f6ea9c-01c5-4854-9bd6-f5749351dff1",
-        "c8309307-5a95-4dc0-b90e-4bf314105e8b"
+        "53ac67b5-7178-470b-b693-93701c0f9fef",
+        "7e97c64e-c8c0-4218-9ead-ea30a08efb55"
       ],
       "ref": "pkg:oci/nats@sha256%3Ad6c6ae7df4a0c5f7aa5ec8035501b7a594d065216aa227265c89909a3c31df96?arch=amd64\u0026repository_url=index.docker.io%2Flibrary%2Fnats"
     }
@@ -1345,7 +1345,7 @@
       "purl": "pkg:oci/nats@sha256%3Ad6c6ae7df4a0c5f7aa5ec8035501b7a594d065216aa227265c89909a3c31df96?arch=amd64\u0026repository_url=index.docker.io%2Flibrary%2Fnats",
       "type": "container"
     },
-    "timestamp": "2026-06-18T03:39:58+00:00",
+    "timestamp": "2026-06-19T03:40:13+00:00",
     "tools": {
       "components": [
         {
@@ -1357,7 +1357,7 @@
       ]
     }
   },
-  "serialNumber": "urn:uuid:3350c6a7-be76-4dc5-b1af-370720a4931a",
+  "serialNumber": "urn:uuid:de3a9265-d689-41c9-b917-c5d26d1f7fc3",
   "specVersion": "1.6",
   "version": 1
 }

@@ -2,7 +2,7 @@
   "bomFormat": "CycloneDX",
   "components": [
     {
-      "bom-ref": "b6f6e7ab-9303-461c-adb8-fa724544f502",
+      "bom-ref": "648a4a5f-72c5-40e0-8f71-4aa510b35112",
       "name": "ko-app/webhook",
       "properties": [
         {
@@ -17,7 +17,7 @@
       "type": "application"
     },
     {
-      "bom-ref": "bf535517-7349-4de0-b834-d55ddae3cea9",
+      "bom-ref": "e0d0c9c1-65bb-42f2-b0bb-524e90af1d49",
       "name": "wolfi",
       "properties": [
         {
@@ -6490,13 +6490,13 @@
       "dependsOn": [
         "pkg:golang/github.com/sigstore/policy-controller@v0.13.1%2Bdirty"
       ],
-      "ref": "b6f6e7ab-9303-461c-adb8-fa724544f502"
+      "ref": "648a4a5f-72c5-40e0-8f71-4aa510b35112"
     },
     {
       "dependsOn": [
         "pkg:apk/wolfi/tzdata@2025b-r2?arch=x86_64\u0026distro=20230201"
       ],
-      "ref": "bf535517-7349-4de0-b834-d55ddae3cea9"
+      "ref": "e0d0c9c1-65bb-42f2-b0bb-524e90af1d49"
     },
     {
       "dependsOn": [
@@ -7776,8 +7776,8 @@
     },
     {
       "dependsOn": [
-        "b6f6e7ab-9303-461c-adb8-fa724544f502",
-        "bf535517-7349-4de0-b834-d55ddae3cea9"
+        "648a4a5f-72c5-40e0-8f71-4aa510b35112",
+        "e0d0c9c1-65bb-42f2-b0bb-524e90af1d49"
       ],
       "ref": "pkg:oci/policy-controller@sha256%3A0bcd60beb93f4427c29cf3a669743caf58490e98ded4380c33c09f092734a6ab?arch=amd64\u0026repository_url=ghcr.io%2Fsigstore%2Fpolicy-controller%2Fpolicy-controller"
     }
@@ -7843,7 +7843,7 @@
       "purl": "pkg:oci/policy-controller@sha256%3A0bcd60beb93f4427c29cf3a669743caf58490e98ded4380c33c09f092734a6ab?arch=amd64\u0026repository_url=ghcr.io%2Fsigstore%2Fpolicy-controller%2Fpolicy-controller",
       "type": "container"
     },
-    "timestamp": "2026-06-18T03:42:51+00:00",
+    "timestamp": "2026-06-19T03:43:13+00:00",
     "tools": {
       "components": [
         {
@@ -7855,7 +7855,7 @@
       ]
     }
   },
-  "serialNumber": "urn:uuid:1eccce27-bf5f-4ca3-a7c3-6fad62273b98",
+  "serialNumber": "urn:uuid:8e548d6b-c88b-43f8-9b3a-f1ec6748e38e",
   "specVersion": "1.6",
   "version": 1
 }
