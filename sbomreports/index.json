@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-20T09:17:02Z",
+  "generatedAt": "2026-06-20T10:17:01Z",
   "clusterName": "kind-kind",
   "content": "cyclonedx",
   "reports": [
@@ -448,7 +448,7 @@
       "artifactTag": "v0.3.142",
       "artifactDigest": "sha256:bcdc0deef55d279834c5fcff737215cf3c0663c4f6adac62a10fe43c58fedbec",
       "creationTimestamp": "2026-06-14T09:34:21Z",
-      "resourceVersion": "1444706"
+      "resourceVersion": "1718586"
     },
     {
       "namespace": "kubescape",
