@@ -12,6 +12,16 @@ spec:
       releaseName: trivy-operator
       valuesObject:
         excludeNamespaces: "kube-system,trivy-system,local-path-storage"
+        operator:
+          namespace: trivy-system
+          accessGlobalSecretsAndServiceAccount: false
+          privateRegistryScanSecretsNames:
+            trivy-system: regcred
+          sbomGenerationEnabled: true
+          clusterSbomCacheEnabled: false
+
+        trivyOperator:
+          scanJobsInSameNamespace: false
     chart: trivy-operator
   destination:
     server: https://kubernetes.default.svc

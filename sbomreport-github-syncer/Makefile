@@ -1,0 +1,13 @@
+REGISTRY ?= ghcr.io/cybozu
+IMAGE_NAME ?= sbomreport-github-syncer
+TAG ?= dev
+IMAGE := $(REGISTRY)/$(IMAGE_NAME):$(TAG)
+
+.PHONY: build
+build:
+	docker build -t $(IMAGE) .
+
+.PHONY: kind-load
+kind-load:
+	kind load docker-image $(IMAGE) --name kind-cluster
+
