@@ -9,9 +9,9 @@ import (
 
 	"github.com/spf13/cobra"
 
-	githubsync "github.com/cybozu/neco-containers/sbomreports-github-syncer/internal/github"
-	"github.com/cybozu/neco-containers/sbomreports-github-syncer/internal/kube"
-	"github.com/cybozu/neco-containers/sbomreports-github-syncer/internal/render"
+	githubsync "github.com/ystkfujii/playground_supply-chain-guard/sbomreports-github-syncer/internal/github"
+	"github.com/ystkfujii/playground_supply-chain-guard/sbomreports-github-syncer/internal/kube"
+	"github.com/ystkfujii/playground_supply-chain-guard/sbomreports-github-syncer/internal/render"
 )
 
 type syncOptions struct {

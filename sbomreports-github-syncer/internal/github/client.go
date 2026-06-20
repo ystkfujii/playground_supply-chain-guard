@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cybozu/neco-containers/sbomreports-github-syncer/internal/render"
+	"github.com/ystkfujii/playground_supply-chain-guard/sbomreports-github-syncer/internal/render"
 
 	gogithub "github.com/google/go-github/v88/github"
 )

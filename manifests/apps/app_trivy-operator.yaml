@@ -6,23 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://aquasecurity.github.io/helm-charts/
-    targetRevision: 0.32.1
-    helm:
-      releaseName: trivy-operator
-      valuesObject:
-        excludeNamespaces: "kube-system,trivy-system,local-path-storage"
-        operator:
-          namespace: trivy-system
-          accessGlobalSecretsAndServiceAccount: false
-          privateRegistryScanSecretsNames:
-            trivy-system: regcred
-          sbomGenerationEnabled: true
-          clusterSbomCacheEnabled: false
-
-        trivyOperator:
-          scanJobsInSameNamespace: false
-    chart: trivy-operator
+    repoURL: https://github.com/ystkfujii/playground_supply-chain-guard
+    targetRevision: main
+    path: trivy-operator
   destination:
     server: https://kubernetes.default.svc
     namespace: trivy-system

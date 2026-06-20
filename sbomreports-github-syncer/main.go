@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/cybozu/neco-containers/sbomreports-github-syncer/cmd"
+	"github.com/ystkfujii/playground_supply-chain-guard/sbomreports-github-syncer/cmd"
 )
 
 func main() {

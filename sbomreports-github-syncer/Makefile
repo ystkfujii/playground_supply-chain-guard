@@ -1,4 +1,4 @@
-REGISTRY ?= ghcr.io/cybozu
+REGISTRY ?= ghcr.io/ystkfujii/playground_supply-chain-guard
 IMAGE_NAME ?= sbomreports-github-syncer
 TAG ?= dev
 IMAGE := $(REGISTRY)/$(IMAGE_NAME):$(TAG)

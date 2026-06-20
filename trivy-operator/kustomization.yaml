@@ -1,0 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - generated/install.yaml
+
+patches:
+  - path: patches/clusterrole.yaml
+  - path: patches/role.yaml

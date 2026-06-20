@@ -62,8 +62,17 @@ kubectl apply -n argocd --server-side --force-conflicts \
 kubectl -n argocd rollout status deploy/argocd-server --timeout=300s
 kubectl -n argocd rollout status deploy/argocd-repo-server --timeout=300s
 kubectl -n argocd rollout status statefulset/argocd-application-controller --timeout=300s
+kubectl apply -f manifests/apps.yaml 
 ```
 
+
+```
+kubectl -n argocd port-forward svc/argocd-server 8080:80
+```
+
+```
+kubectl get -n argocd secret argocd-initial-admin-secret -o yaml | yq .data.password | base64 -d;echo
+```
 
 ```
 go install github.com/CycloneDX/sbom-utility@latest

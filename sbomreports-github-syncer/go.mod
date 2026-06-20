@@ -1,4 +1,4 @@
-module github.com/cybozu/neco-containers/sbomreports-github-syncer
+module github.com/ystkfujii/playground_supply-chain-guard/sbomreports-github-syncer
 
 go 1.26.0
 

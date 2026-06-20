@@ -1,0 +1,18 @@
+CHART_REPO ?= https://aquasecurity.github.io/helm-charts/
+CHART ?= trivy-operator
+CHART_VERSION ?= 0.32.1
+RELEASE_NAME ?= trivy-operator
+NAMESPACE ?= trivy-system
+VALUES ?= value.yaml
+OUTPUT ?= generated/install.yaml
+
+.PHONY: template
+template:
+	mkdir -p $(dir $(OUTPUT))
+	helm template $(RELEASE_NAME) $(CHART) \
+		--repo $(CHART_REPO) \
+		--version $(CHART_VERSION) \
+		--namespace $(NAMESPACE) \
+		--include-crds \
+		--values $(VALUES) \
+		> $(OUTPUT)

@@ -1,0 +1,16 @@
+excludeNamespaces: "kube-system,trivy-system,local-path-storage"
+operator:
+  namespace: trivy-system
+  accessGlobalSecretsAndServiceAccount: false
+  privateRegistryScanSecretsNames:
+    trivy-system: regcred
+  sbomGenerationEnabled: true
+  vulnerabilityScannerEnabled: false
+  configAuditScannerEnabled: false
+  rbacAssessmentScannerEnabled: false
+  infraAssessmentScannerEnabled: false
+  clusterComplianceEnabled: false
+  exposedSecretScannerEnabled: false
+  clusterSbomCacheEnabled: false
+trivyOperator:
+  scanJobsInSameNamespace: false
