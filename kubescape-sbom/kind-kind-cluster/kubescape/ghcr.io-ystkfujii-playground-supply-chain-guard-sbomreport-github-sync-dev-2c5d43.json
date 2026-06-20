@@ -4,9 +4,9 @@
   "metadata": {
     "name": "ghcr.io-ystkfujii-playground-supply-chain-guard-sbomreport-github-sync-dev-2c5d43",
     "namespace": "kubescape",
-    "uid": "4d4d34e2-2904-45e5-afc3-f40e476b4891",
+    "uid": "19cd3926-b9ca-4a19-bc24-e7e73da552ba",
     "resourceVersion": "2",
-    "creationTimestamp": "2026-06-20T01:17:11Z",
+    "creationTimestamp": "2026-06-20T06:17:09Z",
     "labels": {
       "kubescape.io/image-id": "ghcr-io-ystkfujii-playground-supply-chain-guard-sbomreport-gith",
       "kubescape.io/image-name": "ghcr-io-ystkfujii-playground-supply-chain-guard-sbomreport-gith"
@@ -26,7 +26,7 @@
         "version": "v1.32.0"
       },
       "report": {
-        "createdAt": "2026-06-20T01:17:11Z"
+        "createdAt": "2026-06-20T06:17:09Z"
       }
     },
     "syft": {
