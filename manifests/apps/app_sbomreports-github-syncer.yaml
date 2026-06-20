@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sbomreport-github-syncer
+  name: sbomreports-github-syncer
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/ystkfujii/playground_supply-chain-guard
     targetRevision: main
-    path: sbomreport-github-syncer/deploy
+    path: sbomreports-github-syncer/deploy
   destination:
     server: https://kubernetes.default.svc
     namespace: demo-python

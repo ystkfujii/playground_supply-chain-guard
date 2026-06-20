@@ -1,6 +1,6 @@
-# sbomreport-github-syncer
+# sbomreports-github-syncer
 
-`sbomreport-github-syncer` is a CLI tool that reads Trivy Operator `SbomReport` custom resources from a Kubernetes cluster and commits them to a GitHub repository as JSON files.
+`sbomreports-github-syncer` is a CLI tool that reads Trivy Operator `SbomReport` custom resources from a Kubernetes cluster and commits them to a GitHub repository as JSON files.
 
 It can be run locally or as a Kubernetes CronJob.
 
@@ -33,8 +33,8 @@ export GITHUB_BRANCH=main
 export GITHUB_PATH_PREFIX=clusters/dev/sbomreports
 export CLUSTER_NAME=dev
 
-./sbomreport-github-syncer sync --dry-run
-./sbomreport-github-syncer sync
+./sbomreports-github-syncer sync --dry-run
+./sbomreports-github-syncer sync
 ```
 
 ## Examples
@@ -42,33 +42,33 @@ export CLUSTER_NAME=dev
 List reports from all namespaces:
 
 ```bash
-./sbomreport-github-syncer sync
+./sbomreports-github-syncer sync
 ```
 
 List reports from one namespace:
 
 ```bash
-./sbomreport-github-syncer sync --namespace default
+./sbomreports-github-syncer sync --namespace default
 ```
 
 Filter reports by label selector:
 
 ```bash
-./sbomreport-github-syncer sync \
+./sbomreports-github-syncer sync \
   --selector 'trivy-operator.resource.kind=Deployment'
 ```
 
 Write files under a custom repository path:
 
 ```bash
-./sbomreport-github-syncer sync \
+./sbomreports-github-syncer sync \
   --path-prefix clusters/prod/sbomreports
 ```
 
 Run without committing to GitHub:
 
 ```bash
-./sbomreport-github-syncer sync --dry-run
+./sbomreports-github-syncer sync --dry-run
 ```
 
 ## Output layout
@@ -126,7 +126,7 @@ Use this carefully. For first-time runs, start with:
 
 ```bash
 export DELETE_MISSING=false
-./sbomreport-github-syncer sync --dry-run
+./sbomreports-github-syncer sync --dry-run
 ```
 
 After confirming the generated file list, enable stale deletion if needed.
@@ -153,7 +153,7 @@ Create the namespace and GitHub token secret:
 ```bash
 kubectl create namespace trivy-system
 
-kubectl create secret generic sbomreport-github-syncer \
+kubectl create secret generic sbomreports-github-syncer \
   --namespace trivy-system \
   --from-literal=github-token="$GITHUB_TOKEN"
 ```
@@ -168,9 +168,9 @@ Trigger a manual run:
 
 ```bash
 kubectl create job \
-  --from=cronjob/sbomreport-github-syncer \
+  --from=cronjob/sbomreports-github-syncer \
   --namespace trivy-system \
-  sbomreport-github-syncer-manual-$(date +%s)
+  sbomreports-github-syncer-manual-$(date +%s)
 ```
 
 Check logs:

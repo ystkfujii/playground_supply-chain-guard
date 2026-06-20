@@ -1,5 +1,5 @@
 REGISTRY ?= ghcr.io/cybozu
-IMAGE_NAME ?= sbomreport-github-syncer
+IMAGE_NAME ?= sbomreports-github-syncer
 TAG ?= dev
 IMAGE := $(REGISTRY)/$(IMAGE_NAME):$(TAG)
 

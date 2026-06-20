@@ -1,4 +1,4 @@
-module github.com/cybozu/neco-containers/sbomreport-github-syncer
+module github.com/cybozu/neco-containers/sbomreports-github-syncer
 
 go 1.26.0
 

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/cybozu/neco-containers/sbomreport-github-syncer/cmd"
+	"github.com/cybozu/neco-containers/sbomreports-github-syncer/cmd"
 )
 
 func main() {

@@ -9,9 +9,9 @@ import (
 
 	"github.com/spf13/cobra"
 
-	githubsync "github.com/cybozu/neco-containers/sbomreport-github-syncer/internal/github"
-	"github.com/cybozu/neco-containers/sbomreport-github-syncer/internal/kube"
-	"github.com/cybozu/neco-containers/sbomreport-github-syncer/internal/render"
+	githubsync "github.com/cybozu/neco-containers/sbomreports-github-syncer/internal/github"
+	"github.com/cybozu/neco-containers/sbomreports-github-syncer/internal/kube"
+	"github.com/cybozu/neco-containers/sbomreports-github-syncer/internal/render"
 )
 
 type syncOptions struct {
@@ -36,7 +36,7 @@ type syncOptions struct {
 
 func NewRootCommand() *cobra.Command {
 	root := &cobra.Command{
-		Use:           "sbomreport-github-syncer",
+		Use:           "sbomreports-github-syncer",
 		Short:         "Sync Trivy Operator SbomReport resources to a GitHub repository",
 		SilenceUsage:  true,
 		SilenceErrors: true,
