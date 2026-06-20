@@ -2,22 +2,7 @@
   "bomFormat": "CycloneDX",
   "components": [
     {
-      "bom-ref": "a01dd304-f993-4fc1-b8c9-1c26a4cae167",
-      "name": "usr/local/bin/nats-server-config-reloader",
-      "properties": [
-        {
-          "name": "aquasecurity:trivy:Class",
-          "value": "lang-pkgs"
-        },
-        {
-          "name": "aquasecurity:trivy:Type",
-          "value": "gobinary"
-        }
-      ],
-      "type": "application"
-    },
-    {
-      "bom-ref": "d31b58db-1327-4830-bb9d-fba7f6cba3c1",
+      "bom-ref": "053ef12e-4839-4c57-afd4-cefa3a9053ae",
       "name": "alpine",
       "properties": [
         {
@@ -31,6 +16,21 @@
       ],
       "type": "operating-system",
       "version": "3.18.2"
+    },
+    {
+      "bom-ref": "56437d2b-1407-42b7-846a-79a8158240d8",
+      "name": "usr/local/bin/nats-server-config-reloader",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "gobinary"
+        }
+      ],
+      "type": "application"
     },
     {
       "bom-ref": "pkg:apk/alpine/alpine-baselayout-data@3.4.3-r1?arch=x86_64\u0026distro=3.18.2",
@@ -891,19 +891,19 @@
   "dependencies": [
     {
       "dependsOn": [
-        "pkg:golang/github.com/nats-io/nack@0.11.0"
-      ],
-      "ref": "a01dd304-f993-4fc1-b8c9-1c26a4cae167"
-    },
-    {
-      "dependsOn": [
         "pkg:apk/alpine/alpine-baselayout@3.4.3-r1?arch=x86_64\u0026distro=3.18.2",
         "pkg:apk/alpine/alpine-keys@2.4-r1?arch=x86_64\u0026distro=3.18.2",
         "pkg:apk/alpine/apk-tools@2.14.0-r2?arch=x86_64\u0026distro=3.18.2",
         "pkg:apk/alpine/libc-utils@0.7.2-r5?arch=x86_64\u0026distro=3.18.2",
         "pkg:apk/alpine/ssl_client@1.36.1-r0?arch=x86_64\u0026distro=3.18.2"
       ],
-      "ref": "d31b58db-1327-4830-bb9d-fba7f6cba3c1"
+      "ref": "053ef12e-4839-4c57-afd4-cefa3a9053ae"
+    },
+    {
+      "dependsOn": [
+        "pkg:golang/github.com/nats-io/nack@0.11.0"
+      ],
+      "ref": "56437d2b-1407-42b7-846a-79a8158240d8"
     },
     {
       "dependsOn": [],
@@ -1018,8 +1018,8 @@
     },
     {
       "dependsOn": [
-        "a01dd304-f993-4fc1-b8c9-1c26a4cae167",
-        "d31b58db-1327-4830-bb9d-fba7f6cba3c1"
+        "053ef12e-4839-4c57-afd4-cefa3a9053ae",
+        "56437d2b-1407-42b7-846a-79a8158240d8"
       ],
       "ref": "pkg:oci/nats-server-config-reloader@sha256%3Ac3a755eab2cc4702878d8d7bb75b82cd692a2557315cd18a0fac84f77f9253c9?arch=amd64\u0026repository_url=index.docker.io%2Fnatsio%2Fnats-server-config-reloader"
     }
@@ -1077,7 +1077,7 @@
       "purl": "pkg:oci/nats-server-config-reloader@sha256%3Ac3a755eab2cc4702878d8d7bb75b82cd692a2557315cd18a0fac84f77f9253c9?arch=amd64\u0026repository_url=index.docker.io%2Fnatsio%2Fnats-server-config-reloader",
       "type": "container"
     },
-    "timestamp": "2026-06-19T03:40:13+00:00",
+    "timestamp": "2026-06-20T03:40:31+00:00",
     "tools": {
       "components": [
         {
@@ -1089,7 +1089,7 @@
       ]
     }
   },
-  "serialNumber": "urn:uuid:0bb31611-ac10-4f48-b44b-6446c2a3fb89",
+  "serialNumber": "urn:uuid:813a140a-0928-4523-b2af-5026003f70e3",
   "specVersion": "1.6",
   "version": 1
 }
