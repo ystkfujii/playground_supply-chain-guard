@@ -2,22 +2,7 @@
   "bomFormat": "CycloneDX",
   "components": [
     {
-      "bom-ref": "43ed5c3b-5fb1-48c1-9a1b-1ae44db23453",
-      "name": "usr/bin/operator",
-      "properties": [
-        {
-          "name": "aquasecurity:trivy:Class",
-          "value": "lang-pkgs"
-        },
-        {
-          "name": "aquasecurity:trivy:Type",
-          "value": "gobinary"
-        }
-      ],
-      "type": "application"
-    },
-    {
-      "bom-ref": "ebd0f198-cc5c-40fc-97ea-44a95898e827",
+      "bom-ref": "740562d5-725a-4fda-b646-ba2fae508cda",
       "name": "debian",
       "properties": [
         {
@@ -31,6 +16,21 @@
       ],
       "type": "operating-system",
       "version": "13.4"
+    },
+    {
+      "bom-ref": "e6af328a-a8f7-4f0b-a28f-c910d8750a7e",
+      "name": "usr/bin/operator",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "gobinary"
+        }
+      ],
+      "type": "application"
     },
     {
       "bom-ref": "pkg:deb/debian/base-files@13.8%2Bdeb13u4?arch=amd64\u0026distro=debian-13.4",
@@ -8214,19 +8214,19 @@
   "dependencies": [
     {
       "dependsOn": [
-        "pkg:golang/github.com/kubescape/operator@v0.2.142-0.20260508091334-37ad38211f98"
-      ],
-      "ref": "43ed5c3b-5fb1-48c1-9a1b-1ae44db23453"
-    },
-    {
-      "dependsOn": [
         "pkg:deb/debian/base-files@13.8%2Bdeb13u4?arch=amd64\u0026distro=debian-13.4",
         "pkg:deb/debian/media-types@13.0.0?arch=all\u0026distro=debian-13.4",
         "pkg:deb/debian/netbase@6.5?arch=all\u0026distro=debian-13.4",
         "pkg:deb/debian/tzdata-legacy@2026a-0%2Bdeb13u1?arch=all\u0026distro=debian-13.4",
         "pkg:deb/debian/tzdata@2026a-0%2Bdeb13u1?arch=all\u0026distro=debian-13.4"
       ],
-      "ref": "ebd0f198-cc5c-40fc-97ea-44a95898e827"
+      "ref": "740562d5-725a-4fda-b646-ba2fae508cda"
+    },
+    {
+      "dependsOn": [
+        "pkg:golang/github.com/kubescape/operator@v0.2.142-0.20260508091334-37ad38211f98"
+      ],
+      "ref": "e6af328a-a8f7-4f0b-a28f-c910d8750a7e"
     },
     {
       "dependsOn": [],
@@ -9840,8 +9840,8 @@
     },
     {
       "dependsOn": [
-        "43ed5c3b-5fb1-48c1-9a1b-1ae44db23453",
-        "ebd0f198-cc5c-40fc-97ea-44a95898e827"
+        "740562d5-725a-4fda-b646-ba2fae508cda",
+        "e6af328a-a8f7-4f0b-a28f-c910d8750a7e"
       ],
       "ref": "pkg:oci/operator@sha256%3Aeef301362c81da2a8260b71234ea696357a5773d94a253615a647272b4d35c48?arch=amd64\u0026repository_url=quay.io%2Fkubescape%2Foperator"
     }
@@ -9935,7 +9935,7 @@
       "purl": "pkg:oci/operator@sha256%3Aeef301362c81da2a8260b71234ea696357a5773d94a253615a647272b4d35c48?arch=amd64\u0026repository_url=quay.io%2Fkubescape%2Foperator",
       "type": "container"
     },
-    "timestamp": "2026-06-19T05:48:08+00:00",
+    "timestamp": "2026-06-20T05:48:26+00:00",
     "tools": {
       "components": [
         {
@@ -9947,7 +9947,7 @@
       ]
     }
   },
-  "serialNumber": "urn:uuid:c53c93ad-2770-4b48-ac86-68d596e0022c",
+  "serialNumber": "urn:uuid:662651a1-9ca7-400b-9c9b-a9b2377854ad",
   "specVersion": "1.6",
   "version": 1
 }
