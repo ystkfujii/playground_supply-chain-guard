@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-20T14:43:05Z",
+  "generatedAt": "2026-06-20T15:17:06Z",
   "clusterName": "cluster_name",
   "reports": [
     {
@@ -448,6 +448,20 @@
       "artifactDigest": "sha256:842bb0bd4e7281778aab49f2348adee6b54cb93d50f3722eb6b192c3b5555553",
       "creationTimestamp": "2026-06-20T14:10:15Z",
       "resourceVersion": "5174"
+    },
+    {
+      "namespace": "sbom-test",
+      "name": "pod-nginx-nginx",
+      "file": "sbomreports/cluster_name/sbom-test/pod-nginx-nginx.json",
+      "resourceKind": "Pod",
+      "resourceName": "nginx",
+      "resourceNamespace": "sbom-test",
+      "containerName": "nginx",
+      "artifactRepository": "library/nginx",
+      "artifactTag": "1.24.0",
+      "artifactDigest": "sha256:f6daac2445b0ce70e64d77442ccf62839f3f1b4c24bf6746a857eff014e798c8",
+      "creationTimestamp": "2026-06-20T14:56:40Z",
+      "resourceVersion": "15094"
     }
   ]
 }
