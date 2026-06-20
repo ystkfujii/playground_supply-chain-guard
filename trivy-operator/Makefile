@@ -4,10 +4,10 @@ CHART_VERSION ?= 0.32.1
 RELEASE_NAME ?= trivy-operator
 NAMESPACE ?= trivy-system
 VALUES ?= value.yaml
-OUTPUT ?= generated/install.yaml
+OUTPUT ?= upstream/install.yaml
 
-.PHONY: template
-template:
+.PHONY: generate
+generate:
 	mkdir -p $(dir $(OUTPUT))
 	helm template $(RELEASE_NAME) $(CHART) \
 		--repo $(CHART_REPO) \
@@ -16,3 +16,4 @@ template:
 		--include-crds \
 		--values $(VALUES) \
 		> $(OUTPUT)
+	kustomize build . > generated/install.yaml

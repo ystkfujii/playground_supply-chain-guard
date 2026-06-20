@@ -1,11 +1,12 @@
-excludeNamespaces: "kube-system,trivy-system,local-path-storage"
+excludeNamespaces: ""
 operator:
   namespace: trivy-system
   accessGlobalSecretsAndServiceAccount: false
   privateRegistryScanSecretsNames:
     trivy-system: regcred
+  scanJobsConcurrentLimit: 5
   sbomGenerationEnabled: true
-  vulnerabilityScannerEnabled: false
+  vulnerabilityScannerEnabled: true
   configAuditScannerEnabled: false
   rbacAssessmentScannerEnabled: false
   infraAssessmentScannerEnabled: false
