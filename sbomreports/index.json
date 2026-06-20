@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-20T15:17:06Z",
+  "generatedAt": "2026-06-20T16:33:51Z",
   "clusterName": "cluster_name",
   "reports": [
     {
@@ -251,7 +251,7 @@
       "artifactTag": "v1.0.1",
       "artifactDigest": "sha256:34ca3dc7d5a21340904f753fd2483b1a4305e8223a6969f315b6bf7e2fb27d3e",
       "creationTimestamp": "2026-06-20T14:28:44Z",
-      "resourceVersion": "9408"
+      "resourceVersion": "31180"
     },
     {
       "namespace": "guac",
@@ -293,7 +293,7 @@
       "artifactTag": "v1.0.1",
       "artifactDigest": "sha256:34ca3dc7d5a21340904f753fd2483b1a4305e8223a6969f315b6bf7e2fb27d3e",
       "creationTimestamp": "2026-06-20T14:28:49Z",
-      "resourceVersion": "9461"
+      "resourceVersion": "31190"
     },
     {
       "namespace": "guac",
@@ -321,7 +321,7 @@
       "artifactTag": "v1.0.1",
       "artifactDigest": "sha256:34ca3dc7d5a21340904f753fd2483b1a4305e8223a6969f315b6bf7e2fb27d3e",
       "creationTimestamp": "2026-06-20T14:28:45Z",
-      "resourceVersion": "9417"
+      "resourceVersion": "31166"
     },
     {
       "namespace": "guac",
@@ -460,8 +460,24 @@
       "artifactRepository": "library/nginx",
       "artifactTag": "1.24.0",
       "artifactDigest": "sha256:f6daac2445b0ce70e64d77442ccf62839f3f1b4c24bf6746a857eff014e798c8",
-      "creationTimestamp": "2026-06-20T14:56:40Z",
-      "resourceVersion": "15094"
+      "creationTimestamp": "2026-06-20T16:32:44Z",
+      "resourceVersion": "33894",
+      "namespaceTeamLabel": "test-team"
+    },
+    {
+      "namespace": "sbom-test",
+      "name": "pod-nginx2-nginx2",
+      "file": "sbomreports/cluster_name/sbom-test/pod-nginx2-nginx2.json",
+      "resourceKind": "Pod",
+      "resourceName": "nginx2",
+      "resourceNamespace": "sbom-test",
+      "containerName": "nginx2",
+      "artifactRepository": "library/nginx",
+      "artifactTag": "1.24.0",
+      "artifactDigest": "sha256:f6daac2445b0ce70e64d77442ccf62839f3f1b4c24bf6746a857eff014e798c8",
+      "creationTimestamp": "2026-06-20T16:32:54Z",
+      "resourceVersion": "33949",
+      "namespaceTeamLabel": "test-team"
     }
   ]
 }
