@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-20T16:33:51Z",
+  "generatedAt": "2026-06-20T17:17:06Z",
   "clusterName": "cluster_name",
   "reports": [
     {
@@ -461,7 +461,7 @@
       "artifactTag": "1.24.0",
       "artifactDigest": "sha256:f6daac2445b0ce70e64d77442ccf62839f3f1b4c24bf6746a857eff014e798c8",
       "creationTimestamp": "2026-06-20T16:32:44Z",
-      "resourceVersion": "33894",
+      "resourceVersion": "34197",
       "namespaceTeamLabel": "test-team"
     },
     {
@@ -476,7 +476,22 @@
       "artifactTag": "1.24.0",
       "artifactDigest": "sha256:f6daac2445b0ce70e64d77442ccf62839f3f1b4c24bf6746a857eff014e798c8",
       "creationTimestamp": "2026-06-20T16:32:54Z",
-      "resourceVersion": "33949",
+      "resourceVersion": "34237",
+      "namespaceTeamLabel": "test-team"
+    },
+    {
+      "namespace": "sbom-test",
+      "name": "pod-nginx3-nginx3",
+      "file": "sbomreports/cluster_name/sbom-test/pod-nginx3-nginx3.json",
+      "resourceKind": "Pod",
+      "resourceName": "nginx3",
+      "resourceNamespace": "sbom-test",
+      "containerName": "nginx3",
+      "artifactRepository": "library/nginx",
+      "artifactTag": "1.24.0",
+      "artifactDigest": "sha256:f6daac2445b0ce70e64d77442ccf62839f3f1b4c24bf6746a857eff014e798c8",
+      "creationTimestamp": "2026-06-20T17:05:01Z",
+      "resourceVersion": "40224",
       "namespaceTeamLabel": "test-team"
     }
   ]

@@ -2,7 +2,7 @@
   "bomFormat": "CycloneDX",
   "components": [
     {
-      "bom-ref": "c1525736-c629-4051-a495-60b8805ec1c5",
+      "bom-ref": "829dd331-0596-4a2f-aecf-023251fb334f",
       "name": "debian",
       "properties": [
         {
@@ -8634,7 +8634,7 @@
         "pkg:deb/debian/sysvinit-utils@2.96-7%2Bdeb11u1?arch=amd64\u0026distro=debian-11.9",
         "pkg:deb/debian/tzdata@2024a-0%2Bdeb11u1?arch=all\u0026distro=debian-11.9"
       ],
-      "ref": "c1525736-c629-4051-a495-60b8805ec1c5"
+      "ref": "829dd331-0596-4a2f-aecf-023251fb334f"
     },
     {
       "dependsOn": [
@@ -9607,7 +9607,7 @@
     },
     {
       "dependsOn": [
-        "c1525736-c629-4051-a495-60b8805ec1c5"
+        "829dd331-0596-4a2f-aecf-023251fb334f"
       ],
       "ref": "pkg:oci/nginx@sha256%3Af6daac2445b0ce70e64d77442ccf62839f3f1b4c24bf6746a857eff014e798c8?arch=amd64\u0026repository_url=index.docker.io%2Flibrary%2Fnginx"
     }
@@ -9673,7 +9673,7 @@
       "purl": "pkg:oci/nginx@sha256%3Af6daac2445b0ce70e64d77442ccf62839f3f1b4c24bf6746a857eff014e798c8?arch=amd64\u0026repository_url=index.docker.io%2Flibrary%2Fnginx",
       "type": "container"
     },
-    "timestamp": "2026-06-20T16:34:03+00:00",
+    "timestamp": "2026-06-20T17:06:02+00:00",
     "tools": {
       "components": [
         {
@@ -9685,7 +9685,7 @@
       ]
     }
   },
-  "serialNumber": "urn:uuid:35be2046-5805-42fa-8df0-48b7acf81787",
+  "serialNumber": "urn:uuid:4d23484d-866d-4bca-8d4f-89e4368646ef",
   "specVersion": "1.6",
   "version": 1
 }
