@@ -13,7 +13,13 @@ generate:
 		--repo $(CHART_REPO) \
 		--version $(CHART_VERSION) \
 		--namespace $(NAMESPACE) \
-		--include-crds \
+		--values $(VALUES) \
+		--include-crds | yq 'select(.kind == "CustomResourceDefinition")' \
+		> generated/crds.yaml
+	helm template $(RELEASE_NAME) $(CHART) \
+		--repo $(CHART_REPO) \
+		--version $(CHART_VERSION) \
+		--namespace $(NAMESPACE) \
 		--values $(VALUES) \
 		> $(OUTPUT)
 	kustomize build . > generated/install.yaml

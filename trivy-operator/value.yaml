@@ -1,15 +1,25 @@
+image:
+  registry: ghcr.io
+  repository: cybozu/trivy-operator
+  tag: "dummy"
+trivy:
+  image:
+    registry: ghcr.io
+    repository: cybozu-private/trivy
+    tag: "dummy"
+  configFile:
+    cache:
+      backend: memory
 excludeNamespaces: ""
 operator:
   namespace: trivy-system
   accessGlobalSecretsAndServiceAccount: false
-  privateRegistryScanSecretsNames:
-    trivy-system: regcred
   scanJobsConcurrentLimit: 5
   sbomGenerationEnabled: true
   vulnerabilityScannerEnabled: true
-  configAuditScannerEnabled: false
+  configAuditScannerEnabled: true
   rbacAssessmentScannerEnabled: false
-  infraAssessmentScannerEnabled: false
+  infraAssessmentScannerEnabled: true
   clusterComplianceEnabled: false
   exposedSecretScannerEnabled: false
   clusterSbomCacheEnabled: false

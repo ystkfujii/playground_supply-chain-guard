@@ -1,4 +1,3 @@
-# Source: trivy-operator/templates/rbac/role.yaml
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
@@ -11,6 +10,16 @@ rules:
       - configmaps
     verbs:
       - create
+      - get
+      - list
+      - watch
+  - apiGroups:
+      - batch
+    resources:
+      - jobs
+    verbs:
+      - create
+      - delete
       - get
       - list
       - watch
@@ -29,4 +38,3 @@ rules:
       - pods/log
     verbs:
       - get
-
