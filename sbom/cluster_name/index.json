@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-07-21T18:28:35Z",
+  "namespaces": [
+    {
+      "name": "argocd"
+    },
+    {
+      "name": "artifact-attestations"
+    },
+    {
+      "name": "default"
+    },
+    {
+      "name": "demo"
+    },
+    {
+      "name": "demo-node"
+    },
+    {
+      "name": "demo-python"
+    },
+    {
+      "name": "guac"
+    },
+    {
+      "name": "kube-node-lease"
+    },
+    {
+      "name": "kube-public"
+    },
+    {
+      "name": "kube-system"
+    },
+    {
+      "name": "kubescape"
+    },
+    {
+      "name": "local-path-storage"
+    },
+    {
+      "name": "trivy-system"
+    }
+  ]
+}
