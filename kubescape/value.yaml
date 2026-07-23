@@ -1,0 +1,70 @@
+server: ""
+clusterName: kind-kind-cluster
+capabilities:
+  # Kubescape Operator本体
+  operator: disable
+
+  # Configuration scan
+  configurationScan: disable
+  continuousScan: disable
+  nodeScan: disable
+
+  # SBOMSyft生成だけ有効
+  nodeSbomGeneration: enable
+  scanEmbeddedSBOMs: disable
+
+  # 脆弱性スキャンは不要
+  vulnerabilityScan: disable
+  relevancy: disable
+  vexGeneration: disable
+
+  # ApplicationProfile生成だけ有効
+  runtimeObservability: enable
+
+  # それ以外のRuntime機能
+  networkPolicyService: disable
+  networkEventsStreaming: disable
+  runtimeDetection: disable
+  malwareDetection: disable
+
+  # ApplicationProfileとは別機能
+  nodeProfileService: disable
+
+  admissionController: disable
+  httpDetection: disable
+
+  # SeccompProfileの生成を無効化
+  seccompProfileService: disable
+
+  # "crd" のままだとseccompprofiles CRDが作成されるため変更
+  seccompProfileBackend: storage
+
+  manageWorkloads: disable
+  syncSBOM: disable
+
+  riskAcceptance: disable
+  remediation: disable
+
+  autoUpgrading: disable
+  kubescapeOffline: disable
+  prometheusExporter: disable
+alertCRD:
+  installDefault: false
+  scopeClustered: false
+  scopeNamespaced: false
+nodeAgent:
+  # オプションのSyft分離サイドカー。
+  # falseでもNode Agent本体によるSBOM生成は有効
+  sbomScanner:
+    enabled: false
+  config:
+    # ノード情報収集用のhostdata CRDを作成しない
+    hostSensor:
+      enabled: false
+storage:
+  # trueでもApplicationProfileとSBOMSyftは利用可能。
+  # 一部の派生APIリソースを減らす
+  disableVirtualCRDs: true
+  # 無効化してもSecretは自動生成される
+  mtls:
+    enabled: false

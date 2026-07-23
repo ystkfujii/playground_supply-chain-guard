@@ -6,18 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://kubescape.github.io/helm-charts/
-    targetRevision: v1.40.2
-    helm:
-      releaseName: kubescape-operator
-      valuesObject:
-        capabilities:
-          configurationScan: disable
-          continuousScan: enable
-          nodeSbomGeneration: enable
-          vulnerabilityScan: enable
-        clusterName: kind-kind-cluster
-    chart: kubescape-operator
+    repoURL: https://github.com/ystkfujii/playground_supply-chain-guard
+    targetRevision: main
+    path: kubescape/generated/install.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: kubescape

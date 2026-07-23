@@ -53,20 +53,6 @@ cosign verify-blob-attestation \
 ```
 
 ```
-export ARGOCD_VERSION=v3.4.2
-kubectl create namespace argocd
-
-kubectl apply -n argocd --server-side --force-conflicts \
-  -f "https://raw.githubusercontent.com/argoproj/argo-cd/${ARGOCD_VERSION}/manifests/install.yaml"
-
-kubectl -n argocd rollout status deploy/argocd-server --timeout=300s
-kubectl -n argocd rollout status deploy/argocd-repo-server --timeout=300s
-kubectl -n argocd rollout status statefulset/argocd-application-controller --timeout=300s
-kubectl apply -f manifests/apps.yaml 
-```
-
-
-```
 kubectl -n argocd port-forward svc/argocd-server 8080:80
 ```
 
@@ -76,4 +62,8 @@ kubectl get -n argocd secret argocd-initial-admin-secret -o yaml | yq .data.pass
 
 ```
 go install github.com/CycloneDX/sbom-utility@latest
+```
+
+```
+kubectl run nginx --image=nginx
 ```

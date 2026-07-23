@@ -2,20 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - upstream/install.yaml
-images:
-  - name: ghcr.io/cybozu/trivy-operator
-    newTag: 0.31.1.1
-    digest: sha256:866d8888e888c7c7787ba5371d3f874eb2e201411a3f181777070df90e16eba3
 patches:
-  - target:
-      version: v1
-      kind: ConfigMap
-      name: trivy-operator-trivy-config
-      namespace: trivy-system
-    patch: |-
-      - op: replace
-        path: /data/trivy.tag
-        value: "0.71.1.2"
   - path: patches/clusterrole.yaml
   - path: patches/role.yaml
   - path: patches/delete-aggregate-exposed-secret-reports-view-clusterrole.yaml

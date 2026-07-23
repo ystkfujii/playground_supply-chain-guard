@@ -1,12 +1,4 @@
-image:
-  registry: ghcr.io
-  repository: cybozu/trivy-operator
-  tag: "dummy"
 trivy:
-  image:
-    registry: ghcr.io
-    repository: cybozu-private/trivy
-    tag: "dummy"
   configFile:
     cache:
       backend: memory
@@ -25,3 +17,33 @@ operator:
   clusterSbomCacheEnabled: false
 trivyOperator:
   scanJobsInSameNamespace: false
+  alternateReportStorage:
+    enabled: false
+
+# ファイル出力モードを環境変数で直接有効化
+extraEnv:
+  - name: OPERATOR_ALTERNATE_REPORT_STORAGE_ENABLED
+    value: "true"
+  - name: OPERATOR_ALTERNATE_REPORT_STORAGE_DIR
+    value: "/var/reports"
+
+podSecurityContext:
+  runAsUser: 10000
+  fsGroup: 10000
+
+# Chartのデフォルトにあるcache-policiesを消さないこと
+volumeMounts:
+  - name: cache-policies
+    mountPath: /tmp
+    readOnly: false
+
+  - name: reports
+    mountPath: /var/reports
+
+volumes:
+  - name: cache-policies
+    emptyDir: {}
+
+  - name: reports
+    emptyDir:
+      sizeLimit: 10Gi

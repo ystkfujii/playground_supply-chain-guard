@@ -155,6 +155,8 @@ rules:
   resources:
   - sbomreports
   - vulnerabilityreports
+  - clusterinfraassessmentreports
+  - configauditreports
   verbs:
   - create
   - delete
@@ -169,11 +171,9 @@ rules:
   - clustercompliancedetailreports
   - clustercompliancereports
   - clusterconfigauditreports
-  - clusterinfraassessmentreports
   - clusterrbacassessmentreports
   - clustersbomreports
   - clustervulnerabilityreports
-  - configauditreports
   - exposedsecretreports
   - infraassessmentreports
   - rbacassessmentreports
@@ -185,6 +185,36 @@ rules:
   - apiextensions.k8s.io
   resources:
   - customresourcedefinitions
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - ""
+  resources:
+  - services
+  - limitranges
+  - resourcequotas
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - networking.k8s.io
+  resources:
+  - ingresses
+  - networkpolicies
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - rbac.authorization.k8s.io
+  resources:
+  - roles
+  - rolebindings
+  - clusterroles
+  - clusterrolebindings
   verbs:
   - get
   - list
@@ -344,7 +374,7 @@ data:
   trivy.includeDevDeps: "false"
   trivy.javaDbRepository: mirror.gcr.io/aquasec/trivy-java-db
   trivy.mode: Standalone
-  trivy.repository: ghcr.io/cybozu-private/trivy
+  trivy.repository: mirror.gcr.io/aquasec/trivy
   trivy.resources.limits.cpu: 500m
   trivy.resources.limits.memory: 500M
   trivy.resources.requests.cpu: 100m
@@ -354,7 +384,7 @@ data:
   trivy.skipJavaDBUpdate: "false"
   trivy.slow: "true"
   trivy.supportedConfigAuditKinds: Workload,Service,Role,ClusterRole,NetworkPolicy,Ingress,LimitRange,ResourceQuota
-  trivy.tag: 0.71.1.2
+  trivy.tag: 0.69.3
   trivy.timeout: 5m0s
   trivy.useBuiltinRegoPolicies: "false"
   trivy.useEmbeddedRegoPolicies: "true"
@@ -459,10 +489,14 @@ spec:
           value: pod,replicaset,replicationcontroller,statefulset,daemonset,cronjob,job
         - name: OPERATOR_SERVICE_ACCOUNT
           value: trivy-operator
+        - name: OPERATOR_ALTERNATE_REPORT_STORAGE_ENABLED
+          value: "true"
+        - name: OPERATOR_ALTERNATE_REPORT_STORAGE_DIR
+          value: /var/reports
         envFrom:
         - configMapRef:
             name: trivy-operator-config
-        image: ghcr.io/cybozu/trivy-operator:0.31.1.1@sha256:866d8888e888c7c7787ba5371d3f874eb2e201411a3f181777070df90e16eba3
+        image: mirror.gcr.io/aquasec/trivy-operator:0.30.1
         imagePullPolicy: IfNotPresent
         livenessProbe:
           failureThreshold: 10
@@ -497,10 +531,18 @@ spec:
         - mountPath: /tmp
           name: cache-policies
           readOnly: false
+        - mountPath: /var/reports
+          name: reports
+      securityContext:
+        fsGroup: 10000
+        runAsUser: 10000
       serviceAccountName: trivy-operator
       volumes:
       - emptyDir: {}
         name: cache-policies
+      - emptyDir:
+          sizeLimit: 10Gi
+        name: reports
 ---
 apiVersion: aquasecurity.github.io/v1alpha1
 kind: ClusterComplianceReport

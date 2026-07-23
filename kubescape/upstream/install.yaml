@@ -1,0 +1,977 @@
+---
+# Source: kubescape-operator/templates/configs/priority-class.yaml
+apiVersion: scheduling.k8s.io/v1
+kind: PriorityClass
+metadata:
+  name: kubescape-critical
+  annotations:
+    
+  labels:
+    helm.sh/chart: kubescape-operator-1.40.2
+    app.kubernetes.io/name: kubescape-operator
+    app.kubernetes.io/instance: kubescape-operator
+    app.kubernetes.io/component: kubescape-critical
+    app.kubernetes.io/version: "1.40.2"
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kubescape
+    app: kubescape-critical
+    tier: ks-control-plane
+    kubescape.io/ignore: "true"
+value: 1.000001e+08
+globalDefault: false
+description: "This priority class is for node-agent daemonset pods"
+---
+# Source: kubescape-operator/templates/node-agent/serviceaccount.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: node-agent
+  namespace: kubescape
+  annotations:
+    
+  labels:
+    helm.sh/chart: kubescape-operator-1.40.2
+    app.kubernetes.io/name: kubescape-operator
+    app.kubernetes.io/instance: kubescape-operator
+    app.kubernetes.io/component: node-agent
+    app.kubernetes.io/version: "1.40.2"
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kubescape
+    app: node-agent
+    tier: ks-control-plane
+    kubescape.io/ignore: "true"
+---
+# Source: kubescape-operator/templates/storage/serviceaccount.yaml
+kind: ServiceAccount
+apiVersion: v1
+metadata:
+  name: storage
+  namespace: kubescape
+  annotations:
+    
+  labels:
+    helm.sh/chart: kubescape-operator-1.40.2
+    app.kubernetes.io/name: kubescape-operator
+    app.kubernetes.io/instance: kubescape-operator
+    app.kubernetes.io/component: storage
+    app.kubernetes.io/version: "1.40.2"
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kubescape
+    app: storage
+    tier: ks-control-plane
+    kubescape.io/ignore: "true"
+---
+# Source: kubescape-operator/templates/configs/cloud-secret.yaml
+kind: Secret
+apiVersion: v1
+metadata:
+  name: cloud-secret
+  namespace: kubescape
+  annotations:
+    
+  labels:
+    helm.sh/chart: kubescape-operator-1.40.2
+    app.kubernetes.io/name: kubescape-operator
+    app.kubernetes.io/instance: kubescape-operator
+    app.kubernetes.io/component: cloud-secret
+    app.kubernetes.io/version: "1.40.2"
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kubescape
+    app: cloud-secret
+    tier: ks-control-plane
+    kubescape.io/ignore: "true"
+    kubescape.io/infra: credentials
+type: Opaque
+data:
+  account: ""
+  accessKey: ""
+---
+# Source: kubescape-operator/templates/configs/cloudapi-configmap.yaml
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: ks-cloud-config
+  namespace: kubescape
+  annotations:
+    
+  labels:
+    helm.sh/chart: kubescape-operator-1.40.2
+    app.kubernetes.io/name: kubescape-operator
+    app.kubernetes.io/instance: kubescape-operator
+    app.kubernetes.io/component: ks-cloud-config
+    app.kubernetes.io/version: "1.40.2"
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kubescape
+    app: ks-cloud-config
+    tier: ks-control-plane
+    kubescape.io/ignore: "true"
+    kubescape.io/tier: "core"
+    kubescape.io/infra: config
+data:
+  clusterData: |
+    {
+      "serviceDiscovery": false,
+      "vulnScanURL": "kubevuln:8080",
+      "kubevulnURL": "kubevuln:8080",
+      "kubescapeURL": "kubescape:8080",
+      "clusterName": "kind-kind-cluster",
+      "storage": true,
+      "relevantImageVulnerabilitiesEnabled": false,
+      "namespace": "kubescape",
+      "imageVulnerabilitiesScanningEnabled": false,
+      "postureScanEnabled": false,
+      "otelCollector": false,
+      "nodeAgent": "true",
+      "maxImageSize": 5.36870912e+09,
+      "maxSBOMSize": 2.097152e+07,
+      "keepLocal": true,
+      "scanTimeout": "5m",
+      "scanEmbeddedSBOMs": false,
+      "vexGeneration": false,
+      "useDefaultMatchers": false,
+      "storeFilteredSbom": false,
+      "continuousPostureScan": false,
+      "relevantImageVulnerabilitiesConfiguration": "disable",
+      "riskAcceptance": false
+    }
+---
+# Source: kubescape-operator/templates/configs/components-configmap.yaml
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: ks-capabilities
+  namespace: kubescape
+  annotations:
+    
+  labels:
+    helm.sh/chart: kubescape-operator-1.40.2
+    app.kubernetes.io/name: kubescape-operator
+    app.kubernetes.io/instance: kubescape-operator
+    app.kubernetes.io/component: ks-capabilities
+    app.kubernetes.io/version: "1.40.2"
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kubescape
+    app: ks-capabilities
+    tier: ks-control-plane
+    kubescape.io/ignore: "true"
+    kubescape.io/tier: "core"
+data:
+  capabilities: |
+    {
+      "capabilities":{"admissionController":"disable","autoUpgrading":"disable","configurationScan":"disable","continuousScan":"disable","httpDetection":"disable","kubescapeOffline":"disable","malwareDetection":"disable","manageWorkloads":"disable","networkEventsStreaming":"disable","networkPolicyService":"disable","nodeProfileService":"disable","nodeSbomGeneration":"enable","nodeScan":"disable","operator":"disable","prometheusExporter":"disable","relevancy":"disable","remediation":"disable","riskAcceptance":"disable","runtimeDetection":"disable","runtimeObservability":"enable","scanEmbeddedSBOMs":"disable","seccompProfileBackend":"storage","seccompProfileService":"disable","syncSBOM":"disable","testing":{"nodeAgentMultiplication":{"enabled":false,"replicas":5}},"vexGeneration":"disable","vulnerabilityScan":"disable"},
+      "components":{"autoUpdater":{"enabled":false},"clamAV":{"enabled":false},"cloudSecret":{"create":true,"name":"cloud-secret"},"customCaCertificates":{"name":"custom-ca-certificates"},"kubescape":{"enabled":false},"kubescapeScheduler":{"enabled":false},"kubevuln":{"enabled":false},"kubevulnScheduler":{"enabled":false},"nodeAgent":{"enabled":true},"operator":{"enabled":false},"otelCollector":{"enabled":false},"prometheusExporter":{"enabled":false},"sbomScanner":{"enabled":false},"serviceDiscovery":{"enabled":false},"storage":{"enabled":true},"synchronizer":{"enabled":false}},
+      "configurations":{"excludeJsonPaths":null,"otelUrl":null,"persistence":"enable","priorityClass":{"daemonset":100000100,"enabled":true},"prometheusAnnotations":"disable"} ,
+      "serviceScanConfig" :{"enabled":false,"interval":"1h"}
+    }
+---
+# Source: kubescape-operator/templates/configs/matchingRules-configmap.yaml
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: cs-matching-rules
+  namespace: kubescape
+  annotations:
+    
+  labels:
+    helm.sh/chart: kubescape-operator-1.40.2
+    app.kubernetes.io/name: kubescape-operator
+    app.kubernetes.io/instance: kubescape-operator
+    app.kubernetes.io/component: kubescape
+    app.kubernetes.io/version: "1.40.2"
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kubescape
+    app: kubescape
+    tier: ks-control-plane
+    kubescape.io/ignore: "true"
+    kubescape.io/tier: "core"
+data:
+  matchingRules.json: |
+    {"match":[{"apiGroups":["apps"],"apiVersions":["v1"],"resources":["deployments"]}],"namespaces":["default"]}
+---
+# Source: kubescape-operator/templates/node-agent/configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: node-agent
+  namespace: kubescape
+  annotations:
+    
+  labels:
+    helm.sh/chart: kubescape-operator-1.40.2
+    app.kubernetes.io/name: kubescape-operator
+    app.kubernetes.io/instance: kubescape-operator
+    app.kubernetes.io/component: node-agent
+    app.kubernetes.io/version: "1.40.2"
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kubescape
+    app: node-agent
+    tier: ks-control-plane
+    kubescape.io/ignore: "true"
+    kubescape.io/tier: "core"
+data:
+  config.json: |
+    {
+        "applicationProfileServiceEnabled": true,
+        "backendStorageEnabled": false,
+        "prometheusExporterEnabled": false,
+        "runtimeDetectionEnabled": false,
+        "httpDetectionEnabled": false,
+        "networkServiceEnabled": false,
+        "malwareDetectionEnabled": false,
+        "hostMalwareSensorEnabled": false,
+        "hostNetworkSensorEnabled": false,
+        "hostSensorEnabled": false,
+        "hostSensorInterval": "5m",
+        "nodeProfileServiceEnabled": false,
+        "networkStreamingEnabled": false,
+        "maxImageSize": 5.36870912e+09,
+        "maxSBOMSize": 2.097152e+07,
+        "sbomGenerationEnabled": true,
+        "enableEmbeddedSBOMs": false,
+        "seccompServiceEnabled": false,
+        "seccompProfileBackend": "storage",
+        "initialDelay": "2m",
+        "updateDataPeriod": "10m",
+        "nodeProfileInterval": "10m",
+        "networkStreamingInterval": "2m",
+        "maxSniffingTimePerContainer": "24h",
+        "excludeNamespaces": "kubescape,kube-system,kube-public,kube-node-lease,kubeconfig,gmp-system,gmp-public",
+        "excludeLabels":null,
+        "exporters": {
+          "alertManagerExporterUrls":[],
+          "stdoutExporter":true,
+          "syslogExporterURL": ""
+        },
+        "excludeJsonPaths":null,
+        "ruleCooldown": {
+            "ruleCooldownDuration": "1h",
+            "ruleCooldownAfterCount": 1,
+            "ruleCooldownOnProfileFailure": true,
+            "ruleCooldownMaxSize": 20000
+        }
+    }
+---
+# Source: kubescape-operator/templates/storage/configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: storage
+  namespace: kubescape
+  labels:
+    helm.sh/chart: kubescape-operator-1.40.2
+    app.kubernetes.io/name: kubescape-operator
+    app.kubernetes.io/instance: kubescape-operator
+    app.kubernetes.io/component: storage
+    app.kubernetes.io/version: "1.40.2"
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kubescape
+    app: storage
+    tier: ks-control-plane
+    kubescape.io/ignore: "true"
+    kubescape.io/tier: "core"
+data:
+  config.json: |
+    {
+      "cleanupInterval": "6h",
+      "disableVirtualCRDs": true,
+      "disableSeccompProfileEndpoint": false,
+      "excludeJsonPaths": null,
+      "defaultQueueLength": 100,
+      "defaultWorkerCount": 2,
+      "defaultMaxObjectSize": 400000,
+      "queueManagerEnabled": true,
+      "kindQueues": {"applicationprofiles":{"maxObjectSize":20000000,"queueLength":50,"workerCount":2},"containerprofiles":{"maxObjectSize":2500000,"queueLength":50,"workerCount":2},"networkneighborhoods":{"maxObjectSize":10000000,"queueLength":50,"workerCount":2},"openvulnerabilityexchangecontainers":{"maxObjectSize":500000,"queueLength":50,"workerCount":1},"sbomsyftfiltereds":{"maxObjectSize":50000000,"queueLength":50,"workerCount":1},"sbomsyfts":{"maxObjectSize":100000000,"queueLength":50,"workerCount":1},"vulnerabilitymanifests":{"maxObjectSize":50000000,"queueLength":50,"workerCount":1}},
+      "serverBindPort": "8443"
+    }
+---
+# Source: kubescape-operator/templates/storage/pvc.yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: kubescape-storage
+  namespace: kubescape
+  annotations:
+    
+  labels:
+    helm.sh/chart: kubescape-operator-1.40.2
+    app.kubernetes.io/name: kubescape-operator
+    app.kubernetes.io/instance: kubescape-operator
+    app.kubernetes.io/component: storage
+    app.kubernetes.io/version: "1.40.2"
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kubescape
+    app: storage
+    tier: ks-control-plane
+    kubescape.io/ignore: "true"
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+---
+# Source: kubescape-operator/templates/node-agent/clusterrole.yaml
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: node-agent
+  annotations:
+    
+  labels:
+    helm.sh/chart: kubescape-operator-1.40.2
+    app.kubernetes.io/name: kubescape-operator
+    app.kubernetes.io/instance: kubescape-operator
+    app.kubernetes.io/component: node-agent
+    app.kubernetes.io/version: "1.40.2"
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kubescape
+    app: node-agent
+    tier: ks-control-plane
+    kubescape.io/ignore: "true"
+rules:
+- apiGroups: [""]
+  resources: ["nodes", "nodes/proxy", "services", "endpoints", "namespaces", "configmaps"]
+  verbs: ["get", "watch", "list"]
+- apiGroups: [""]
+  resources: ["pods"]
+  verbs: ["get", "watch", "list", "delete"]
+- apiGroups: [""]
+  resources: ["events"]
+  verbs: ["get", "watch", "list"]
+- apiGroups: ["batch"]
+  resources: ["jobs", "cronjobs"]
+  verbs: ["get", "watch", "list"]
+- apiGroups: ["apps"]
+  resources: ["deployments", "daemonsets", "statefulsets", "replicasets"]
+  verbs: ["get", "watch", "list"]
+- apiGroups: ["spdx.softwarecomposition.kubescape.io"]
+  resources: ["applicationprofiles", "networkneighborhoods"]
+  verbs: ["get", "watch", "list"]
+- apiGroups: ["spdx.softwarecomposition.kubescape.io"]
+  resources: ["seccompprofiles"]
+  verbs: ["get", "watch", "list"]
+- apiGroups: ["spdx.softwarecomposition.kubescape.io"]
+  resources: ["containerprofiles", "sbomsyfts"]
+  verbs: ["create", "get", "update", "watch", "list", "patch"]
+- apiGroups: ["kubescape.io"]
+  resources: ["runtimerulealertbindings"]
+  verbs: ["list", "watch"]
+- apiGroups: ["kubescape.io"]
+  resources: ["operatorcommands"]
+  verbs: ["get", "watch", "list"]
+- apiGroups: ["kubescape.io"]
+  resources: ["operatorcommands/status"]
+  verbs: ["get", "watch", "list", "update", "patch"]
+- apiGroups: ["events.k8s.io"]
+  resources: ["events"]
+  verbs: ["create", "patch", "get"]
+- apiGroups: ["kubescape.io"]
+  resources: ["rules"]
+  verbs: ["list", "watch"]
+---
+# Source: kubescape-operator/templates/storage/clusterrole.yaml
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: storage
+  annotations:
+    
+  labels:
+    helm.sh/chart: kubescape-operator-1.40.2
+    app.kubernetes.io/name: kubescape-operator
+    app.kubernetes.io/instance: kubescape-operator
+    app.kubernetes.io/component: storage
+    app.kubernetes.io/version: "1.40.2"
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kubescape
+    app: storage
+    tier: ks-control-plane
+    kubescape.io/ignore: "true"
+rules:
+- apiGroups: [""]
+  resources: ["namespaces", "pods", "services"]
+  verbs: [ "get", "watch", "list" ]
+- apiGroups: [ "admissionregistration.k8s.io" ]
+  resources: [ "mutatingwebhookconfigurations", "validatingwebhookconfigurations" ]
+  verbs: [ "get", "watch", "list" ]
+- apiGroups: ["apps"]
+  resources: ["daemonsets", "deployments", "replicasets", "statefulsets"]
+  verbs: ["get", "watch", "list"]
+- apiGroups: ["batch"]
+  resources: ["cronjobs", "jobs"]
+  verbs: ["get", "watch", "list"]
+- apiGroups: ["flowcontrol.apiserver.k8s.io"]
+  resources: ["prioritylevelconfigurations", "flowschemas"]
+  verbs: ["get", "watch", "list"]
+---
+# Source: kubescape-operator/templates/node-agent/clusterrolebinding.yaml
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: node-agent
+  annotations:
+    
+  labels:
+    helm.sh/chart: kubescape-operator-1.40.2
+    app.kubernetes.io/name: kubescape-operator
+    app.kubernetes.io/instance: kubescape-operator
+    app.kubernetes.io/component: node-agent
+    app.kubernetes.io/version: "1.40.2"
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kubescape
+    app: node-agent
+    tier: ks-control-plane
+    kubescape.io/ignore: "true"
+subjects:
+- kind: ServiceAccount
+  name: node-agent
+  namespace: kubescape
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: node-agent
+---
+# Source: kubescape-operator/templates/storage/clusterrolebinding.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: "storage:system:auth-delegator"
+  annotations:
+    
+  labels:
+    helm.sh/chart: kubescape-operator-1.40.2
+    app.kubernetes.io/name: kubescape-operator
+    app.kubernetes.io/instance: kubescape-operator
+    app.kubernetes.io/component: storage
+    app.kubernetes.io/version: "1.40.2"
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kubescape
+    app: storage
+    tier: ks-control-plane
+    kubescape.io/ignore: "true"
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: system:auth-delegator
+subjects:
+- kind: ServiceAccount
+  name: storage
+  namespace: kubescape
+---
+# Source: kubescape-operator/templates/storage/clusterrolebinding.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: storage
+  annotations:
+    
+  labels:
+    helm.sh/chart: kubescape-operator-1.40.2
+    app.kubernetes.io/name: kubescape-operator
+    app.kubernetes.io/instance: kubescape-operator
+    app.kubernetes.io/component: storage
+    app.kubernetes.io/version: "1.40.2"
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kubescape
+    app: storage
+    tier: ks-control-plane
+    kubescape.io/ignore: "true"
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: storage
+subjects:
+  - kind: ServiceAccount
+    name: storage
+    namespace: kubescape
+---
+# Source: kubescape-operator/templates/storage/rolebinding.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: "storage-auth-reader"
+  namespace: kube-system
+  annotations:
+    
+  labels:
+    helm.sh/chart: kubescape-operator-1.40.2
+    app.kubernetes.io/name: kubescape-operator
+    app.kubernetes.io/instance: kubescape-operator
+    app.kubernetes.io/component: storage
+    app.kubernetes.io/version: "1.40.2"
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kubescape
+    app: storage
+    tier: ks-control-plane
+    kubescape.io/ignore: "true"
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  # This is a default role name provided by K8s and should not be templated or changed
+  name: "extension-apiserver-authentication-reader"
+subjects:
+- kind: ServiceAccount
+  name: storage
+  namespace: kubescape
+---
+# Source: kubescape-operator/templates/node-agent/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-agent
+  namespace: kubescape
+  annotations:
+    
+  labels:
+    helm.sh/chart: kubescape-operator-1.40.2
+    app.kubernetes.io/name: kubescape-operator
+    app.kubernetes.io/instance: kubescape-operator
+    app.kubernetes.io/component: node-agent
+    app.kubernetes.io/version: "1.40.2"
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kubescape
+    app: node-agent
+    tier: ks-control-plane
+    kubescape.io/ignore: "true"
+spec:
+  ports:
+  - name: prometheus
+    port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app.kubernetes.io/name: kubescape-operator
+    app.kubernetes.io/instance: kubescape-operator
+    app.kubernetes.io/component: node-agent
+---
+# Source: kubescape-operator/templates/storage/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: storage
+  namespace: kubescape
+  annotations:
+    
+  labels:
+    helm.sh/chart: kubescape-operator-1.40.2
+    app.kubernetes.io/name: kubescape-operator
+    app.kubernetes.io/instance: kubescape-operator
+    app.kubernetes.io/component: storage
+    app.kubernetes.io/version: "1.40.2"
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kubescape
+    app: storage
+    tier: ks-control-plane
+    kubescape.io/ignore: "true"
+spec:
+  type: ClusterIP
+  ports:
+  - port: 443
+    protocol: TCP
+    targetPort: 8443
+    name: https
+  selector:
+      app.kubernetes.io/name: kubescape-operator
+      app.kubernetes.io/instance: kubescape-operator
+      app.kubernetes.io/component: storage
+---
+# Source: kubescape-operator/templates/node-agent/daemonset.yaml
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: node-agent
+  namespace: kubescape
+  annotations:
+    
+  labels:
+    helm.sh/chart: kubescape-operator-1.40.2
+    app.kubernetes.io/name: kubescape-operator
+    app.kubernetes.io/instance: kubescape-operator
+    app.kubernetes.io/component: node-agent
+    app.kubernetes.io/version: "1.40.2"
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kubescape
+    app: node-agent
+    tier: ks-control-plane
+    kubescape.io/ignore: "true"
+    kubescape.io/tier: "core"
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: kubescape-operator
+      app.kubernetes.io/instance: kubescape-operator
+      app.kubernetes.io/component: node-agent
+  template:
+    metadata:
+      annotations:
+        
+        checksum/node-agent-config: a236ca17d83f851bacdaf4ab8c86272b2361df5d994afbf1c016d4d55958b935
+        checksum/cloud-secret: e9343bd3d4348c849e3e096987551dfefaf6432c501de384eb9f929a7c657dd9
+        checksum/cloud-config: 1a0b251a288e53af6d3b026be4fcc05a1aba46e7ce9aa0adc50cbe50ea35c2aa
+      labels:
+        helm.sh/chart: kubescape-operator-1.40.2
+        app.kubernetes.io/name: kubescape-operator
+        app.kubernetes.io/instance: kubescape-operator
+        app.kubernetes.io/component: node-agent
+        app.kubernetes.io/version: "1.40.2"
+        app.kubernetes.io/managed-by: Helm
+        app.kubernetes.io/part-of: kubescape
+        app: node-agent
+        tier: ks-control-plane
+        kubescape.io/ignore: "true"
+        kubescape.io/tier: "core"
+    spec:
+      securityContext:
+        appArmorProfile:
+          type: Unconfined
+      priorityClassName: kubescape-critical
+      serviceAccountName: node-agent
+      automountServiceAccountToken: true
+      hostPID: true
+      volumes:
+      
+      - hostPath:
+          path: /
+        name: host
+      - hostPath:
+          path: /var/lib/kubelet
+        name: kubeletdir
+      - hostPath:
+          path: /run
+        name: run
+      - hostPath:
+          path: /var
+        name: var
+      - hostPath:
+          path: /sys/fs/cgroup
+        name: cgroup
+      - hostPath:
+          path: /lib/modules
+        name: modules
+      - hostPath:
+          path: /sys/fs/bpf
+        name: bpffs
+      - hostPath:
+          path: /sys/kernel/debug
+        name: debugfs
+      - hostPath:
+          path: /boot
+        name: boot
+      - emptyDir: null
+        name: data
+      - emptyDir: null
+        name: profiles
+      - hostPath:
+          path: /
+          type: Directory
+        name: host-filesystem
+      - emptyDir: {}
+        name: clamdb
+      - emptyDir: {}
+        name: clamrun
+      - configMap:
+          items:
+          - key: clamd.conf
+            path: clamd.conf
+          - key: freshclam.conf
+            path: freshclam.conf
+          name: clamav
+        name: etc
+      - name: cloud-secret
+        secret:
+          secretName: cloud-secret
+      - name: ks-cloud-config
+        configMap:
+          name: ks-cloud-config
+          items:
+            - key: "clusterData"
+              path: "clusterData.json"
+      - name: config
+        configMap:
+          name: node-agent
+          items:
+            - key: "config.json"
+              path: "config.json"
+      containers:
+      
+      
+      
+      
+      
+      - name: node-agent
+        image: "quay.io/kubescape/node-agent:v0.3.119"
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          httpGet:
+            path: /livez
+            port: 7888
+          periodSeconds: 3
+        readinessProbe:
+          httpGet:
+            path: /readyz
+            port: 7888
+          periodSeconds: 3
+        startupProbe:
+          httpGet:
+            path: /readyz
+            port: 7888
+          periodSeconds: 10
+          failureThreshold: 30
+          timeoutSeconds: 1
+        resources:
+          
+          limits:
+            cpu: 500m
+            memory: 1400Mi
+          requests:
+            cpu: 100m
+            memory: 180Mi
+        env:
+          
+          - name: GOMEMLIMIT
+            value: "1120MiB"
+          - name: HOST_ROOT
+            value: "/host"
+          - name: KS_LOGGER_LEVEL
+            value: "info"
+          - name: KS_LOGGER_NAME
+            value: "zap"
+          - name: NODE_NAME
+            valueFrom:
+              fieldRef:
+                fieldPath: spec.nodeName
+          - name: POD_NAME
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.name
+          - name: NAMESPACE_NAME
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.namespace
+          - name: KUBELET_ROOT
+            value: "/var/lib/kubelet"
+          - name: AGENT_VERSION
+            value: "v0.3.119"
+          - name: NodeName
+            valueFrom:
+              fieldRef:
+                fieldPath: spec.nodeName
+        securityContext:
+          runAsUser: 0
+          privileged: false
+          capabilities:
+            add:
+              - SYS_ADMIN
+              - SYS_PTRACE
+              - NET_ADMIN
+              - SYSLOG
+              - SYS_RESOURCE
+              - IPC_LOCK
+              - NET_RAW
+          seLinuxOptions:
+            type: spc_t
+        volumeMounts:
+          
+          - mountPath: /host
+            name: host
+            readOnly: true
+          - mountPath: /var/lib/kubelet
+            name: kubeletdir
+          - mountPath: /run
+            name: run
+          - mountPath: /var
+            name: var
+            readOnly: true
+          - mountPath: /lib/modules
+            name: modules
+            readOnly: true
+          - mountPath: /sys/kernel/debug
+            name: debugfs
+          - mountPath: /sys/fs/cgroup
+            name: cgroup
+            readOnly: true
+          - mountPath: /sys/fs/bpf
+            name: bpffs
+          - mountPath: /data
+            name: data
+          - mountPath: /profiles
+            name: profiles
+          - mountPath: /boot
+            name: boot
+            readOnly: true
+          - mountPath: /clamav
+            name: clamrun
+          - name: cloud-secret
+            mountPath: /etc/credentials
+            readOnly: true
+          - name: ks-cloud-config
+            mountPath: /etc/config/clusterData.json
+            readOnly: true
+            subPath: "clusterData.json"
+          - name: config
+            mountPath: /etc/config/config.json
+            readOnly: true
+            subPath: "config.json"
+      nodeSelector:
+      
+        kubernetes.io/os: linux
+      affinity:
+      
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/os
+                operator: In
+                values:
+                - linux
+      tolerations:
+---
+# Source: kubescape-operator/templates/storage/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: storage
+  namespace: kubescape
+  annotations:
+    
+  labels:
+    helm.sh/chart: kubescape-operator-1.40.2
+    app.kubernetes.io/name: kubescape-operator
+    app.kubernetes.io/instance: kubescape-operator
+    app.kubernetes.io/component: storage
+    app.kubernetes.io/version: "1.40.2"
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kubescape
+    app: storage
+    tier: ks-control-plane
+    kubescape.io/ignore: "true"
+    kubescape.io/tier: "core"
+spec:
+  replicas: 1
+  revisionHistoryLimit: 2
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: kubescape-operator
+      app.kubernetes.io/instance: kubescape-operator
+      app.kubernetes.io/component: storage
+  template:
+    metadata:
+      labels:
+        helm.sh/chart: kubescape-operator-1.40.2
+        app.kubernetes.io/name: kubescape-operator
+        app.kubernetes.io/instance: kubescape-operator
+        app.kubernetes.io/component: storage
+        app.kubernetes.io/version: "1.40.2"
+        app.kubernetes.io/managed-by: Helm
+        app.kubernetes.io/part-of: kubescape
+        app: storage
+        tier: ks-control-plane
+        kubescape.io/ignore: "true"
+        kubescape.io/tier: "core"
+    spec:
+      serviceAccountName: storage
+      securityContext:
+        seccompProfile:
+          type: RuntimeDefault
+        runAsUser: 65532
+        fsGroup: 65532
+      containers:
+      - name: apiserver
+        image: "quay.io/kubescape/storage:v0.0.274"
+        imagePullPolicy: IfNotPresent
+        securityContext:
+          allowPrivilegeEscalation: false
+          runAsNonRoot: true
+        livenessProbe:
+          httpGet:
+            path: /livez
+            port: 8443
+            scheme: HTTPS
+        readinessProbe:
+          httpGet:
+            path: /readyz
+            port: 8443
+            scheme: HTTPS
+        env:
+          - name: GOMEMLIMIT
+            valueFrom:
+              resourceFieldRef:
+                resource: limits.memory
+                divisor: '1'
+          - name: KS_LOGGER_LEVEL
+            value: "info"
+          - name: KS_LOGGER_NAME
+            value: "zap"
+        volumeMounts:
+          - name: "data"
+            mountPath: "/data"
+          - name: ks-cloud-config
+            mountPath: /etc/config/clusterData.json
+            readOnly: true
+            subPath: "clusterData.json"
+          - name: config
+            mountPath: /etc/config/config.json
+            readOnly: true
+            subPath: "config.json"
+        resources:
+            limits:
+              cpu: 1500m
+              memory: 1500Mi
+            requests:
+              cpu: 100m
+              memory: 400Mi
+      nodeSelector:
+        kubernetes.io/os: linux
+      affinity:
+      tolerations:
+      
+      volumes:
+        - name: "data"
+          persistentVolumeClaim:
+            claimName: kubescape-storage
+        - name: ks-cloud-config
+          configMap:
+            name: ks-cloud-config
+            items:
+            - key: "clusterData"
+              path: "clusterData.json"
+        - name: config
+          configMap:
+            name: storage
+            items:
+              - key: "config.json"
+                path: "config.json"
+---
+# Source: kubescape-operator/templates/storage/apiservice.yaml
+apiVersion: apiregistration.k8s.io/v1
+kind: APIService
+metadata:
+  name: v1beta1.spdx.softwarecomposition.kubescape.io
+  annotations:
+    
+  labels:
+    helm.sh/chart: kubescape-operator-1.40.2
+    app.kubernetes.io/name: kubescape-operator
+    app.kubernetes.io/instance: kubescape-operator
+    app.kubernetes.io/component: storage
+    app.kubernetes.io/version: "1.40.2"
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kubescape
+    app: storage
+    tier: ks-control-plane
+    kubescape.io/ignore: "true"
+spec:
+  group: "spdx.softwarecomposition.kubescape.io"
+  groupPriorityMinimum: 1000
+  versionPriority: 15
+  version: "v1beta1"
+  service:
+    name: storage
+    namespace: kubescape
+  insecureSkipTLSVerify: true
+---
+# Source: kubescape-operator/templates/node-agent/servicemonitor.yaml
+# If prometheus enabled, add prometheus exporter
